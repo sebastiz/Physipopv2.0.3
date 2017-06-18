@@ -73,7 +73,6 @@ public class HistopathExtractor {
 
 				 //Change this so its just adding the ones that have pathology////I think contains doesn't take regexes??
 				  if (matcherHistol_pattern.find()) {
-					 //System.out.println("MMMMMAAAAAAATTTCHHHHHH Histol");
 
 					  filteredRows.add(row);
 					  break;
