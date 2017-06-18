@@ -1,0 +1,122 @@
+Hospital Number:Hospital No
+Examination Date:Report date
+Examination Date:Report
+Examination Date:Examination Date date
+Belch :Belching
+Belch :BELCHING
+Belch :Burp
+Belch :Belch.
+Pain :discomfort
+Heartburn :HrtBrn
+Heartburn :Hearburn
+Heartburn :HEARTBURN
+Chest :chest
+ChestPain :Chest Pain
+ChestPain :CHEST PAIN
+ChestPain :ChestP
+ChestPain :Chest pain
+Cough :cough
+Cough :COUGH
+Stomach :epigastric
+Stomach :EPIGASTRIC
+Regurgitation :Regurgitate
+Regurgitation :regurgitation
+Regurgitation :REGURGITATION
+Regurgitation :regurg.
+Regurgitation :Regurg.
+Regurgitation :Regurg
+Regurgitation :regurg
+Regurgitation :Regurgitation itaion
+Cough :cough
+Throat :throat
+Throat :THROAT
+Throat :Throat Burn
+Throat :Sore Throat
+Throat :Sore throat
+Throat :Throat discomfort
+Throat :Globus
+Throat :GLOBUS
+Throat :Throat Pain
+StomachPain :stomach pain
+Stomach:stomach
+Stomach:STOMACH
+Stomach:epigastric
+StomachPain :Stomach Pain
+StomachPain :Stomach pain
+StomachPain :Epigastric Pain
+StomachPain :Epigastric pain
+Vomiting :vomiting
+Vomiting :VOMITING
+Hiatal hernia:Hiatal hernia?
+Vomiting :vomit
+PostPr :Post-Prandial
+PostPr :Post-prandial
+Nausea :nausea
+Nausea :NAUSEA
+Esophageal :Oesophageal
+LES midpoint (from nares)(cm) :LOS midpoint
+LES midpoint (from nares)(cm) :LOS midpoint (from nares)
+LES midpoint (from nares)(cm) :LES midpoint (from nares)
+LES midpoint (from nares)(cm) :LOS Center (fr. nares):
+LES midpoint (from nares)(cm) :LES Center (fr. nares):
+Proximal LES (from nares)(cm) :Proximal LOS (from nares)
+Proximal LES (from nares)(cm) :Prox LOS (fr. nares)
+Proximal LES (from nares)(cm) :Prox LES (fr. nares)
+Proximal LES (from nares)(cm) :Proximal LES (from nares)
+Distal LES (from nares)(cm) :Distal LOS (from nares)
+Distal LES (from nares)(cm) :Dist LOS (fr. nares)
+Distal LES (from nares)(cm) :Dist LES (fr. nares)
+Distal LES (from nares)(cm) :Distal LES (from nares)
+Distal contractile integral(highest)(mmHg-cm-s) :Distal contr. integral(mmHg-cm-s)
+Distal contractile integral(mean)(mmHg-cm-s):Distal contractile integral (mean)
+PIP (from nares)(cm) :PIP (fr. nares):
+PIP (from nares)(cm) :PIP (from nares)
+PIP (from nares)(cm) :PIP (fr. nares)
+LES length(cm) :LOS length
+Intraabdominal LES length(cm) :Intraabdominal LOS length
+Intraabdominal LES length(cm) :Intraabdominal LES length
+Intraabdominal LES length(cm) :Intraabdominal Segment
+LES Pressures :LOS Pressures
+Basal (respiratory min.)(mmHg) :Basal (respiratory min, eSleeve)
+Basal (respiratory mean)(mmHg) :Basal (respiratory mean, eSleeve)
+Basal (respiratory min.)(mmHg) :Basal (respiratory min., eSleeve,IRP)
+Basal (respiratory mean)(mmHg) :Basal (respiratory mean, eSleeve,IRP)
+Mean wave amplitude(mmHg) :Mean Wave Amplitude
+Mean wave amplitude(mmHg) :Mean Wave amplitude
+Mean peak pressure(mmHg) :Peak Pressure @ 2.0 above mid UOS
+Residual (mean)(mmHg):Mean Residual Pressure
+Residual (mean)(mmHg):Mean Residual P
+Residual (mean)(mmHg):Residual (mean, eSleeve,IRP)
+Residual (mean)(mmHg):Residual (mean, eSleeve,3sN)
+Basal (respiratory min.)(mmHg) :Basal P (end expiratory)
+Basal (respiratory min.)(mmHg):Basal (respiratory min., eSleeve,3sN)
+Basal (respiratory mean)(mmHg):Basal (respiratory mean, eSleeve,3sN)
+Basal (respiratory mean)(mmHg):Mean Basal P
+Basal (respiratory mean)(mmHg):Mean Basal Pressure
+Esophageal length (LOS-UOS centers):Esophageal  length (LOS-UOS centers)
+Esophageal length (LOS-UOS centers):Oesophageal length (LOS-UOScenters)
+Esophageal length (LES-UES centers)(cm):Esophageal length (LES-UES centers)
+Contractile front velocity(cm/s):Velocity (5.0-13.0 above LOS)
+Contractile front velocity(cm/s):Velocity (11.0-3.0 above LOS)
+Contractile front velocity(cm/s):Vel. (betw. 13.0 & 5.0 cm above LOS)
+Contractile front velocity(cm/s):Vel. (betw. 11.0 & 5.0 cm above LOS)
+Wave amplitude mean :Wave amplitude (mean, 3.0 & 7.0 above LES) (mmHg)
+Distal latency :Distal latency (sec)
+% failed (Chicago Classification) :Percent failed(%)
+% failed (Chicago Classification) :Failed
+Hiatal hernia?:Hiatal Hernia?
+Hiatal hernia?:Hiatal Hernia
+%Simultaneous:Percent simultaneous(%)
+%Simultaneous:Simultaneous (vel. ≥ 6.25 cm/s)(%)
+%Simultaneous:Simultaneous (vel. ≥ 6.25 cm/s)
+Mean basal pressure(mmHg):Mean basal pressure
+Mean residual pressure(mmHg):Mean residual pressure
+Contractile front velocity(cm/s):Contractile front velocity
+Intrabolus pressure (avg max)(mmHg):Intrabolus pressure (avg max)
+ :(cm/s)(cm/s)
+ :(cm/s)(cm/s)
+ :(cm) (cm)
+ :(cm) (cm)
+ (mmHg) :(mmHg)(mmHg)(mmHg)(mmHg)
+ (mmHg) :(mmHg)(mmHg)(mmHg)
+ (mmHg) :(mmHg)(mmHg)

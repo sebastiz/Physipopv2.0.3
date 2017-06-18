@@ -1,0 +1,35 @@
+Number of swallows evaluated.*
+LES midpoint.*
+Proximal LES .*
+Distal LES .*
+LES length.*
+Esophageal length .*
+PIP .*
+Intraabdominal LES length.*
+Hiatal hernia?.*
+Basal \(respiratory min\.\)\(mmHg\).*
+Basal \(respiratory mean\)\(mmHg\).*
+Residual \(mean\)\(mmHg\).*
+Residual \(highest\)\(mmHg\).*
+Location.*
+Mean basal pressure.*
+Mean residual pressure.*
+Mean peak pressure.*
+Relaxation time-to-nadir.*
+Relaxation duration.*
+Recovery time.*
+No. swallows evaluated.*
+Mean wave amplitude.*
+Distal contractile integral\(highest\)\(mmHg-cm-s\).*
+Distal contractile integral\(mean\)\(mmHg-cm-s\).*
+Contractile front velocity.*
+Intrabolus pressure \(\@LESR\)\(mmHg\).*
+Intrabolus pressure \(avg max\)\(mmHg\).*
+Intraabdominal LES length\(cm\).*
+Distal latency.*
+% failed.*
+% premature contraction.*
+% panesophageal pressurization.*
+% rapid contraction.*
+% large breaks.*
+% small breaks.*

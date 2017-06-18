@@ -1,0 +1,53 @@
+LES, respiratory mean\(mmHg\)
+UES mean\(mmHg\)
+LES proximal\(cm\)
+LES intraabdominal\(cm\)
+Esophageal length\(cm\)
+Hiatal hernia
+Dist. wave amplitude\(mmHg\)
+Wave dur. @ LES -3.0 & 7.0\(s\)
+Onset vel. \(LES -11.0 to -3.0\)\(cm\\/s\)
+Percent peristaltic\(%\)
+Percent simultaneous\(%\)
+Percent failed\(%\)
+Distal contr. integral
+LES \(mean\)\(mmHg\)
+UES \(mean\)\(mmHg\)
+Number of swallows evaluated
+Proximal LES \(from nares\)\(cm\)
+LES length\(cm\)
+Peristaltic \(velocity ≤ 6.25 cm/s\)\(%\)
+Esophageal length \(LES-UES centers\)\(cm\)
+%Simultaneous
+Intraabdominal LES length\(cm\)
+Failed\(%\)
+Hiatal hernia\?
+Mean wave amplitude\(mmHg\)
+Pressure meas. method
+Mean wave duration\(s\)
+Basal \(respiratory min.\)\(mmHg\)
+Double-peaked waves\(%\)
+Basal \(respiratory mean\)\(mmHg\)
+Triple-peaked waves\(%\)
+Residual \(mean\)\(mmHg\)
+Distal contractile integral\(mean\)\(mmHg-cm-s\)
+Distal contractile integral\(highest\)\(mmHg-cm-s\)
+Distal contractile integral (mean)
+Contractile front velocity\(cm\/s\)
+Contractile front velocity
+Intrabolus pressure \(@LESR\)\(mmHg\)
+Intrabolus pressure \(avg max\)\(mmHg\)
+Intrabolus pressure \(avg max\)
+Distal latency
+% failed Chicago Classification
+% panesophageal pressurization
+% premature contraction
+% rapid contraction
+% large breaks
+% small breaks
+Mean basal pressure\(mmHg\)
+Mean residual pressure\(mmHg\)
+Mean peak pressure\(mmHg\)
+LES midpoint \(from nares\)\(cm\)
+Distal LES \(from nares\)\(cm\)
+PIP \(from nares\)\(cm\)

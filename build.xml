@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="PhysiologyUpperGITotalExtractorv2">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../eclipse/java-mars/Eclipse.app/Contents/MacOS/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="PhysiologyUpperGITotalExtractorv2.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../jfreechart-1.0.19/jfreechart-1.0.19/lib/jcommon-1.0.23.jar"/>
+        <pathelement location="../../jfreechart-1.0.19/jfreechart-1.0.19/lib/jfreechart-1.0.19.jar"/>
+        <pathelement location="../../commons-io-2.4.jar"/>
+        <pathelement location="../../commons-lang3-3.4.jar"/>
+        <pathelement location="../../commons-math-2.2.jar"/>
+        <pathelement location="../../fontbox-1.8.5.jar"/>
+        <pathelement location="../../fontbox-1.8.12.jar"/>
+        <pathelement location="../../itext-rtf-2.1.7.jar"/>
+        <pathelement location="../../jodconverter-3.0-beta-1-javadoc.jar"/>
+        <pathelement location="../../pdfbox-1.8.12.jar"/>
+        <pathelement location="../../pdfbox-app-1.8.12.jar"/>
+        <pathelement location="../../rs2xml.jar"/>
+        <pathelement location="../../rtfkit_nosrc.jar"/>
+        <pathelement location="../../tika-app-1.12.jar"/>
+        <pathelement location="../../EclipseTBB/UCanAccess-3.0.4-bin/ucanaccess-3.0.4.jar"/>
+        <pathelement location="../../EclipseTBB/UCanAccess-3.0.4-bin/lib/commons-lang-2.6.jar"/>
+        <pathelement location="../../EclipseTBB/UCanAccess-3.0.4-bin/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="../../EclipseTBB/UCanAccess-3.0.4-bin/lib/hsqldb.jar"/>
+        <pathelement location="../../EclipseTBB/UCanAccess-3.0.4-bin/lib/jackcess-2.1.3.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/docx4j-3.2.2.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/antlr-2.7.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/antlr-runtime-3.3.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/avalon-framework-api-4.3.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/avalon-framework-impl-4.3.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-anim-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-awt-util-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-bridge-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-css-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-dom-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-ext-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-extension-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-gvt-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-js-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-parser-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-script-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-svg-dom-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-svggen-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-transcoder-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-util-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/batik-xml-1.7.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/commons-codec-1.10.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/fop-1.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/guava-17.0.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/jaxb-svg11-1.0.2.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/jaxb-xmldsig-core-1.0.0.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/jaxb-xslfo-1.0.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/jcl-over-slf4j-1.7.5.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/mbassador-1.1.10.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/poi-3.8.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/poi-scratchpad-3.8.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/serializer-2.7.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/slf4j-api-1.7.5.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/stringtemplate-3.2.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/wmf2svg-0.9.0.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/xalan-2.7.1.jar"/>
+        <pathelement location="../../docx4j-3.2.2.zip Folder/dependencies/xmlgraphics-commons-1.5.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.ucls"/>
+                <exclude name="**/*.useq"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Console">
+        <java classname="Console.Console" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="Iterator (1)">
+        <java classname="Overview.Iterator" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="Sandbox">
+        <java classname="Overview.Sandbox" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="tbb">
+        <java classname="Console.TBB" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="TBB_SQLBuilder (1)">
+        <java classname="Console.TBB_SQLBuilder" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="TBBcarmickr">
+        <java classname="Console.TBBcarmickr" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="TBBv2">
+        <java classname="Console.TBBv2" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+    <target name="TBBv3">
+        <java classname="Console.TBBv3" failonerror="true" fork="yes">
+            <classpath refid="PhysiologyUpperGITotalExtractorv2.classpath"/>
+        </java>
+    </target>
+</project>
