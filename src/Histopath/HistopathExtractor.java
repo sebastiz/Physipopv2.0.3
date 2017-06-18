@@ -63,7 +63,7 @@ public class HistopathExtractor {
 			XSSFRow row = (XSSFRow) rows.next ();
 			Iterator<Cell> cells = row.cellIterator ();
 
-
+//pattern for Histol
 
             Pattern Histol_pattern = Pattern.compile("\\b(Diagnosis|DIAGNOSIS)\\b.*?(osinoph|Barrett.*)",Pattern.DOTALL);
 			 while (cells.hasNext ()){
