@@ -32,7 +32,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 
 	public mane(String s) {
 	}
-	public static void Dimane(String s,String child,String FileCreationDate) throws IOException, SAXException, TikaException, SQLException, ParseException {
+	public static Map<String, String> Dimane(String s,String child,String FileCreationDate) throws IOException, SAXException, TikaException, SQLException, ParseException {
 		s=s.replaceAll(" ", " ").trim();
 		System.out.println("Im in Diag.mane.Dimane");
 
@@ -208,10 +208,9 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				mapAllDiag.put("HODQScore", HODQScore);
 				}
 
-
+				System.out.println("mapAllDiag"+mapAllDiag);
 								  try {
 									String tab="Diag";
-									    ////System.out.println("mapAllDiag"+mapAllDiag);
 									    DBConnectorForAll ConnectMeUp = new DBConnectorForAll();
 										Statement st=ConnectMeUp.Connector(HospNum,FName,SName,DOB);
 										String first=ConnectMeUp.StringInsertKeyPreparer(st,mapAllDiag,tab);
@@ -223,6 +222,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 								} catch (Exception e) {
 									Logger.error(e+HospNum+"->From Diag"+child);
 								}
+								return mapAllDiag;
 	}
 
 }

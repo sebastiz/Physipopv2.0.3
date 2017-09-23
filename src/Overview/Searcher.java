@@ -183,7 +183,7 @@ public class Searcher {
 	public static String DOB_searcher(String s) throws IOException, SQLException {
 		String DOB=null;
 		String DOB1="DOB?\\s/?\\sAge:\\n\\t(.*)";
- 		String DOB2="DOB??\\s/?\\sAge: (.*)Operator|Physiologist|Technician|Dr";
+ 		String DOB2="DOB?\\s/?\\sAge: (.*)Operator|Physiologist|Technician|Dr";
  		String DOB3="DOB?\\s/?\\sAge:\\n(.*)";
  		String DOB4="D\\.O\\.B(.*)?,";
  		String DOB5="DOB?\\s/?\\sAge: (.*)Physiologist";
@@ -196,6 +196,7 @@ public class Searcher {
  		String DOB12="DOB?\\s/?\\sAge:\\t(.*)";
  		String DOB13="DOB?\\s/?\\sAge:(.*)[A-Z]";
  		String DOB14="Date of Birth:(.*)";
+ 		String DOB15="DOB?\\s/?\\sAge:\\s\\d{2}.\\d{2}.\\d{4}";
 
  		DOB=Searcher.searcher(s,DOB1);
  		if(DOB==null){

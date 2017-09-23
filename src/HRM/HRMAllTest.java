@@ -105,6 +105,7 @@ public class HRMAllTest {
 		Map<String,String>  mapAllReportTest = new LinkedHashMap<String,String>();
 
 		String s=GetHRMFile(child_str);
+
 		mapAllReportTest=HRMAll.MainHRMExtractor(s, child_str);
 		System.out.println("mapAllReportReference "+mapAllReportReference);
 		System.out.println("mapAllReportTest "+mapAllReportTest);

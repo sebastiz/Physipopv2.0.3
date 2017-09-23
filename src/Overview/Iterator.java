@@ -241,11 +241,11 @@ public class Iterator {
 								}
 					        }
 //Endoscopy files....takes xlsx files....
-					        else if(child.getPath().contains("T6200")|child.getPath().contains("TCR2232")){
+					        else if(child.getPath().contains("T6200")|child.getPath().contains("TCR2232")|child.getPath().contains("Gastroscopy_Hi")){
 					        	try {
 					        		System.out.println(child.getName().trim()+"Im in endoscopy");
 
-					        		getFileCreationDate(child);
+					        		//getFileCreationDate(child);
 									EndoscopyExtractor.Endoscopy_mane(child.getPath());
 									HistopathExtractor.Histology_mane(child.getPath());
 									//System.out.println(child.getName().trim());

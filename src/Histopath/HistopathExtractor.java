@@ -63,82 +63,146 @@ public class HistopathExtractor {
 			XSSFRow row = (XSSFRow) rows.next ();
 			Iterator<Cell> cells = row.cellIterator ();
 
-//pattern for Histol
+//pattern for Histol---- this makes sure I'm only getting the histology pattern:
 
-            Pattern Histol_pattern = Pattern.compile("\\b(Diagnosis|DIAGNOSIS)\\b.*?(osinoph|Barrett.*)",Pattern.DOTALL);
+            Pattern Histol_pattern = Pattern.compile("\\b(NATURE|Nature)\\b.*\\b(Diagnosis|DIAGNOSIS)\\b.*?(?:osinoph|Barrett)",Pattern.DOTALL);
 			 while (cells.hasNext ()){
 				 XSSFCell cell = (XSSFCell) cells.next ();
-				// System.out.println("Im in the Histology section postWhile");
+
 				 Matcher matcherHistol_pattern = Histol_pattern.matcher(cell.toString());
 
 				 //Change this so its just adding the ones that have pathology////I think contains doesn't take regexes??
 				  if (matcherHistol_pattern.find()) {
-
+					  System.out.println("Im in the Histology section postWhile"+cell.toString());
 					  filteredRows.add(row);
 					  break;
 				 }
 			  }
 			 }
 
-
 			for (XSSFRow n:filteredRows){
+				 System.out.println("THE ROW is here");
 				Iterator<Cell> cells = n.cellIterator ();
 				 ArrayList<String> in =new ArrayList<String>();
 				 while (cells.hasNext ()){
+
 					 XSSFCell cell = (XSSFCell) cells.next ();
 					//in.add(cell.toString());
 
 					 //This comes from another cell so we will see if it can be maintained for the row . Perhaps clear map at the end of the row iteration?
-					 Pattern HospitalNumpattern = Pattern.compile("Hospital Number(.*)");
+					   Pattern HospitalNumpattern = Pattern.compile("Hospital Number(.*)");
 					    Matcher matcherHospitalNumpattern = HospitalNumpattern.matcher(cell.toString());
+					    Pattern ResultEntered_pattern = Pattern.compile("(?<!Birth:)\\s*((?:\\d{2}/\\d{2}/\\d{4}))");
+						Matcher matcherResultEntered_pattern = ResultEntered_pattern.matcher(cell.toString());
 
+					    System.out.println("THE CELL is here"+cell.toString());
 				    	if (matcherHospitalNumpattern.find()) {
 						    System.out.println("THE HospNum"+matcherHospitalNumpattern.group(1));
-				    		mapPathBarr.put("HospNum_Id",matcherHospitalNumpattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replaceAll(":", ""));
+				    		try {
+								mapPathBarr.put("HospNum_Id",matcherHospitalNumpattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replaceAll(":", ""));
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 				    	}
 
-					    Pattern VisitDate_pattern = Pattern.compile("Date of Procedure:(.*)");
-						Matcher matcherVisitDate_pattern = VisitDate_pattern.matcher(cell.toString());
-
-						if (matcherVisitDate_pattern.find()) {
+						if (matcherResultEntered_pattern.find()) {
 							//System.out.println("THE VisitDate"+matcherVisitDate_pattern.group(1));
-							mapPathBarr.put("VisitDate",matcherVisitDate_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
+							try {
+								mapPathBarr.put("ResultEntered",matcherResultEntered_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
+								mapPathBarr.put("VisitDate",matcherResultEntered_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
 
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
-
-
 					            Pattern BarrClinDetPath_pattern = Pattern.compile("(Clinical Information.*?)Macroscopic Description",Pattern.DOTALL);
 				                Matcher matcherBarrClinDetPath_pattern = BarrClinDetPath_pattern.matcher(cell.toString());
 
+				                Pattern BarrClinDetPath_pattern2 = Pattern.compile("(CLINICAL DETAILS.*?)MACROSCOPICAL DESCRIPTION",Pattern.DOTALL);
+				                Matcher matcherBarrClinDetPath_pattern2 = BarrClinDetPath_pattern2.matcher(cell.toString());
+
 						        if (matcherBarrClinDetPath_pattern.find()) {
 						    	    //in.add(matcherBarrClinDetPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-						    	   mapPathBarr.put("ClinDetails", matcherBarrClinDetPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-						    	    ////System.out.println("THE ClinDetails"+matcherBarrClinDetPath_pattern.group(1));
+						    	   try {
+									mapPathBarr.put("ClinDetails", matcherBarrClinDetPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									System.out.println("THE ClinDetails"+matcherBarrClinDetPath_pattern.group(1));
+						    	   } catch (Exception e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+						    	    ////
+						        }
+						        else if  (matcherBarrClinDetPath_pattern2.find()) {
+							    	   mapPathBarr.put("ClinDetails", matcherBarrClinDetPath_pattern2.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+
 						        }
 						        Pattern BarrMacroDescPath_pattern = Pattern.compile("(Macroscopic Description.*?)Microscopic Description",Pattern.DOTALL);
 							    Matcher matcherBarrMacroDescPath_pattern = BarrMacroDescPath_pattern.matcher(cell.toString());
 
+							    Pattern BarrMacroDescPath_pattern2 = Pattern.compile("(MACROSCOPICAL DESCRIPTION.*?)HISTOLOGY",Pattern.DOTALL);
+							    Matcher matcherBarrMacroDescPath_pattern2 = BarrMacroDescPath_pattern2.matcher(cell.toString());
+
 						    	if (matcherBarrMacroDescPath_pattern.find()) {
 								    //in.add(matcherBarrMacroDescPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-								    mapPathBarr.put("NatureOfSpec",matcherBarrMacroDescPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+								    try {
+										mapPathBarr.put("NatureOfSpec",matcherBarrMacroDescPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								    ////System.out.println("THE NatureOfSpec"+matcherBarrMacroDescPath_pattern.group(1));
+						    	}
+						    	else if (matcherBarrMacroDescPath_pattern2.find()){
+								    mapPathBarr.put("NatureOfSpec",matcherBarrMacroDescPath_pattern2.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+
 						    	}
 
 							    Pattern BarrHistolPath_pattern = Pattern.compile("(Microscopic Description.*?)Diagnosis",Pattern.DOTALL);
 								Matcher matcherBarrHistolPath_pattern = BarrHistolPath_pattern.matcher(cell.toString());
 
-								if (matcherBarrHistolPath_pattern.find()) {
+								Pattern BarrHistolPath_pattern2 = Pattern.compile("(HISTOLOGY.*?)DIAGNOSIS",Pattern.DOTALL);
+								Matcher matcherBarrHistolPath_pattern2 = BarrHistolPath_pattern2.matcher(cell.toString());
+
+								if  (matcherBarrHistolPath_pattern.find()) {
 									//in.add(matcherBarrHistolPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-									mapPathBarr.put("Histology",matcherBarrHistolPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									try {
+										mapPathBarr.put("Histology",matcherBarrHistolPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 									////System.out.println("THE Histology"+matcherBarrHistolPath_pattern.group(1));
 								}
-							    Pattern BarrDx_pattern = Pattern.compile("(Diagnosis.*Electronically)",Pattern.DOTALL);
+								else if (matcherBarrHistolPath_pattern2.find()){
+									mapPathBarr.put("Histology",matcherBarrHistolPath_pattern2.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+
+								}
+							    Pattern BarrDx_pattern = Pattern.compile("(Diagnosis.*)",Pattern.DOTALL);
 							    Matcher matcherBarrDx_pattern = BarrDx_pattern.matcher(cell.toString());
+
+							    Pattern BarrDx_pattern2 = Pattern.compile("(DIAGNOSIS.*)",Pattern.DOTALL);
+							    Matcher matcherBarrDx_pattern2 = BarrDx_pattern2.matcher(cell.toString());
 
 								if (matcherBarrDx_pattern.find()) {
 									//in.add(matcherBarrDx_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-									mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									try {
+										mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 									////System.out.println("THE Diagnosis"+matcherBarrDx_pattern.group(1));
+								}
+								else if (matcherBarrDx_pattern2.find()){
+									try {
+										mapPathBarr.put("Diagnosis", matcherBarrDx_pattern2.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+
 								}
 								try {
 									FName=Searcher.FName_searcher(cell.toString());
@@ -189,7 +253,7 @@ public class HistopathExtractor {
 									e.printStackTrace();
 								}
 							 try {
-								 VisitDate=mapPathBarr.get("VisitDate").toString().trim();
+								 VisitDate=mapPathBarr.get("ResultEntered").toString().trim();
 								 VisitDate=VisitDate.replace("\\", "_").replace("/","_");
 								 VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 								} catch (Exception e) {
@@ -203,16 +267,11 @@ public class HistopathExtractor {
 							 //Going to have to extract into a new map here from mapPathBarr to get the HistolDet table I think
 							 //Extract the NatureOfSpec and then do a find on that
 
-
-
-
-
-
 							 first=ConnectMeUp.StringInsertKeyPreparer(st,mapPathBarr,tab);
 							 second=ConnectMeUp.StringInsertValuePreparer(st,mapPathBarr,tab);
 							 //VisitDate=ResultPerformed;
 							 ////System.out.println("Checkers.VisitDateChecker "+Checkers.VisitDateChecker(st,tab,HospNum)+" VS VisitDate "+VisitDate);
-							 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(VisitDate)){
+							 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(ResultEntered)){
 								 int sharedkey=ConnectMeUp.Inserter(st,HospNum,first,second,tab,filepath);
 
 

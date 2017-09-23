@@ -68,22 +68,21 @@ public class EndoscopyExtractor {
 				 XSSFCell cell = (XSSFCell) cells.next ();
 
 //Adds whole endoscopy if any cell contains the term Barrett's RFA or APC or EMR
-				 if((cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&cell.toString().contains("Barrett"))) {
+				 if(cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&(cell.toString().contains("Barrett")|cell.toString().contains("osinoph"))) {
 					 //System.out.println("Barrett's endoscopy detected");
 					 filteredRows.add(row);
 					  break;
 
 				 }
 				 else if
-					 ((cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy"))&&((cell.toString().contains("RFA"))|(cell.toString().contains("APC"))|(cell.toString().contains("HALO")))){
-					 //System.out.println("cell.toString()"+cell.toString());
+				 //Convoluted as originally was picking up a lot of APC only. RFA and HALO sometimes dont't mention Barrett's being present
+					 ((cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy"))&&((cell.toString().contains("RFA"))|((cell.toString().contains("APC"))&&(cell.toString().contains("Barrett")))|(cell.toString().contains("HALO")))){
 					  filteredRows.add(row);
 					  break;
 				 }
 				 //Need to sort this one out so it extracts the eosinophilic endoscopies but figure out whether the EoE storage will mess up the Barrett's endoscopies
 				 else if
 				 (cell.toString().matches(".*osinoph.*")){
-					 //System.out.println("cell.toString()EOSINOPHILICS"+cell.toString());
 				  filteredRows.add(row);
 				  break;
 			 }
@@ -106,13 +105,11 @@ public class EndoscopyExtractor {
 						        if (matcherDOB_pattern.find()) {
 						    	    DOB=matcherDOB_pattern.group(1);
 						    	    mapEndoscBarr.put("DOB",DOB);
-						    	    //System.out.println("THE DOB"+matcherDOB_pattern.group(1));
 						        }
 						        Pattern HospitalNumpattern = Pattern.compile("Hospital Number(.*)");
 							    Matcher matcherHospitalNumpattern = HospitalNumpattern.matcher(cell.toString());
 
 						    	if (matcherHospitalNumpattern.find()) {
-								    //System.out.println("THE HospNum"+matcherHospitalNumpattern.group(1));
 								    mapEndoscBarr.put("HospNum_Id",matcherHospitalNumpattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replaceAll(":", ""));
 						    	}
 
@@ -120,7 +117,6 @@ public class EndoscopyExtractor {
 								Matcher matcherVisitDate_pattern = VisitDate_pattern.matcher(cell.toString());
 
 								if (matcherVisitDate_pattern.find()) {
-									//System.out.println("THE VisitDate"+matcherVisitDate_pattern.group(1));
 									mapEndoscBarr.put("VisitDate",matcherVisitDate_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
 
 								}
@@ -130,70 +126,51 @@ public class EndoscopyExtractor {
 								if (matcherEndoscopist_pattern.find()) {
 
 									mapEndoscBarr.put("ENDOSCOPIST",matcherEndoscopist_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-									//System.out.println("THE Endoscopist"+matcherEndoscopist_pattern.group(1));
 								}
 								 Pattern Endoscopist2_pattern = Pattern.compile("2nd Endoscopist:(.*)");
 								    Matcher matcherEndoscopist2_pattern = Endoscopist2_pattern.matcher(cell.toString());
 
 									if (matcherEndoscopist2_pattern.find()) {
-										//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
 										mapEndoscBarr.put("ENDOTWO",matcherEndoscopist2_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-										//System.out.println("THE Endoscopist2"+matcherEndoscopist2_pattern.group(1));
 									}
 									 Pattern Trainee_pattern = Pattern.compile("Trainee:(.*)");
 									    Matcher matcherTrainee_pattern = Trainee_pattern.matcher(cell.toString());
 
 										if (matcherTrainee_pattern.find()) {
-											//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
 											mapEndoscBarr.put("TRAINEE",matcherTrainee_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-											//System.out.println("THE Trainee"+matcherTrainee_pattern.group(1));
 										}
-										 Pattern Medication_pattern = Pattern.compile("Medications:(.*)");
-										    Matcher matcherMedication_pattern = Medication_pattern.matcher(cell.toString());
-
-											if (matcherMedication_pattern.find()) {
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE Medications"+matcherMedication_pattern.group(1));
-											}
 
 											Pattern Instrument_pattern = Pattern.compile("Instrument:(.*)");
 										    Matcher matcherInstrument_pattern = Instrument_pattern.matcher(cell.toString());
 
 											if (matcherInstrument_pattern.find()) {
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE Instrument"+matcherInstrument_pattern.group(1));
+
 											}
 											Pattern Indication_pattern = Pattern.compile("INDICATIONS FOR EXAMINATION(.*)PROCEDURE PERFORMED",Pattern.DOTALL);
 										    Matcher matcherIndication_pattern = Indication_pattern.matcher(cell.toString());
 
 											if (matcherIndication_pattern.find()) {
 												mapEndoscBarr.put("INDICATIONS",matcherIndication_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE Indications"+matcherIndication_pattern.group(1));
 											}
 											Pattern ProcPerf_pattern = Pattern.compile("PROCEDURE PERFORMED(.*)FINDINGS",Pattern.DOTALL);
 										    Matcher matcherProcPerf_pattern = ProcPerf_pattern.matcher(cell.toString());
 
 											if (matcherProcPerf_pattern.find()) {
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
 												mapEndoscBarr.put("ERPROCEDUREPERFORMED",matcherProcPerf_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-												//System.out.println("THE ProcPerf"+matcherProcPerf_pattern.group(1));
 											}
 											Pattern Findings_pattern = Pattern.compile("FINDINGS(.*)ENDOSCOPIC DIAGNOSIS",Pattern.DOTALL);
 										    Matcher matcherFindings_pattern = Findings_pattern.matcher(cell.toString());
 
 											if (matcherFindings_pattern.find()) {
 												mapEndoscBarr.put("ERFINDINGSSTR",matcherFindings_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE Findings"+matcherFindings_pattern.group(1));
+
 											}
 											Pattern EndDx_pattern = Pattern.compile("ENDOSCOPIC DIAGNOSIS(.*)RECOMMENDATIONS",Pattern.DOTALL);
 										    Matcher matcherEndDx_pattern = EndDx_pattern.matcher(cell.toString());
 
 											if (matcherEndDx_pattern.find()) {
 												mapEndoscBarr.put("ERDIAGNOSISSTR",matcherEndDx_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE EndoDx"+matcherEndDx_pattern.group(1));
+
 											}
 											Pattern Recommen_pattern = Pattern.compile("RECOMMENDATIONS(.*)COMMENTS",Pattern.DOTALL);
 										    Matcher matcherRecommen_pattern = Recommen_pattern.matcher(cell.toString());
@@ -201,24 +178,20 @@ public class EndoscopyExtractor {
 											if (matcherRecommen_pattern.find()) {
 
 												mapEndoscBarr.put("ERRECOMMENDATIONS",matcherRecommen_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-														//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
-												//System.out.println("THE Recommend"+matcherRecommen_pattern.group(1));
+
 											}
 											Pattern Comment_pattern = Pattern.compile("COMMENTS(.*)FOLLOW UP ",Pattern.DOTALL);
 										    Matcher matcherComment_pattern = Comment_pattern.matcher(cell.toString());
 
 											if (matcherComment_pattern.find()) {
 												in.add(matcherComment_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-												//mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1));
 												mapEndoscBarr.put("ERRECOMMENDATIONS",matcherComment_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
-												//System.out.println("THE Comment"+matcherComment_pattern.group(1));
 											}
 											Pattern FU_pattern = Pattern.compile("FOLLOW UP(.*)OPCS4 Code: ",Pattern.DOTALL);
 										    Matcher matcherFU_pattern = FU_pattern.matcher(cell.toString());
 
 											if (matcherFU_pattern.find()) {
 												in.add(matcherFU_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
-												//System.out.println("THE followup"+matcherFU_pattern.group(1));
 											}
 
 											try {
@@ -291,8 +264,6 @@ public class EndoscopyExtractor {
 														st=ConnectMeUp.Connector(HospNum,FName,SName,DOB);
 														 first=ConnectMeUp.StringInsertKeyPreparer(st,mapEndoscBarr,tab);
 														 second=ConnectMeUp.StringInsertValuePreparer(st,mapEndoscBarr,tab);
-														 System.out.println("CHECKTHEVISITDATE"+Checkers.VisitDateChecker(st,tab,HospNum)+VisitDate);
-
 														 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(VisitDate)){
 															ConnectMeUp.Inserter(st,HospNum,first,second,tab,filepath);
 
@@ -307,27 +278,6 @@ public class EndoscopyExtractor {
 			}
 
 			workBook2.close();
-///////////////////////////////////////// MAY NOT NEED THIS //////////////////////////////////////////////////////////////////
-			//Add each array to a HashMap
-			int adder=0;
-			for (List<String> n:out){
-				adder++;
-				if(adder % 5 == 0){
-					//System.out.println("Divisible by 2");
-					try {
-						System.gc();
-					Thread.sleep(500);
-
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-				}
-
-
-
-			 }
-///////////////////////////////////////// MAY NOT NEED THIS //////////////////////////////////////////////////////////////////
 
 	}
 }
