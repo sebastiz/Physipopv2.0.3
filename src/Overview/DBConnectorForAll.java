@@ -66,7 +66,7 @@ public class DBConnectorForAll {
 		 for (Entry<String, String> entry : map.entrySet()) {
 		System.out.println("THIS IS THE KEYpre: "+entry);
 
-		key = entry.getKey().replaceAll("\\s", "").replace(":","").replace("#" ,"").replaceAll("_" ,"").replace("(?<!^)-" ,"").replaceAll("\\)" ,"").replace("<","LessThan").replace(">","MoreThan").replace("__","").replaceAll("\\." ,"").replaceAll("\\(s\\)" ,"").replaceAll(",$" ,"").replaceAll("\\(" ,"").replaceAll("%" ,"").replace("@LESRmmHg","ATLESRmmHg").replace("@LESR,mmHg","ATLESRmmHg").replace("cm/s","cms").replaceAll("_cm_s","cms").trim();			//Messy solution to a weird thing with the Hospital number in the endoscopy reports where HospNum_Id gets converted to HospNumID although this doesnt happen anywhere else
+		key = entry.getKey().replaceAll("\\s", "").replace(":","").replace("#" ,"").replaceAll("_" ,"").replaceAll("-","").replace("(?<!^)-" ,"").replaceAll("\\)" ,"").replace("<","LessThan").replace(">","MoreThan").replace("__","").replaceAll("\\." ,"").replaceAll("\\(s\\)" ,"").replaceAll(",$" ,"").replaceAll("\\(" ,"").replaceAll("%" ,"").replace("@LESRmmHg","ATLESRmmHg").replace("@LESR,mmHg","ATLESRmmHg").replace("cm/s","cms").replaceAll("_cm_s","cms").trim();			//Messy solution to a weird thing with the Hospital number in the endoscopy reports where HospNum_Id gets converted to HospNumID although this doesnt happen anywhere else
 			 //key = entry.getKey().replaceAll("HospNumId", "HospNum_Id");
 			 //System.out.println("THIS IS THE KEYpre2: "+key);
 			 PostReplaceAllPreChes.add(key);

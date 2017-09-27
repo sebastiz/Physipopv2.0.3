@@ -300,7 +300,6 @@ System.out.println("MYSWALLOW"+mapSwallow);
 						match2=matchermatch_patternWhole.group(2).replaceAll("\\n", "").trim();
 								match3=match+"   "+match2;
 						seTab3_HRM=match3.split("\\s+(?=\\S*$)");
-						//System.out.println("MATCH3"+match3);
 					}
 					else if(matchermatch_patternWhole2.find()){
 						String match2;
@@ -312,7 +311,6 @@ System.out.println("MYSWALLOW"+mapSwallow);
 						match3=matchermatch_patternWhole3.group(0).replaceAll("\\n", "").trim();
 						seTab3_HRM=match3.split("\\s+(?=\\S*$)");
 					}
-					//System.out.println("seTab3_HRM;"+seTab3_HRM+"seTab3_HRM;");
 			return seTab3_HRM;
 	}
 }
