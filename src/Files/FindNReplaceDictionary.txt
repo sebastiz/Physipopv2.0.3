@@ -1,6 +1,5 @@
 Hospital Number:Hospital No
 Examination Date:Report date
-Examination Date:Report
 Examination Date:Examination Date date
 Belch :Belching
 Belch :BELCHING
@@ -67,7 +66,7 @@ Distal LES (from nares)(cm) :Distal LOS (from nares)
 Distal LES (from nares)(cm) :Dist LOS (fr. nares)
 Distal LES (from nares)(cm) :Dist LES (fr. nares)
 Distal LES (from nares)(cm) :Distal LES (from nares)
-Distal contractile integral(highest)(mmHg-cm-s) :Distal contr. integral(mmHg-cm-s)
+Distal contractile integral(mean)(mmHg-cm-s) :Distal contr. integral(mmHg-cm-s)
 Distal contractile integral(mean)(mmHg-cm-s):Distal contractile integral (mean)
 PIP (from nares)(cm) :PIP (fr. nares):
 PIP (from nares)(cm) :PIP (from nares)

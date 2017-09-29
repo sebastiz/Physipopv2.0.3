@@ -68,7 +68,6 @@ public class DBConnectorForAll {
 
 		key = entry.getKey().replaceAll("\\s", "").replace(":","").replace("#" ,"").replaceAll("_" ,"").replaceAll("-","").replace("(?<!^)-" ,"").replaceAll("\\)" ,"").replace("<","LessThan").replace(">","MoreThan").replace("__","").replaceAll("\\." ,"").replaceAll("\\(s\\)" ,"").replaceAll(",$" ,"").replaceAll("\\(" ,"").replaceAll("%" ,"").replace("@LESRmmHg","ATLESRmmHg").replace("@LESR,mmHg","ATLESRmmHg").replace("cm/s","cms").replaceAll("_cm_s","cms").trim();			//Messy solution to a weird thing with the Hospital number in the endoscopy reports where HospNum_Id gets converted to HospNumID although this doesnt happen anywhere else
 			 //key = entry.getKey().replaceAll("HospNumId", "HospNum_Id");
-			 //System.out.println("THIS IS THE KEYpre2: "+key);
 			 PostReplaceAllPreChes.add(key);
 		for (String n:chesney){
 			//System.out.println("THE KEYin DB::::"+n);
@@ -121,7 +120,6 @@ public class DBConnectorForAll {
 		 return value;
 	}
 
-
 	public void HospNumChecker(Statement st, String HospNum,String SName,String FName,String DOB) throws SQLException{
 		ArrayList<String> CheckHospNum =new ArrayList<String>();
 		String str = "select HospNum_Id from PatientData";
@@ -151,11 +149,6 @@ public class DBConnectorForAll {
 		else{
 		}
 				}
-
-
-
-
-
 
 	public ArrayList<String> Selector(Statement st, String HospNum,String table,String Field) throws SQLException{
 		String stg2 = "SELECT "+ Field+" FROM "+table+" Where HospNum_Id='"+HospNum+"'";

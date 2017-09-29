@@ -199,7 +199,7 @@ public class HRMAll {
 				mapAllReport.put("Height", Height);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
-				Logger.error(e1+HospNum+child);
+				Logger.error(e1+"No height here"+HospNum+child);
 				////System.out.println("ERROR no HEIGHT HERE for: "+HospNum);
 			}
 //Operator
@@ -233,7 +233,6 @@ public class HRMAll {
 
 			 }
 			 reader.close();
-			 System.out.println("MY MAPALLREPORT"+mapAllReport);
 		return mapAllReport;
 
 	}
@@ -283,9 +282,7 @@ System.out.println("MYSWALLOW"+mapSwallow);
 		 s=s.replaceAll(" :\\n", "").replaceAll("\\):", "");
 
 
-
 		 Pattern match_patternWhole = Pattern.compile("("+start.trim()+"?\\s*)(\\-?\\d+\\.\\d+|[Nn]\\/[Aa]|\\d+|Yes|No)?",Pattern.DOTALL);
-		 //System.out.println("HERE THE PATTERN"+"("+start.trim()+"?\\s*)(\\-?\\d+\\.\\d+|[Nn]\\/[Aa]|\\d+|Yes|No)?");
 		 Matcher matchermatch_patternWhole = match_patternWhole.matcher(s);
 			Pattern match_patternWhole2 = Pattern.compile("      ("+start.trim()+"\\s*)(\\S+)",Pattern.DOTALL);
 			Matcher matchermatch_patternWhole2 = match_patternWhole2.matcher(s);

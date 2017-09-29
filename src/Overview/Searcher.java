@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.commons.lang3.StringUtils;
 import org.pmw.tinylog.Logger;
 
 public class Searcher {
@@ -22,8 +24,8 @@ public class Searcher {
 				}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("The searcher couldn't find this"+e);
-			Logger.error(e+"The searcher couldn't find this "+searchPattern);
+			//System.out.println("The searcher couldn't find this"+e);
+			//Logger.error(e+"The searcher couldn't find this "+searchPattern);
 		}
 		return match;
 	}
@@ -79,12 +81,20 @@ public class Searcher {
  		String VisitDate3="Study Date:.*(\\d+\\/\\d+\\/\\d+)";
  		String VisitDate4="Study Date: (.*?)";
  		String VisitDate5="Study Date:.*\n(.*?)";
- 		String VisitDate6="";
+ 		String VisitDate6="Examination Date.*?\\d{2}.?{2}?.\\d{4}";
+ 		String VisitDate7="Examination.*?[Dd]ate.+?(\\d{2}.\\d{2}.\\d{4})";
+ 		String VisitDate8="Report.*?[Dd]ate.+?(\\d{2}.\\d{2}.\\d{4})";
 
  		try {
  			VisitDate=Searcher.threeOption_searcher(s,VisitDate1,VisitDate2,VisitDate3);
- 			if(VisitDate==null){
+ 			if(VisitDate==null|StringUtils.isEmpty(VisitDate)){
  				VisitDate=Searcher.threeOption_searcher(s,VisitDate4,VisitDate5,VisitDate6);
+ 				if(VisitDate==null|StringUtils.isEmpty(VisitDate)){
+ 					VisitDate=Searcher.multiline_searcher(s,VisitDate7);
+ 					if(VisitDate==null|StringUtils.isEmpty(VisitDate)){
+ 	 					VisitDate=Searcher.multiline_searcher(s,VisitDate8);
+ 	 				}
+ 				}
  			}
 		} catch (Exception e3) {
 		}
@@ -183,20 +193,20 @@ public class Searcher {
 	public static String DOB_searcher(String s) throws IOException, SQLException {
 		String DOB=null;
 		String DOB1="DOB?\\s/?\\sAge:\\n\\t(.*)";
- 		String DOB2="DOB?\\s/?\\sAge: (.*)Operator|Physiologist|Technician|Dr";
+ 		String DOB2="DOB?\\s/?\\sAge:.+?(\\d{2}.\\d{2}.\\d{4})";
  		String DOB3="DOB?\\s/?\\sAge:\\n(.*)";
  		String DOB4="D\\.O\\.B(.*)?,";
  		String DOB5="DOB?\\s/?\\sAge: (.*)Physiologist";
  		String DOB6="DOB?\\s/?\\sAge: (.*)Technician";
  		String DOB7="DOB(?:_|:)(.*)";
- 		String DOB8="Birth Date:(.*)Operator";
+ 		String DOB8="Birth Date:.+?(\\d{2}.\\d{2}.\\d{4})";
  		String DOB9="Birth Date:(.*)Technician";
  		String DOB10="Birth Date:\\n(.*)Technician";
- 		String DOB11="D\\.O\\.B:(.*)";
+ 		String DOB11="D\\.O\\.B:(.+?(\\d{2}.\\d{2}.\\d{4}))";
  		String DOB12="DOB?\\s/?\\sAge:\\t(.*)";
  		String DOB13="DOB?\\s/?\\sAge:(.*)[A-Z]";
- 		String DOB14="Date of Birth:(.*)";
- 		String DOB15="DOB?\\s/?\\sAge:\\s\\d{2}.\\d{2}.\\d{4}";
+ 		String DOB14="Date of Birth:.+?(\\d{2}.\\d{2}.\\d{4})";
+ 		String DOB15="DOB?\\s/?\\sAge:.+?(\\d{2}.\\d{2}.\\d{4})";
 
  		DOB=Searcher.searcher(s,DOB1);
  		if(DOB==null){
