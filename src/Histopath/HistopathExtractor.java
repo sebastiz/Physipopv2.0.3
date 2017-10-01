@@ -41,7 +41,6 @@ public class HistopathExtractor {
 		String HospNum=null;
 		String DOB=null;
 		String VisitDate=null;
-		String ResultEntered=null;
 		//Add each array to a HashMap
 	       Map<String,String> mapPathBarr= new LinkedHashMap<String,String>();
 		//Take the spreadsheet and look at the visitDate

@@ -27,7 +27,8 @@ import HRM.HRMAll;
 
 public class maneDiagTest {
 //remove this comment- just for github.
-	File child = new File("//Users//sebastianzeki//Documents//PhysJava/Dumper_final//Trial//MEDAIYESE Esther_1392879Q_28042016_Final report.pdf");
+	File child = new File("//Users//sebastianzeki//Documents//PhysJava//BugFolder - Copy//BugFolder - Copy//MEDAIYESE Esther_1392879Q_28042016_Final report.pdf");
+
 	String child_str=child.getPath();
 
 	public String GetHRMFile(String child) throws IOException, SAXException, TikaException{

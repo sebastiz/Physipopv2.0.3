@@ -63,15 +63,14 @@ public class HistopathExtraxtorOld {
 			 while (cells.hasNext ()){
 				 XSSFCell cell = (XSSFCell) cells.next ();
 				  if (cell.toString().contains("Barrett")) {
+
+					  System.out.println("Im in old Histopath");
 					  filteredRows.add(row);
 			        }
 			  }
 			 }
 
-
-
 			ArrayList<List<String>> out = new ArrayList<List<String>>();
-
 			for (XSSFRow n:filteredRows){
 				Iterator<Cell> cells = n.cellIterator ();
 				 ArrayList<String> in =new ArrayList<String>();
