@@ -29,7 +29,7 @@ String s=null;
 int sharedkey;
 
 	public mane() {
-		
+
 		PDFont.clearResources();
 		System.gc();
 	}
@@ -46,14 +46,15 @@ int sharedkey;
 
         	try {
                 HospNum=Overview.Searcher.HospNo_searcher(s);
-                if(HospNum==""|HospNum==null|HospNum.equals("0207188419")){
+                if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
                 	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
         			 }
 
 
+
         			} catch (Exception e2) {
         				// TODO Auto-generated catch block
-        				Logger.error(e2+"Couldn't get the hospital number"+child);
+        				Logger.error(e2+"Couldn't get the hospital number-is this a private patient"+child);
         			}
 
 

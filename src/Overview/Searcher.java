@@ -84,6 +84,7 @@ public class Searcher {
  		String VisitDate6="Examination Date.*?\\d{2}.?{2}?.\\d{4}";
  		String VisitDate7="Examination.*?[Dd]ate.+?(\\d{2}.\\d{2}.\\d{4})";
  		String VisitDate8="Report.*?[Dd]ate.+?(\\d{2}.\\d{2}.\\d{4})";
+ 		String VisitDate9="Report:.+?(\\d{2}.\\d{2}.\\d{4})";
 
  		try {
  			VisitDate=Searcher.threeOption_searcher(s,VisitDate1,VisitDate2,VisitDate3);
@@ -93,6 +94,9 @@ public class Searcher {
  					VisitDate=Searcher.multiline_searcher(s,VisitDate7);
  					if(VisitDate==null|StringUtils.isEmpty(VisitDate)){
  	 					VisitDate=Searcher.multiline_searcher(s,VisitDate8);
+ 	 					if(VisitDate==null|StringUtils.isEmpty(VisitDate)){
+ 	 	 					VisitDate=Searcher.multiline_searcher(s,VisitDate9);
+ 	 	 				}
  	 				}
  				}
  			}

@@ -39,7 +39,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 		mapAllDiag.clear();
 		 try {
 	         HospNum=Overview.Searcher.HospNo_searcher(s);
-                if(HospNum==""|HospNum==null|HospNum.equals("0207188419")){
+	         if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
                 	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 					 }
 					} catch (Exception e2) {

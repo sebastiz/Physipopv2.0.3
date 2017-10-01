@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -118,11 +119,10 @@ public class mane {
 		}
 
 		 ExtractTotal(docSlim,day);
-		//System.out.println("Returned Total"+Total);
+		System.out.println("Returned Total"+Total);
 		 for (int ff=0;ff<Total.size();ff++){
 			 mapReflDayOneandTwo.put(Total.get(ff).get(0),Total.get(ff).get(1));
 			 //Total=null;
-
 				  }
 		ExtractUpright(docSlim,day);
 		for (int ff=0;ff<Upright.size();ff++){
@@ -367,8 +367,8 @@ public class mane {
 
 		ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 		while (matcherTotal_pattern.find()) {
-
-			seTab3Landmarks=matcherTotal_pattern.group(1).split("\\n|\\r");
+			String match2=matcherTotal_pattern.group(1).replaceAll("\\n\\n", "\n");
+			seTab3Landmarks=match2.split("\\n|\\r");
 		}
 		for (String n:seTab3Landmarks){
 			s=NameChangeMapping(n);
@@ -409,9 +409,13 @@ public class mane {
 		Matcher matcherTotal_pattern = Total_pattern.matcher(docSlim);
 		ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 		while (matcherTotal_pattern.find()) {
-			//System.out.println("Success");
-			seTab3Landmarks=matcherTotal_pattern.group(1).split("\\n|\\r");
+			//This gets rid of empty strings from the find so not included in the array after the split
+			String match2=matcherTotal_pattern.group(1).replaceAll("\\n\\n", "\n");
+			seTab3Landmarks=match2.split("\\n|\\r");
 		}
+
+
+
 		for (String n:seTab3Landmarks){
 			//System.out.println("NNNNNN"+n);
 			if(n.contains("Number of refluxes per hour")){
@@ -459,7 +463,8 @@ public class mane {
 		ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 
 		while (matcherUpright_pattern.find()) {
-			seTab3Landmarks=matcherUpright_pattern.group(1).split("\\n|\\r");
+			String match2=matcherUpright_pattern.group(1).replaceAll("\\n\\n", "\n");
+			seTab3Landmarks=match2.split("\\n|\\r");
 		}
 		for (String n:seTab3Landmarks){
 			if(n.contains("Number of refluxes per hour")){
@@ -506,7 +511,8 @@ public class mane {
 		ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 
 		while (matcherSupine_pattern.find()) {
-			seTab3Landmarks=matcherSupine_pattern.group(1).split("\\n|\\r");
+			String match2=matcherSupine_pattern.group(1).replaceAll("\\n\\n", "\n");
+			seTab3Landmarks=match2.split("\\n|\\r");
 
 		}
 		for (String n:seTab3Landmarks){
@@ -553,7 +559,8 @@ public class mane {
 		seTab3Landmarks=null;
 		ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 		while (matcherPostprandial_pattern.find()) {
-			seTab3Landmarks=matcherPostprandial_pattern.group(1).split("\\n|\\r");
+			String match2=matcherPostprandial_pattern.group(1).replaceAll("\\n\\n", "\n");
+			seTab3Landmarks=match2.split("\\n|\\r");
 			//System.out.println("AM I JUST STEALING STUFF FROM SOMEONE ELSE? " );
 		}
 		for (String n:seTab3Landmarks){
@@ -604,6 +611,8 @@ public class mane {
 		//Horrible bit of code to get the symptoms in order
 		if (matcherSymptomsTable_pattern.find()) {
 			String g="Symptom "+matcherSymptomsTable_pattern.group(1);
+			//String match2=matcherTotal_pattern.group(1).replaceAll("\\n\\n", "\n");
+
 			//System.out.println("LOOK AT G1"+g);
 			g=g.replaceAll("\\(.*\\)", "").replaceAll("\\n", "").replaceAll("\\s{2,}", " ").replaceAll("[Bb]loated", "").replaceAll("[Tt]rapped", "");
 			//System.out.println("LOOK AT G"+g);
@@ -622,7 +631,8 @@ public class mane {
 
 			Arr2d.add(temp);
 		//Add the rest of the match to a simple ArrayList
-			for(String n:matcherSymptomsTable_pattern.group(2).split("\\n|\\r")){
+			for(String n:matcherSymptomsTable_pattern.group(2).replaceAll("\\n\\n", "\n").split("\\n|\\r")){
+
 				mashup.add(n.trim());
 				}
 			//System.out.println("mashup"+mashup);
@@ -748,7 +758,7 @@ public class mane {
 	public String HospNum(String doc) throws IOException, SQLException {
 		try {
         HospNum=Overview.Searcher.HospNo_searcher(doc);
-        if(HospNum==""|HospNum==null|HospNum.equals("0207188419")){
+        if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
         	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 			 }
 			} catch (Exception e2) {

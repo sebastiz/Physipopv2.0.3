@@ -99,7 +99,7 @@ public class HRMAll {
 	public static Map<String, String> MainHRMExtractor(String s,String child) throws IOException, SQLException{
 		try {
 	         HospNum=Overview.Searcher.HospNo_searcher(s);
-               if(HospNum==""|HospNum==null|HospNum.equals("0207188419")){
+	         if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
                	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 					 }
 			} catch (Exception e3) {
@@ -199,7 +199,7 @@ public class HRMAll {
 				mapAllReport.put("Height", Height);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
-				Logger.error(e1+"No height here"+HospNum+child);
+				//Logger.error(e1+"No height here"+HospNum+child);
 				////System.out.println("ERROR no HEIGHT HERE for: "+HospNum);
 			}
 //Operator
