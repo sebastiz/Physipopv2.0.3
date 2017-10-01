@@ -165,10 +165,38 @@ public class Iterator {
 
 
 
+//Endoscopy files....takes xlsx files....
+					        if(child.getPath().contains("T6200")||child.getPath().contains("TCR2232")||child.getPath().contains("Gastroscopy_Hi")){
+					        	try {
+					        		System.out.println(child.getName().trim()+"Im in endoscopy");
+
+					        		//getFileCreationDate(child);
+									EndoscopyExtractor.Endoscopy_mane(child.getPath());
+									HistopathExtractor.Histology_mane(child.getPath());
+									//System.out.println(child.getName().trim());
+								} catch (Exception e) {
+									Logger.error(e+child.getName());
+
+								}
+					        }
+
+//Old Barrett's surveillance files
+					        else if(child.getPath().contains("BarrettsSurveillanceReport2010To2016")){
+					        	try {
+					        		////System.out.println("Yes being processed Surveillance report");
+					        		//getFileCreationDate(child);
+					        		EndoscopyExtractorOld.Endoscopy_mane(child.getPath());
+									HistopathExtraxtorOld.Histology_mane(child.getPath());
+
+								} catch (Exception e) {
+									////System.out.println("The histology import ain't happening here bud");
+									Logger.error(e+child.getName());
+								}
+					        }
 
 
 //For newer Bravo files
-					        if(s.contains("pH Analysis Thresholds")
+					        else if(s.contains("pH Analysis Thresholds")&&!s.contains("ENDOSCOPIC DIAGNOSIS")
 					        		&&!child.getName().trim().contains("Chph")
 					        		&&!child.getName().trim().contains("ChPh")
 					        		&&!child.getName().trim().contains("PAE")
@@ -200,7 +228,7 @@ public class Iterator {
 							}
 					        }
 //Older BRAVO files
-					       else if(s.contains("Fraction Time pH <4")&&!s.contains("Reflux Table - pH")&&s.contains("Day")&&!s.contains("Reflux Table - Proximal")){
+					       else if(s.contains("Fraction Time pH <4")&&!s.contains("Reflux Table - pH")&&!s.contains("ENDOSCOPIC DIAGNOSIS")&&s.contains("Day")&&!s.contains("Reflux Table - Proximal")){
 
 					        	Bravo.maneOld g=new Bravo.maneOld();
 
@@ -208,7 +236,7 @@ public class Iterator {
 
 					        }
 //Surgical files
-					       else if(child.getName().contains("Galaxy")){
+					       else if(child.getName().contains("Galaxy")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 
 					        	//Surgery.Procedures p=new Surgery.Procedures();
 					        	getFileCreationDate(child);
@@ -216,7 +244,7 @@ public class Iterator {
 
 					        }
 //Impedance files
-					        else if(s.contains("Impedance")){
+					        else if(s.contains("Impedance")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	 try {
 									if (child.getPath().contains("rtf")){
 										System.out.println("File now being dealt with"+getFileCreationDate(child));
@@ -228,7 +256,7 @@ public class Iterator {
 								}
 					        }
 //Breath Test files
-					        else if(s.contains("Breath Test")&&!s.contains("Breath Test Technician")){
+					        else if(s.contains("Breath Test")&&!s.contains("Breath Test Technician")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	try {
 									BreathTest.mane b= new BreathTest.mane();
 
@@ -240,46 +268,10 @@ public class Iterator {
 									Logger.error(e+child.getName());
 								}
 					        }
-//Endoscopy files....takes xlsx files....
-					        else if(child.getPath().contains("T6200")|child.getPath().contains("TCR2232")|child.getPath().contains("Gastroscopy_Hi")){
-					        	try {
-					        		System.out.println(child.getName().trim()+"Im in endoscopy");
 
-					        		//getFileCreationDate(child);
-									EndoscopyExtractor.Endoscopy_mane(child.getPath());
-									HistopathExtractor.Histology_mane(child.getPath());
-									//System.out.println(child.getName().trim());
-								} catch (Exception e) {
-									Logger.error(e+child.getName());
-
-								}
-					        }
-
-//Old Barrett's surveillance files
-					        if(child.getPath().contains("BarrettsSurveillanceReport2010To2016")){
-					        	try {
-					        		////System.out.println("Yes being processed Surveillance report");
-					        		//getFileCreationDate(child);
-					        		EndoscopyExtractorOld.Endoscopy_mane(child.getPath());
-									HistopathExtraxtorOld.Histology_mane(child.getPath());
-
-								} catch (Exception e) {
-									////System.out.println("The histology import ain't happening here bud");
-									Logger.error(e+child.getName());
-								}
-					        }
-//The big Barrett's surveillance file:
-
-					        if(child.getPath().contains("BarrettEndoscopyPatients2010To2016")){
-					        	try {
-
-								} catch (Exception e) {
-									Logger.error("getFileCreationDate"+e+child.getName());
-								}
-					        }
 
 //HRM
-					        else if(s.contains("nares")&&!s.contains("Indications")&&!s.contains("RECALL")){
+					        else if(s.contains("nares")&&!s.contains("Indications")&&!s.contains("RECALL")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	//do Something for HRM
 					        	System.out.println("SEND SEND SEND send to HRM ONLY");
 					        	s=Checkers.FindNReplace(s);
@@ -299,7 +291,7 @@ public class Iterator {
 					        //will not be entered into the database (so won't displace this one
 					        else if((child.getPath().contains("final")
 					        		||child.getPath().contains("FINAL")
-					        		||child.getPath().contains("Final"))&&s.contains("nares")&&s.contains("Indications")){
+					        		||child.getPath().contains("Final"))&&s.contains("nares")&&s.contains("Indications")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	System.out.println("Caught in Diag"+child.getName());
 					        	s=Checkers.FindNReplace(s);
 					        	try {
@@ -341,7 +333,7 @@ public class Iterator {
 								}
 					        }
 //Just diag
-					        else if(s.contains(("Indications"))&&!s.contains("nares")&&!s.contains("HISTOLOGY")&&!s.contains("Analysis Thresholds Channel")){
+					        else if(s.contains(("Indications"))&&!s.contains("nares")&&!s.contains("HISTOLOGY")&&!s.contains("ENDOSCOPIC DIAGNOSIS")&&!s.contains("Analysis Thresholds Channel")){
 					        	try {
 					        		//Just for Diag
 					        		System.out.println("SEND SEND SEND send to MANE");

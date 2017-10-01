@@ -270,8 +270,8 @@ public class HistopathExtractor {
 							 first=ConnectMeUp.StringInsertKeyPreparer(st,mapPathBarr,tab);
 							 second=ConnectMeUp.StringInsertValuePreparer(st,mapPathBarr,tab);
 							 //VisitDate=ResultPerformed;
-							 ////System.out.println("Checkers.VisitDateChecker "+Checkers.VisitDateChecker(st,tab,HospNum)+" VS VisitDate "+VisitDate);
-							 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(ResultEntered)){
+							System.out.println("Checkers.VisitDateChecker "+Checkers.VisitDateChecker(st,tab,HospNum)+" VS VisitDate "+VisitDate);
+							 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(VisitDate)){
 								 int sharedkey=ConnectMeUp.Inserter(st,HospNum,first,second,tab,filepath);
 
 
