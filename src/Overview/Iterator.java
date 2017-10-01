@@ -51,7 +51,7 @@ public class Iterator {
 		Preferences userPrefs = Preferences.userNodeForPackage(TBB_SQLBuilder.class);
 		//Load up the error log
 
-		org.pmw.tinylog.writers.FileWriter fwError= new org.pmw.tinylog.writers.FileWriter(userPrefs.get("PathForError", null),true);
+		org.pmw.tinylog.writers.FileWriter fwError= new org.pmw.tinylog.writers.FileWriter(userPrefs.get("PathForError", null),false);
 		Configurator.currentConfig().writer(fwError).level(Level.ERROR).formatPattern("{level}: {class}.{method}.{line}()\t{message}+{method}").maxStackTraceElements(5).activate();
 
 		filename=userPrefs.get("PathForLogger", null);

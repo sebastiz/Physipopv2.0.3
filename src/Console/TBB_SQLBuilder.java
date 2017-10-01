@@ -2223,9 +2223,6 @@ try {
 			public void actionPerformed(ActionEvent e) {
         		try {
         			System.out.println("Hi frmo the console");
-        			//System.setOut(printStream);
-      		       // System.setErr(printStream);
-
         			Iterator.main(null);
         			System.out.println("Over the iterator");
         			PDFont.clearResources();
@@ -2470,9 +2467,7 @@ try {
                 		JFileChooser fileChooser = new JFileChooser();
                         int returnValue = fileChooser.showOpenDialog(null);
                         if (returnValue == JFileChooser.APPROVE_OPTION) {
-                          File selectedFile = fileChooser.getSelectedFile();
-                          txtForError.setText(fileChooser.getCurrentDirectory().toString());
-                          //System.out.println(selectedFile.getName());
+                          txtForError.setText(fileChooser.getSelectedFile().getAbsolutePath().toString());
                         }
                 	}
                 });
