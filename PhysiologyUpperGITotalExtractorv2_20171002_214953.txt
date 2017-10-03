@@ -1,0 +1,69 @@
+WARNING - 21:49:53: Creating types 
+WARNING - 21:49:53: Initializing types
+WARNING - 21:50:05: Generic post-process : Creating usages and associations
+WARNING - 21:50:05: Generic post-process : Creating activities
+WARNING - 21:50:05: Saving .uml resource: 20171002_215005
+WARNING - 21:50:05: Finished saving .uml resource: 20171002_215005
+ERROR - 21:50:06: Multiple exceptions
+----- exceptions : ----------
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : No service registered under 'interface org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : Bad state for service 'org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService'. Expected 'initialized' found 'error'.
+----------------------------- 
+
+WARNING - 21:50:06: Creating class diagrams
+WARNING - 21:50:06: Creating activity diagrams
+WARNING - 21:50:06: Saving .notation resource
+WARNING - 21:50:06: Finished saving .notation resource
+WARNING - 21:50:06: Saving .di resource
+WARNING - 21:50:06: Finished saving .di resource
+WARNING - 21:50:07:    class diagram for packageImports
+WARNING - 21:50:50:    class diagram for PhysiologyUpperGITotalExtractorv2
+WARNING - 21:51:04:    class diagram for Algorithms
+WARNING - 21:51:17:    class diagram for Bravo
+WARNING - 21:51:29:    class diagram for BreathTest
+WARNING - 21:51:41:    class diagram for Console
+WARNING - 21:51:54:    class diagram for Diag
+WARNING - 21:52:06:    class diagram for Endoscopy
+WARNING - 21:52:18:    class diagram for HRM
+WARNING - 21:52:31:    class diagram for Histopath
+WARNING - 21:52:43:    class diagram for Impedance
+WARNING - 21:52:55:    class diagram for Overview
+WARNING - 21:53:09:    class diagram for Surgery
+WARNING - 21:53:27:    class diagram for java
+WARNING - 21:53:44:    class diagram for util
+WARNING - 21:53:56:    class diagram for regex
+WARNING - 21:54:02:    class diagram for prefs
+WARNING - 21:54:15:    class diagram for lang
+WARNING - 21:54:28:    class diagram for io
+WARNING - 21:54:40:    class diagram for sql
+WARNING - 21:54:53:    class diagram for text
+WARNING - 21:55:06:    class diagram for net
+WARNING - 21:55:19:    class diagram for nio
+WARNING - 21:55:29:    class diagram for file
+WARNING - 21:55:45:    class diagram for attribute
+WARNING - 21:56:00:    class diagram for awt
+WARNING - 21:56:14:    class diagram for event
+WARNING - 21:56:27:    class diagram for beans
+WARNING - 21:56:40:    class diagram for org
+WARNING - 21:56:53:    class diagram for pmw
+WARNING - 21:57:01:    class diagram for tinylog
+WARNING - 21:57:14:    class diagram for apache
+WARNING - 21:57:27:    class diagram for poi
+WARNING - 21:57:40:    class diagram for hwpf
+WARNING - 21:57:54:    class diagram for usermodel
+WARNING - 21:58:04:    class diagram for poifs
+WARNING - 21:58:18:    class diagram for filesystem
+WARNING - 21:58:31:    class diagram for ss
+WARNING - 21:58:44:    class diagram for usermodel
+WARNING - 21:58:55:    class diagram for xssf
+WARNING - 21:59:08:    class diagram for usermodel
+WARNING - 21:59:22:    class diagram for hssf
+WARNING - 21:59:35:    class diagram for usermodel
+WARNING - 21:59:43:    class diagram for tika
+WARNING - 21:59:56:    class diagram for exception
+WARNING - 22:00:09:    class diagram for metadata
+WARNING - 22:00:18:    class diagram for parser

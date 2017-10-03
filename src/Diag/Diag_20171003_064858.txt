@@ -1,0 +1,191 @@
+WARNING - 06:48:58: First conversion pass
+WARNING - 06:48:59: Second pass : generating package usages
+WARNING - 06:48:59: Saving .uml resource: 20171003_064859
+WARNING - 06:48:59: Finished saving .uml resource: 20171003_064859
+ERROR - 06:48:59: Multiple exceptions
+----- exceptions : ----------
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : No service registered under 'interface org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : Bad state for service 'org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService'. Expected 'initialized' found 'error'.
+----------------------------- 
+
+WARNING - 06:48:59: Creating class diagrams
+WARNING - 06:48:59:    class diagram for packageImports
+WARNING - 06:48:59: Creating activity diagrams
+WARNING - 06:48:59: Saving .notation resource
+WARNING - 06:48:59: Finished saving .notation resource
+WARNING - 06:48:59: Saving .di resource
+WARNING - 06:48:59: Finished saving .di resource
+WARNING - 06:49:13:    class diagram for Diag
+WARNING - 06:49:13:    class diagram for Diag
+WARNING - 06:49:15:    class diagram for org
+WARNING - 06:49:15:    class diagram for junit
+WARNING - 06:49:15:    class diagram for Assert
+WARNING - 06:49:15:    class diagram for apache
+WARNING - 06:49:15:    class diagram for pdfbox
+WARNING - 06:49:15:    class diagram for pdmodel
+WARNING - 06:49:15:    class diagram for font
+WARNING - 06:49:15:    class diagram for tika
+WARNING - 06:49:15:    class diagram for exception
+WARNING - 06:49:15:    class diagram for metadata
+WARNING - 06:49:15:    class diagram for parser
+WARNING - 06:49:15:    class diagram for sax
+WARNING - 06:49:15:    class diagram for xml
+WARNING - 06:49:15:    class diagram for sax
+WARNING - 06:49:15:    class diagram for pmw
+WARNING - 06:49:15:    class diagram for tinylog
+WARNING - 06:49:15:    class diagram for java
+WARNING - 06:49:15:    class diagram for io
+WARNING - 06:49:15:    class diagram for nio
+WARNING - 06:49:15:    class diagram for file
+WARNING - 06:49:15:    class diagram for attribute
+WARNING - 06:49:16:    class diagram for sql
+WARNING - 06:49:16:    class diagram for text
+WARNING - 06:49:16:    class diagram for util
+WARNING - 06:49:16:    class diagram for HRM
+WARNING - 06:49:16:    class diagram for Overview
+WARNING - 06:50:39: First conversion pass
+WARNING - 06:50:39: Second pass : generating package usages
+WARNING - 06:50:39: Saving .uml resource: 20171003_065039
+WARNING - 06:50:39: Finished saving .uml resource: 20171003_065039
+ERROR - 06:50:41: Multiple exceptions
+----- exceptions : ----------
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : No service registered under 'interface org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : Bad state for service 'org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService'. Expected 'initialized' found 'error'.
+----------------------------- 
+
+WARNING - 06:50:41: Creating class diagrams
+WARNING - 06:50:41: Creating activity diagrams
+WARNING - 06:50:41:    class diagram for packageImports
+WARNING - 06:50:41: Saving .notation resource
+WARNING - 06:50:41: Finished saving .notation resource
+WARNING - 06:50:41: Saving .di resource
+WARNING - 06:50:41: Finished saving .di resource
+WARNING - 06:50:56:    class diagram for Diag
+WARNING - 06:50:56:    class diagram for Diag
+WARNING - 06:50:58:    class diagram for org
+WARNING - 06:50:58:    class diagram for junit
+WARNING - 06:50:58:    class diagram for Assert
+WARNING - 06:50:58:    class diagram for apache
+WARNING - 06:50:58:    class diagram for pdfbox
+WARNING - 06:50:59:    class diagram for pdmodel
+WARNING - 06:50:59:    class diagram for font
+WARNING - 06:50:59:    class diagram for tika
+WARNING - 06:50:59:    class diagram for exception
+WARNING - 06:50:59:    class diagram for metadata
+WARNING - 06:50:59:    class diagram for parser
+WARNING - 06:50:59:    class diagram for sax
+WARNING - 06:50:59:    class diagram for xml
+WARNING - 06:50:59:    class diagram for sax
+WARNING - 06:51:00:    class diagram for pmw
+WARNING - 06:51:00:    class diagram for tinylog
+WARNING - 06:51:00:    class diagram for java
+WARNING - 06:51:00:    class diagram for io
+WARNING - 06:51:00:    class diagram for nio
+WARNING - 06:51:00:    class diagram for file
+WARNING - 06:51:00:    class diagram for attribute
+WARNING - 06:51:00:    class diagram for sql
+WARNING - 06:51:00:    class diagram for text
+WARNING - 06:51:00:    class diagram for util
+WARNING - 06:51:00:    class diagram for HRM
+WARNING - 06:51:00:    class diagram for Overview
+WARNING - 06:57:17: First conversion pass
+WARNING - 06:57:18: Second pass : generating package usages
+WARNING - 06:57:18: Saving .uml resource: 20171003_065718
+WARNING - 06:57:18: Finished saving .uml resource: 20171003_065718
+ERROR - 06:57:18: Multiple exceptions
+----- exceptions : ----------
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : No service registered under 'interface org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : Bad state for service 'org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService'. Expected 'initialized' found 'error'.
+----------------------------- 
+
+WARNING - 06:57:18: Creating class diagrams
+WARNING - 06:57:18: Creating activity diagrams
+WARNING - 06:57:18: Saving .notation resource
+WARNING - 06:57:18: Finished saving .notation resource
+WARNING - 06:57:18: Saving .di resource
+WARNING - 06:57:18: Finished saving .di resource
+WARNING - 06:57:18:    class diagram for packageImports
+WARNING - 06:57:26:    class diagram for Endoscopy
+WARNING - 06:57:26:    class diagram for Endoscopy
+WARNING - 06:57:28:    class diagram for java
+WARNING - 06:57:28:    class diagram for io
+WARNING - 06:57:28:    class diagram for sql
+WARNING - 06:57:28:    class diagram for util
+WARNING - 06:57:28:    class diagram for regex
+WARNING - 06:57:28:    class diagram for org
+WARNING - 06:57:29:    class diagram for apache
+WARNING - 06:57:29:    class diagram for poi
+WARNING - 06:57:29:    class diagram for ss
+WARNING - 06:57:29:    class diagram for usermodel
+WARNING - 06:57:29:    class diagram for xssf
+WARNING - 06:57:29:    class diagram for usermodel
+WARNING - 06:57:29:    class diagram for hssf
+WARNING - 06:57:29:    class diagram for usermodel
+WARNING - 06:57:29:    class diagram for pmw
+WARNING - 06:57:29:    class diagram for tinylog
+WARNING - 06:57:29:    class diagram for Overview
+WARNING - 06:57:43: First conversion pass
+WARNING - 06:57:44: Second pass : generating package usages
+WARNING - 06:57:44: Saving .uml resource: 20171003_065744
+WARNING - 06:57:44: Finished saving .uml resource: 20171003_065744
+ERROR - 06:57:44: Multiple exceptions
+----- exceptions : ----------
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+unknown : No service found under key 'org.eclipse.papyrus.infra.core.services.EditorLifecycleManager'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : No service registered under 'interface org.eclipse.papyrus.infra.core.editor.IMultiDiagramEditor'
+org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService : Bad state for service 'org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService'. Expected 'initialized' found 'error'.
+----------------------------- 
+
+WARNING - 06:57:44: Creating class diagrams
+WARNING - 06:57:44: Creating activity diagrams
+WARNING - 06:57:44: Saving .notation resource
+WARNING - 06:57:44: Finished saving .notation resource
+WARNING - 06:57:44: Saving .di resource
+WARNING - 06:57:44: Finished saving .di resource
+WARNING - 06:57:44:    class diagram for packageImports
+WARNING - 06:58:15:    class diagram for HRM
+WARNING - 06:58:15:    class diagram for HRM
+WARNING - 06:58:29:    class diagram for java
+WARNING - 06:58:29:    class diagram for io
+WARNING - 06:58:29:    class diagram for net
+WARNING - 06:58:29:    class diagram for nio
+WARNING - 06:58:29:    class diagram for file
+WARNING - 06:58:29:    class diagram for sql
+WARNING - 06:58:29:    class diagram for util
+WARNING - 06:58:29:    class diagram for regex
+WARNING - 06:58:29:    class diagram for prefs
+WARNING - 06:58:29:    class diagram for lang
+WARNING - 06:58:30:    class diagram for text
+WARNING - 06:58:30:    class diagram for org
+WARNING - 06:58:30:    class diagram for apache
+WARNING - 06:58:30:    class diagram for pdfbox
+WARNING - 06:58:30:    class diagram for pdmodel
+WARNING - 06:58:30:    class diagram for font
+WARNING - 06:58:30:    class diagram for tika
+WARNING - 06:58:30:    class diagram for exception
+WARNING - 06:58:30:    class diagram for metadata
+WARNING - 06:58:30:    class diagram for parser
+WARNING - 06:58:30:    class diagram for pdf
+WARNING - 06:58:30:    class diagram for sax
+WARNING - 06:58:30:    class diagram for xml
+WARNING - 06:58:30:    class diagram for sax
+WARNING - 06:58:30:    class diagram for pmw
+WARNING - 06:58:31:    class diagram for tinylog
+WARNING - 06:58:31:    class diagram for junit
+WARNING - 06:58:31:    class diagram for Assert
+WARNING - 06:58:31:    class diagram for Overview
+WARNING - 06:58:31:    class diagram for Console

@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_b4WRIKf1EeeZk4fxKbmTNw" name="Algorithms">
+  <elementImport xmi:id="_b5TTYaf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_b5TTYqf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6cKf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6caf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6cqf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6c6f1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6dKf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6daf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6dqf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_b5T6d6f1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_b5UhgKf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_b5Uhgaf1EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <packageImport xmi:id="_b5SsUKf1EeeZk4fxKbmTNw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_b5TTYKf1EeeZk4fxKbmTNw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_b5Uhgqf1EeeZk4fxKbmTNw" name="Algorithms">
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VIkKf1EeeZk4fxKbmTNw" name="HRMDx" visibility="public">
+      <elementImport xmi:id="_b5b2Q6f1EeeZk4fxKbmTNw" importedElement="_b5b2Qqf1EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_b5dEY6f1EeeZk4fxKbmTNw" importedElement="_b5dEYqf1EeeZk4fxKbmTNw" visibility="private"/>
+      <ownedAttribute xmi:id="_b5eSgKf1EeeZk4fxKbmTNw" name="LESmidpointfromnarescm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5h84qf1EeeZk4fxKbmTNw" name="LESmidpointfromnarescmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5ij8Kf1EeeZk4fxKbmTNw" name="ProximalLESfromnarescm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5lAMKf1EeeZk4fxKbmTNw" name="ProximalLESfromnarescmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5mOUKf1EeeZk4fxKbmTNw" name="DistalLESfromnarescm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5oDgKf1EeeZk4fxKbmTNw" name="DistalLESfromnarescmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5pRoKf1EeeZk4fxKbmTNw" name="LESlengthcm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5rt4Kf1EeeZk4fxKbmTNw" name="LESlengthcmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5s8AKf1EeeZk4fxKbmTNw" name="EsophageallengthLESUEScenterscm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5vYQKf1EeeZk4fxKbmTNw" name="EsophageallengthLESUEScenterscmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5wmYKf1EeeZk4fxKbmTNw" name="PIPfromnarescm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5zCoKf1EeeZk4fxKbmTNw" name="PIPfromnarescmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5zpsKf1EeeZk4fxKbmTNw" name="IntraabdominalLESlengthcm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b52tAKf1EeeZk4fxKbmTNw" name="IntraabdominalLESlengthcmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b53UEKf1EeeZk4fxKbmTNw" name="Hiatalhernia">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b54iMKf1EeeZk4fxKbmTNw" name="BasalrespiratoryminmmHg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b56-cKf1EeeZk4fxKbmTNw" name="BasalrespiratoryminmmHgi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b58MkKf1EeeZk4fxKbmTNw" name="UESMeanResidLocationcenterfrnarescm">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5-o0Kf1EeeZk4fxKbmTNw" name="UESMeanResidLocationcenterfrnarescmi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b5_P4Kf1EeeZk4fxKbmTNw" name="Numberofswallowsevaluated">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6BsIKf1EeeZk4fxKbmTNw" name="Numberofswallowsevaluatedi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6CTMKf1EeeZk4fxKbmTNw" name="DistalcontractileintegralhighestmmHgcms">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6EvcKf1EeeZk4fxKbmTNw" name="DistalcontractileintegralhighestmmHgcmsi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6FWgKf1EeeZk4fxKbmTNw" name="Contractilefrontvelocitycms" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6Jn8Kf1EeeZk4fxKbmTNw" name="Contractilefrontvelocitycmsi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6K2EKf1EeeZk4fxKbmTNw" name="IntraboluspressureATLESRmmHg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6NSUKf1EeeZk4fxKbmTNw" name="IntraboluspressureATLESRmmHgi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6Q8sKf1EeeZk4fxKbmTNw" name="failedChicagoClassification" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6SK0Kf1EeeZk4fxKbmTNw" name="failedChicagoClassificationi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6TY8Kf1EeeZk4fxKbmTNw" name="panesophagealpressurization">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6V1MKf1EeeZk4fxKbmTNw" name="panesophagealpressurizationi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6XDUKf1EeeZk4fxKbmTNw" name="prematurecontraction">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6aGoKf1EeeZk4fxKbmTNw" name="prematurecontractioni" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6atsKf1EeeZk4fxKbmTNw" name="rapidcontraction">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6dxAKf1EeeZk4fxKbmTNw" name="rapidcontractioni" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6e_IKf1EeeZk4fxKbmTNw" name="largebreaks" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6gNQKf1EeeZk4fxKbmTNw" name="largebreaksi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6g0UKf1EeeZk4fxKbmTNw" name="smallbreaks" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6iCcKf1EeeZk4fxKbmTNw" name="smallbreaksi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6jQkKf1EeeZk4fxKbmTNw" name="HRM_Id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6kesKf1EeeZk4fxKbmTNw" name="BasalrespiratorymeanmmHg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6niAKf1EeeZk4fxKbmTNw" name="BasalrespiratorymeanmmHgi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6owIKf1EeeZk4fxKbmTNw" name="ResidualmeanmmHg" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6p-QKf1EeeZk4fxKbmTNw" name="ResidualmeanmmHgi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6rMYKf1EeeZk4fxKbmTNw" name="ResidMeanbasalpressuremmHg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6tooKf1EeeZk4fxKbmTNw" name="ResidMeanbasalpressuremmHgi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b6u2wKf1EeeZk4fxKbmTNw" name="ResidMeanresidualpressuremmHg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b6zIMKf1EeeZk4fxKbmTNw" name="ResidMeanresidualpressuremmHgi" type="_b5h84af1EeeZk4fxKbmTNw"/>
+      <ownedAttribute xmi:id="_b60WUKf1EeeZk4fxKbmTNw" name="Distallatency" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b61kcKf1EeeZk4fxKbmTNw" name="Distallatencyi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b62ykKf1EeeZk4fxKbmTNw" name="DistalcontractileintegralmeanmmHgcms" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b64AsKf1EeeZk4fxKbmTNw" name="DistalcontractileintegralmeanmmHgcmsi" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b67rEKf1EeeZk4fxKbmTNw" name="VisitDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b69gQKf1EeeZk4fxKbmTNw" name="Diagnosis" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_b6-HUKf1EeeZk4fxKbmTNw" name="" value="null">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_b7BKoKf1EeeZk4fxKbmTNw" name="HRMDx" visibility="public"/>
+      <ownedOperation xmi:id="_b7MJwKf1EeeZk4fxKbmTNw" name="HRMDiag" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_b7MJwaf1EeeZk4fxKbmTNw" name="DCI" type="_b5b2Qqf1EeeZk4fxKbmTNw"/>
+        <ownedParameter xmi:id="_b7MJwqf1EeeZk4fxKbmTNw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VvoKf1EeeZk4fxKbmTNw" name="ImpDx" visibility="public">
+      <elementImport xmi:id="_b7S3cKf1EeeZk4fxKbmTNw" importedElement="_b5b2Qqf1EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_b7S3caf1EeeZk4fxKbmTNw" importedElement="_b5dEYqf1EeeZk4fxKbmTNw" visibility="private"/>
+      <ownedAttribute xmi:id="_b7UFkKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueUprightTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7UsoKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueRecumbentTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7V6wKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueTotalTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7Wh0Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueEpisodesOver5min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7XI4Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7YXAKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueTotalEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7Y-EKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreTotalEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7ZlIKf1EeeZk4fxKbmTNw" name="Imp_Id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7azQKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAcidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7baUKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAcidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7cocKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoNonacidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7dPgKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoNonacidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7frwKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAllRefluxTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7hg8Kf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAllRefluxPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7iIAKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoMedianBolusClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7jWIKf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7j9MKf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7kkQKf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoAllReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7lyYKf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationUpright">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7nAgKf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationRecumbent">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7nnkKf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationTotal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7o1sKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelNumberofAcidEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7qD0Kf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7rR8Kf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7r5AKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelMeanAcidClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7sgEKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7tHIKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoGastricChannelTimepHLessThan4">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7tuMKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoGastricChannelPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7uVQKf1EeeZk4fxKbmTNw" name="MainPtDataPatientName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7vjYKf1EeeZk4fxKbmTNw" name="MainPtDataPatientID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7wKcKf1EeeZk4fxKbmTNw" name="MainPtDataPhysician">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7xYkKf1EeeZk4fxKbmTNw" name="MainPtDataPatientSex">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7x_oKf1EeeZk4fxKbmTNw" name="MainPtDataDateofBirth">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7ymsKf1EeeZk4fxKbmTNw" name="MainPtDataPerformedby">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7z00Kf1EeeZk4fxKbmTNw" name="MainPtDataDateofAdmission">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b71C8Kf1EeeZk4fxKbmTNw" name="MainProcProcedureStart">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b72REKf1EeeZk4fxKbmTNw" name="MainProcProcedureDuration">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b73fMKf1EeeZk4fxKbmTNw" name="MainProcCatheterImpedanceSensorPositions">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b74tUKf1EeeZk4fxKbmTNw" name="MainProcCatheterpHSensorPosition">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b75UYKf1EeeZk4fxKbmTNw" name="MainProcCatheterDepth">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b77JkKf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationUpright">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b77woKf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationRecumbent">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b78-wKf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationTotal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7-M4Kf1EeeZk4fxKbmTNw" name="ProximalMigrationLevel">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b7_bAKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightUpright">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8ACEKf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentUpright">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8BQMKf1EeeZk4fxKbmTNw" name="MainProxExtentTotalUpright">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8CeUKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8ETgKf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8FhoKf1EeeZk4fxKbmTNw" name="MainProxExtentTotalAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8GvwKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8H94Kf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8JMAKf1EeeZk4fxKbmTNw" name="MainProxExtentTotalNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8LBMKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8MPUKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8OEgKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalAcid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8PSoKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8P5sKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8RH0Kf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalNonacid">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8SV8Kf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightAllReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8TkEKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentAllReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8UyMKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalAllReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8WAUKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelNumberofAcidEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8XOcKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelNumberofAcidEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8YckKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelNumberofAcidEpisodes">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8ZqsKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8a40Kf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8cG8Kf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8d8IKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8fKQKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8gYYKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8iNkKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelMeanAcidClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8kCwKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelMeanAcidClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8lQ4Kf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelMeanAcidClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8l38Kf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8ntIKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8piUKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8qwcKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightGastricChannelTimepHLessThan40">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8sloKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentGastricChannelTimepHLessThan40">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8tzwKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalGastricChannelTimepHLessThan40">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8vo8Kf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8xeIKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8zTUKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b80hcKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b82WoKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b84L0Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b85Z8Kf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b87PIKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b89EUKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b8-5gKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9AusKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9B80Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9DyAKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9FAIKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9G1UKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9IqgKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9KfsKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9MU4Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9NjAKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9PYMKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9RNYKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMinimum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9TCkKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9U3wKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9XUAKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMaximum">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9ZJMKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9a-YKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9cMgKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9eBsKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9gd8Kf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9iTIKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMedian">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9jhQKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9kIUKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9l9gKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelStandardDeviation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9nysKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9pn4Kf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9rdEKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9t5UKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreUprightTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9vugKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreRecumbentTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9xjsKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreTotalTimeInReflux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9zY4Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreEpisodesOver5min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b911IKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b94RYKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAcidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b96GkKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAcidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b977wKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAcidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b99J4Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAcidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b9-_EKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightNonacidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-ANMKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentNonacidTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-BbUKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightNonacidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-DQgKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentNonacidPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-FFsKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAllRefluxTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-G64Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAllRefluxTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-JXIKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAllRefluxPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-LzYKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAllRefluxPercentTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-NokKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightMedianBolusClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-QE0Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentMedianBolusClearanceTime">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-ShEKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-U9UKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentLongestEpisode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-XZkKf1EeeZk4fxKbmTNw" name="HospNum_Id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-YnsKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueUprightTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-Z10Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueRecumbentTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-bD8Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueTotalTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-c5IKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueEpisodesOver5mini">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-euUKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-hKkKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientValueTotalEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-jm0Kf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreTotalEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-mDEKf1EeeZk4fxKbmTNw" name="Imp_Idi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-ofUKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAcidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-rioKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAcidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-t-4Kf1EeeZk4fxKbmTNw" name="MainPPBolusExpoNonacidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-wbIKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoNonacidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-yQUKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAllRefluxTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-0FgKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoAllRefluxPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-2hwKf1EeeZk4fxKbmTNw" name="MainPPBolusExpoMedianBolusClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-3v4Kf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-5lEKf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b-8BUKf1EeeZk4fxKbmTNw" name="PPReflEpisodeActExpoAllRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b--dkKf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationUprighti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_Bg4Kf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationRecumbenti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_D9IKf1EeeZk4fxKbmTNw" name="MainPPPostprandExpoAnalysisDurationTotali">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_FyUKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelNumberofAcidEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_HAcKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_JcsKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_MgAKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelMeanAcidClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_OVMKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoClearanceChannelLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_QKYKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoGastricChannelTimepHLessThan4i">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_TNsKf1EeeZk4fxKbmTNw" name="MainPPAcidExpoGastricChannelPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_Vp8Kf1EeeZk4fxKbmTNw" name="MainPtDataPatientNamei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_YtQKf1EeeZk4fxKbmTNw" name="MainPtDataPatientIDi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_bJgKf1EeeZk4fxKbmTNw" name="MainPtDataPhysiciani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_eM0Kf1EeeZk4fxKbmTNw" name="MainPtDataPatientSexi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_hQIKf1EeeZk4fxKbmTNw" name="MainPtDataDateofBirthi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_kTcKf1EeeZk4fxKbmTNw" name="MainPtDataPerformedbyi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_nWwKf1EeeZk4fxKbmTNw" name="MainPtDataDateofAdmissioni">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_pzAKf1EeeZk4fxKbmTNw" name="MainProcProcedureStarti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_s2UKf1EeeZk4fxKbmTNw" name="MainProcProcedureDurationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_v5oKf1EeeZk4fxKbmTNw" name="MainProcCatheterImpedanceSensorPositionsi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_y88Kf1EeeZk4fxKbmTNw" name="MainProcCatheterpHSensorPositioni">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_2AQKf1EeeZk4fxKbmTNw" name="MainProcCatheterDepthi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_5DkKf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationUprighti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_8G4Kf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationRecumbenti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b_-jIKf1EeeZk4fxKbmTNw" name="MainReflxSettingsAnalysisDurationTotali">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAAYUKf1EeeZk4fxKbmTNw" name="ProximalMigrationLeveli">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cACNgKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightUprighti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAECsKf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentUprighti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAGe8Kf1EeeZk4fxKbmTNw" name="MainProxExtentTotalUprighti">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAJiQKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cANMoKf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAQP8Kf1EeeZk4fxKbmTNw" name="MainProxExtentTotalAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cASsMKf1EeeZk4fxKbmTNw" name="MainProxExtentUprightNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAVIcKf1EeeZk4fxKbmTNw" name="MainProxExtentRecumbentNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAYLwKf1EeeZk4fxKbmTNw" name="MainProxExtentTotalNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAbPEKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAe5cKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAij0Kf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalAcidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAlnIKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAoqcKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAqfoKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalNonacidi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAs74Kf1EeeZk4fxKbmTNw" name="MainRflxEpisodeUprightAllRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAv_MKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeRecumbentAllRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAzpkKf1EeeZk4fxKbmTNw" name="MainRflxEpisodeTotalAllRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cA2s4Kf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelNumberofAcidEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cA4iEKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelNumberofAcidEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cA6-UKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelNumberofAcidEpisodesi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cA8zgKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cA-osKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBBE8Kf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBEIQKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBHyoKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBK18Kf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBMrIKf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelMeanAcidClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBOgUKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelMeanAcidClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBRjoKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelMeanAcidClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBT_4Kf1EeeZk4fxKbmTNw" name="MainAcidExpUprightClearanceChannelLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBWcIKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentClearanceChannelLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBZfcKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalClearanceChannelLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBdJ0Kf1EeeZk4fxKbmTNw" name="MainAcidExpUprightGastricChannelTimepHLessThan40i">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBgNIKf1EeeZk4fxKbmTNw" name="MainAcidExpRecumbentGastricChannelTimepHLessThan40i">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBj3gKf1EeeZk4fxKbmTNw" name="MainAcidExpTotalGastricChannelTimepHLessThan40i">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBnh4Kf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBrMQKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBu2oKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cBzIEKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cB2LYKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cB51wKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cB9gIKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCBxkKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCEN0Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCH4MKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCMJoKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCN-0Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCSQQKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCWhsKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCYW4Kf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCdPYKf1EeeZk4fxKbmTNw" name="MainStatsUprightClearanceChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCg5wKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentClearanceChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCkkIKf1EeeZk4fxKbmTNw" name="MainStatsTotalClearanceChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCnncKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCqqwKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCuVIKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMinimumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cCzNoKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cC24AKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cC6iYKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMaximumi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cC-MwKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDBQEKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDETYKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMeani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDIk0Kf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDMPMKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDQgoKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelMediani">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDUyEKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDZDgKf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDdU8Kf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelStandardDeviationi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDhmYKf1EeeZk4fxKbmTNw" name="MainStatsUprightGastricChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDl30Kf1EeeZk4fxKbmTNw" name="MainStatsRecumbentGastricChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDqJQKf1EeeZk4fxKbmTNw" name="MainStatsTotalGastricChannelVariancei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDslgKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreUprightTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cDyFEKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreRecumbentTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cD2WgKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreTotalTimeInRefluxi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cD7PAKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreEpisodesOver5mini">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cD_gcKf1EeeZk4fxKbmTNw" name="MainAcidCompositeScorePatientScoreLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEEY8Kf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAcidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEIqYKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAcidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEM70Kf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAcidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEP_IKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAcidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEU3oKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightNonacidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEZJEKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentNonacidTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEdagKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightNonacidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEhE4Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentNonacidPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEl9YKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAllRefluxTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEq14Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAllRefluxTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEt5MKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightAllRefluxPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cEyxsKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentAllRefluxPercentTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cE4RQKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightMedianBolusClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cE9JwKf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentMedianBolusClearanceTimei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFCCQKf1EeeZk4fxKbmTNw" name="MainBolusExpoUprightLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFHh0Kf1EeeZk4fxKbmTNw" name="MainBolusExpoRecumbentLongestEpisodei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFNBYKf1EeeZk4fxKbmTNw" name="HospNum_Idi">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFR54Kf1EeeZk4fxKbmTNw" name="VisitDatei">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFXZcKf1EeeZk4fxKbmTNw" name="VisitDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cFdgEKf1EeeZk4fxKbmTNw" name="Diagnosis">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cFdgEaf1EeeZk4fxKbmTNw" name="" value="null">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_cFi_oKf1EeeZk4fxKbmTNw" name="ImpDx" visibility="public"/>
+      <ownedOperation xmi:id="_cFyQMKf1EeeZk4fxKbmTNw" name="ImpDiag" visibility="public">
+        <ownedParameter xmi:id="_cFyQMaf1EeeZk4fxKbmTNw" name="DCI">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cFyQMqf1EeeZk4fxKbmTNw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_cF6MAKf1EeeZk4fxKbmTNw" name="Algorithms_util" client="_b5Uhgqf1EeeZk4fxKbmTNw" supplier="_b5b2Qaf1EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_cF6zEKf1EeeZk4fxKbmTNw" name="Algorithms_tinylog" client="_b5Uhgqf1EeeZk4fxKbmTNw" supplier="_b5dEYaf1EeeZk4fxKbmTNw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_b5b2QKf1EeeZk4fxKbmTNw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_b5b2Qaf1EeeZk4fxKbmTNw" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_b5b2Qqf1EeeZk4fxKbmTNw" name="Map"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_b5h84Kf1EeeZk4fxKbmTNw" name="lang">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_b5h84af1EeeZk4fxKbmTNw" name="Double"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_b5cdUKf1EeeZk4fxKbmTNw" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_b5dEYKf1EeeZk4fxKbmTNw" name="pmw">
+      <packagedElement xmi:type="uml:Package" xmi:id="_b5dEYaf1EeeZk4fxKbmTNw" name="tinylog">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_b5dEYqf1EeeZk4fxKbmTNw" name="Logger"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

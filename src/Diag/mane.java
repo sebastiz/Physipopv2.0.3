@@ -208,7 +208,6 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				mapAllDiag.put("HODQScore", HODQScore);
 				}
 
-				System.out.println("mapAllDiag"+mapAllDiag);
 								  try {
 									String tab="Diag";
 									    DBConnectorForAll ConnectMeUp = new DBConnectorForAll();

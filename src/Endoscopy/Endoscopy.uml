@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VKSLwKf3EeeZk4fxKbmTNw" name="Endoscopy">
+  <elementImport xmi:id="_VLBLkKf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLkaf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLkqf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLk6f3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLlKf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLlaf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLlqf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLl6f3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLmKf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_VLBLmaf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_VLByoKf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_VLByoaf3EeeZk4fxKbmTNw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <packageImport xmi:id="_VLAkgKf3EeeZk4fxKbmTNw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_VLAkgaf3EeeZk4fxKbmTNw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VLCZsKf3EeeZk4fxKbmTNw" name="Endoscopy">
+    <packagedElement xmi:type="uml:Class" xmi:id="_VLDAwKf3EeeZk4fxKbmTNw" name="EndoscopyExtractor" visibility="public">
+      <elementImport xmi:id="_VMNeYqf3EeeZk4fxKbmTNw" importedElement="_VMNeYaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMOFcaf3EeeZk4fxKbmTNw" importedElement="_VMOFcKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMOsgaf3EeeZk4fxKbmTNw" importedElement="_VMOsgKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMPTkKf3EeeZk4fxKbmTNw" importedElement="_VMOsg6f3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMPTkqf3EeeZk4fxKbmTNw" importedElement="_VMPTkaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMP6oqf3EeeZk4fxKbmTNw" importedElement="_VMP6oaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMQhsaf3EeeZk4fxKbmTNw" importedElement="_VMQhsKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMRIwaf3EeeZk4fxKbmTNw" importedElement="_VMRIwKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMRv0af3EeeZk4fxKbmTNw" importedElement="_VMRv0Kf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMS98Kf3EeeZk4fxKbmTNw" importedElement="_VMSW4Kf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMTlAqf3EeeZk4fxKbmTNw" importedElement="_VMTlAaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMUMEaf3EeeZk4fxKbmTNw" importedElement="_VMUMEKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMUzJqf3EeeZk4fxKbmTNw" importedElement="_VMUzJaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMVaMaf3EeeZk4fxKbmTNw" importedElement="_VMVaMKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMWBQ6f3EeeZk4fxKbmTNw" importedElement="_VMWBQqf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMWoUKf3EeeZk4fxKbmTNw" importedElement="_VMWBRKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMWoUqf3EeeZk4fxKbmTNw" importedElement="_VMWoUaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMX2caf3EeeZk4fxKbmTNw" importedElement="_VMX2cKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMYdgqf3EeeZk4fxKbmTNw" importedElement="_VMYdgaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMZEkaf3EeeZk4fxKbmTNw" importedElement="_VMZEkKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMZroaf3EeeZk4fxKbmTNw" importedElement="_VMZroKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VMaSsqf3EeeZk4fxKbmTNw" importedElement="_VMaSsaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <ownedOperation xmi:id="_VMkqwKf3EeeZk4fxKbmTNw" name="EndoscopyExtractor" visibility="public"/>
+      <ownedOperation xmi:id="_VM0iYKf3EeeZk4fxKbmTNw" name="Endoscopy_mane" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_VM0iYaf3EeeZk4fxKbmTNw" name="filepath">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VLDn0Kf3EeeZk4fxKbmTNw" name="EndoscopyExtractorOld" visibility="public">
+      <elementImport xmi:id="_VNnzoKf3EeeZk4fxKbmTNw" importedElement="_VMNeYaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNnzoaf3EeeZk4fxKbmTNw" importedElement="_VMOFcKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNnzoqf3EeeZk4fxKbmTNw" importedElement="_VMOsgKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNoasKf3EeeZk4fxKbmTNw" importedElement="_VMOsg6f3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNoasaf3EeeZk4fxKbmTNw" importedElement="_VMPTkaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNoasqf3EeeZk4fxKbmTNw" importedElement="_VMP6oaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNoas6f3EeeZk4fxKbmTNw" importedElement="_VMQhsKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNoatKf3EeeZk4fxKbmTNw" importedElement="_VMRIwKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNsFEKf3EeeZk4fxKbmTNw" importedElement="_VMRv0Kf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNsFEaf3EeeZk4fxKbmTNw" importedElement="_VMSW4Kf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNsFEqf3EeeZk4fxKbmTNw" importedElement="_VMTlAaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNssIKf3EeeZk4fxKbmTNw" importedElement="_VMUMEKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNtTMaf3EeeZk4fxKbmTNw" importedElement="_VNtTMKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNt6QKf3EeeZk4fxKbmTNw" importedElement="_VNtTMqf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNuhUKf3EeeZk4fxKbmTNw" importedElement="_VNt6Qaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNuhUqf3EeeZk4fxKbmTNw" importedElement="_VNuhUaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNvIYKf3EeeZk4fxKbmTNw" importedElement="_VMUzJaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNvIYaf3EeeZk4fxKbmTNw" importedElement="_VMVaMKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNvvcKf3EeeZk4fxKbmTNw" importedElement="_VMYdgaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNvvcaf3EeeZk4fxKbmTNw" importedElement="_VMZEkKf3EeeZk4fxKbmTNw" visibility="private"/>
+      <elementImport xmi:id="_VNwWgKf3EeeZk4fxKbmTNw" importedElement="_VMaSsaf3EeeZk4fxKbmTNw" visibility="private"/>
+      <ownedOperation xmi:id="_VN1PAKf3EeeZk4fxKbmTNw" name="EndoscopyExtractorOld" visibility="public"/>
+      <ownedOperation xmi:id="_VODRcKf3EeeZk4fxKbmTNw" name="Endoscopy_mane" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_VODRcaf3EeeZk4fxKbmTNw" name="filepath">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOJ_IKf3EeeZk4fxKbmTNw" name="Endoscopy_io" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMNeYKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOJ_Iaf3EeeZk4fxKbmTNw" name="Endoscopy_sql" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMOsgqf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmMKf3EeeZk4fxKbmTNw" name="Endoscopy_util" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMP6oKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmMaf3EeeZk4fxKbmTNw" name="Endoscopy_regex" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMTlAKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmMqf3EeeZk4fxKbmTNw" name="Endoscopy_usermodel" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMUzJKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmM6f3EeeZk4fxKbmTNw" name="Endoscopy_usermodel" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMWBQaf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmNKf3EeeZk4fxKbmTNw" name="Endoscopy_Overview" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMYdgKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmNaf3EeeZk4fxKbmTNw" name="Endoscopy_tinylog" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VMaSsKf3EeeZk4fxKbmTNw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VOKmNqf3EeeZk4fxKbmTNw" name="Endoscopy_usermodel" client="_VLCZsKf3EeeZk4fxKbmTNw" supplier="_VNssIqf3EeeZk4fxKbmTNw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VMM3UKf3EeeZk4fxKbmTNw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_VMNeYKf3EeeZk4fxKbmTNw" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMNeYaf3EeeZk4fxKbmTNw" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMOFcKf3EeeZk4fxKbmTNw" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMOsgKf3EeeZk4fxKbmTNw" name="IOException"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VMOsgqf3EeeZk4fxKbmTNw" name="sql">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMOsg6f3EeeZk4fxKbmTNw" name="SQLException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMPTkaf3EeeZk4fxKbmTNw" name="Statement"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VMP6oKf3EeeZk4fxKbmTNw" name="util">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VMTlAKf3EeeZk4fxKbmTNw" name="regex">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_VMTlAaf3EeeZk4fxKbmTNw" name="Matcher"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_VMUMEKf3EeeZk4fxKbmTNw" name="Pattern"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMP6oaf3EeeZk4fxKbmTNw" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMQhsKf3EeeZk4fxKbmTNw" name="Iterator"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMRIwKf3EeeZk4fxKbmTNw" name="LinkedHashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMRv0Kf3EeeZk4fxKbmTNw" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VMSW4Kf3EeeZk4fxKbmTNw" name="Map"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VMUzIKf3EeeZk4fxKbmTNw" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_VMUzIaf3EeeZk4fxKbmTNw" name="apache">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VMUzIqf3EeeZk4fxKbmTNw" name="poi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_VMUzI6f3EeeZk4fxKbmTNw" name="ss">
+          <packagedElement xmi:type="uml:Package" xmi:id="_VMUzJKf3EeeZk4fxKbmTNw" name="usermodel">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMUzJaf3EeeZk4fxKbmTNw" name="Cell"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMVaMKf3EeeZk4fxKbmTNw" name="Row"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_VMWBQKf3EeeZk4fxKbmTNw" name="xssf">
+          <packagedElement xmi:type="uml:Package" xmi:id="_VMWBQaf3EeeZk4fxKbmTNw" name="usermodel">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMWBQqf3EeeZk4fxKbmTNw" name="XSSFCell"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMWBRKf3EeeZk4fxKbmTNw" name="XSSFRow"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMWoUaf3EeeZk4fxKbmTNw" name="XSSFSheet"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VMX2cKf3EeeZk4fxKbmTNw" name="XSSFWorkbook"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_VNssIaf3EeeZk4fxKbmTNw" name="hssf">
+          <packagedElement xmi:type="uml:Package" xmi:id="_VNssIqf3EeeZk4fxKbmTNw" name="usermodel">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VNtTMKf3EeeZk4fxKbmTNw" name="HSSFCell"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VNtTMqf3EeeZk4fxKbmTNw" name="HSSFRow"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VNt6Qaf3EeeZk4fxKbmTNw" name="HSSFSheet"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_VNuhUaf3EeeZk4fxKbmTNw" name="HSSFWorkbook"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VMZroqf3EeeZk4fxKbmTNw" name="pmw">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VMaSsKf3EeeZk4fxKbmTNw" name="tinylog">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_VMaSsaf3EeeZk4fxKbmTNw" name="Logger"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VMYdgKf3EeeZk4fxKbmTNw" name="Overview">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_VMYdgaf3EeeZk4fxKbmTNw" name="Checkers"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_VMZEkKf3EeeZk4fxKbmTNw" name="DBConnectorForAll"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_VMZroKf3EeeZk4fxKbmTNw" name="Searcher"/>
+  </packagedElement>
+</uml:Model>

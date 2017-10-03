@@ -222,8 +222,6 @@ public class DBConnectorForAll {
 		try {
 			 stg3 = "INSERT INTO "+table+" ("+FK+","+prep+") VALUES("+FKnum+","+value+")";
 
-		System.out.println("anvvd WHATS HERE "+stg3);
-
 		try {
 			st.execute(stg3);
 		} catch (Exception e) {

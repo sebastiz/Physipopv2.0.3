@@ -86,16 +86,22 @@ public class Checkers {
 
 	public static ArrayList<String> VisitDateChecker(Statement st,String table,String HospNum) throws SQLException{
 		ArrayList<String> VisitFromDB=new ArrayList<String>();
-		System.out.println("THE TABLE"+table+"  HospNum"+HospNum);
-	 ResultSet rs = st.executeQuery("Select VisitDate from "+table.trim()+" Where HospNum_Id='"+HospNum.trim()+"'");
-	 System.out.println("Select VisitDate from "+table.trim()+" Where HospNum_Id='"+HospNum.trim()+"'");
-			 while(rs.next()){
-    	 System.out.println("\n  ID       : " + rs.getString("VisitDate"));
+	    ResultSet rs = st.executeQuery("Select VisitDate from "+table.trim()+" Where HospNum_Id='"+HospNum.trim()+"'");
+		while(rs.next()){
     	  VisitFromDB.add(rs.getString("VisitDate"));
-    	  System.out.println("YEAH"+rs.getString("VisitDate"));
      }
-			 System.out.println("VisitFromDB"+VisitFromDB);
 			 rs.close();
 	return VisitFromDB;
+	}
+
+	public static String HospNumChecker(Statement st,String tabEoE,String EoEHospNum) throws SQLException{
+		String HospNumReturned=null;
+		ResultSet rsEoE = st.executeQuery("Select HospNum_Id from "+tabEoE.trim()+" Where HospNum_Id='"+EoEHospNum.trim()+"'");
+
+		while(rsEoE.next()){
+			HospNumReturned=rsEoE.getString("HospNum_Id");
+     }
+		rsEoE.close();
+	return HospNumReturned;
 	}
 }

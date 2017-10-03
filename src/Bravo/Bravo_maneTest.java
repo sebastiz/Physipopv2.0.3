@@ -32,7 +32,6 @@ import Overview.Iterator;
 
 public class Bravo_maneTest {
 
-
 	String docSlim=null;
 	String day=null;
 	String [] seTab3Landmarks=null;

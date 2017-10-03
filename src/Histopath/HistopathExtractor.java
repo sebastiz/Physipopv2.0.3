@@ -3,6 +3,7 @@ package Histopath;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class HistopathExtractor {
 		String second="";
 		Statement st;
 		String tab="";
+		String tabEoE="";
 		String FName=null;
 		String SName=null;
 		String HospNum=null;
@@ -260,6 +262,7 @@ public class HistopathExtractor {
 									e.printStackTrace();
 								}
 							 tab="Histology";
+							 tabEoE="EoEClinDet";
 
 
 							 st=ConnectMeUp.Connector(HospNum,FName,SName,DOB);
@@ -269,11 +272,39 @@ public class HistopathExtractor {
 							 first=ConnectMeUp.StringInsertKeyPreparer(st,mapPathBarr,tab);
 							 second=ConnectMeUp.StringInsertValuePreparer(st,mapPathBarr,tab);
 							 //VisitDate=ResultPerformed;
-							System.out.println("Checkers.VisitDateChecker "+Checkers.VisitDateChecker(st,tab,HospNum)+" VS VisitDate "+VisitDate);
+							//System.out.println("Checkers.VisitDateChecker "+Checkers.VisitDateChecker(st,tab,HospNum)+" VS VisitDate "+VisitDate);
 							 if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(VisitDate)){
 								 int sharedkey=ConnectMeUp.Inserter(st,HospNum,first,second,tab,filepath);
 
+								 //This gets the EoE hospital numbers so they are part of EoEClinDet main table if eosinophilia is present
+								 String DiagEoE=null;
+								 DiagEoE=mapPathBarr.get("Diagnosis");
+								 Pattern EoEPath_pattern = Pattern.compile(".*osinoph.*",Pattern.DOTALL);
+								 Matcher matcherEoEPath_pattern = EoEPath_pattern.matcher(DiagEoE);
+								 if (matcherEoEPath_pattern.find()) {
+									 String EoEHospNum=null;
+									 EoEHospNum=mapPathBarr.get("HospNum_Id");
+									 if (Checkers.HospNumChecker(st,tabEoE,EoEHospNum)==null){
 
+											String stg3;
+											try {
+												 stg3 = "INSERT INTO "+tabEoE+" (HospNum_Id) VALUES('"+EoEHospNum+"')";
+System.out.println("This is stg2"+stg3);
+											try {
+												st.execute(stg3);
+											} catch (Exception e) {
+												// TODO Auto-generated catch block
+												Logger.error(e+"No process"+":"+stg3);
+											}
+
+											System.out.println("Successful execution innit");
+
+									 } catch (Exception e) {
+
+										}
+									 }
+									 //Check to see if this already exists in that table
+								 }
 //Now have to iterate through the matches here to add to the one to many table for HistolDet
 							 String h=null;
 							 h=mapPathBarr.get("NatureOfSpec");
@@ -320,7 +351,7 @@ public class HistopathExtractor {
 							e.printStackTrace();
 						}
 					 //To make sure Hospital NUmber doesn't get misallocated to the next rows results
-					 mapPathBarr.clear();
+			mapPathBarr.clear();
 }
 			workBook.close();
 	}
