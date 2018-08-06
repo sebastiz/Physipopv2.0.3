@@ -42,7 +42,6 @@ public class EndoscopyExtractor {
 		String HospNum=null;
 		String DOB=null;
 		String VisitDate=null;
-		String ResultPerformed=null;
 		    //Take the spreadsheet and look at the visitDate
 			//Then take the pathology spreadsheet and look at the sample taken date
 			//Then add the array together for the ones where the Hospital Number and VisitDate match
@@ -68,7 +67,7 @@ public class EndoscopyExtractor {
 				 XSSFCell cell = (XSSFCell) cells.next ();
 
 //Adds whole endoscopy if any cell contains the term Barrett's RFA or APC or EMR
-				 if(cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&(cell.toString().contains("Barrett")|cell.toString().contains("osinoph"))) {
+				 if(cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&(cell.toString().contains("Barrett")||cell.toString().contains("osinoph")||cell.toString().matches(".*osinoph.*"))) {
 					 //System.out.println("Barrett's endoscopy detected");
 					 filteredRows.add(row);
 					  break;
@@ -89,7 +88,6 @@ public class EndoscopyExtractor {
 			 }
 			}
 
-			ArrayList<List<String>> out = new ArrayList<List<String>>();
 			for (XSSFRow n:filteredRows){
 				Iterator<Cell> cells = n.cellIterator ();
 				 ArrayList<String> in =new ArrayList<String>();

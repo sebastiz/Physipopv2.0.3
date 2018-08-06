@@ -122,29 +122,20 @@ public class GraphExtractor {
 	              for (int j=0; j<tableHoNo1.getRow(i).numCells(); j++){
 
 	   if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
-
-		   //System.out.println("tableHoNo1.getRow("+i+").getCell("+j+").getParagraph(0).text()"+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+"oint");
 		   oint.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-		   //mapTable.put(keyStem+"TimePoint"+i, tableHoNo1.getRow(i).getCell(j).getParagraph(0).text());
 	   }
 	   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("Time")&&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
-		  //System.out.println("tableHoNo1.getRow("+i+").getCell("+j+").getParagraph(0).text()"+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+"Time");
 		   Time.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-		   //mapTable.put(keyStem+"Time"+i, tableHoNo1.getRow(i).getCell(j).getParagraph(0).text());
 	   }
 	   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
-		   //System.out.println("tableHoNo1.getRow("+i+").getCell("+j+").getParagraph(0).text()"+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+"CH4");
 		   CH.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-		   //mapTable.put(keyStem+"CH4"+i, tableHoNo1.getRow(i).getCell(j).getParagraph(0).text());
 	   }
 	   else  if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("H")&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
-		   //System.out.println("tableHoNo1.getRow("+i+").getCell("+j+").getParagraph(0).text()"+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+"H PPM");
 
 		   System.out.println("THIS IS CH  "+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
 		   System.out.println("THIS IS H2  "+H2);
 
 		   H2.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-		   //mapTable.put(keyStem+"H PPM"+i, tableHoNo1.getRow(i).getCell(j).getParagraph(0).text());
 	   }
 	        	  					}
                        }
@@ -152,10 +143,10 @@ public class GraphExtractor {
 
 
               }
-     	mapTable.put(keyStem+"TimePoint",oint.toString().trim());
-       	mapTable.put(keyStem+"Time",Time.toString().trim());
-       	mapTable.put(keyStem+"H2",H2.toString().trim());
-       	mapTable.put(keyStem+"CH4",CH.toString().trim());
+     	mapTable.put(keyStem+"TimePoint",oint.toString().replaceAll("\\P{Print}", "").trim());
+       	mapTable.put(keyStem+"Time",Time.toString().replaceAll("\\P{Print}", "").trim());
+       	mapTable.put(keyStem+"H2",H2.toString().replaceAll("\\P{Print}", "").trim());
+       	mapTable.put(keyStem+"CH4",CH.toString().replaceAll("\\P{Print}", "").trim());
 		System.out.println("THIS IS MAPTABLE"+mapTable);
 		return mapTable;
 

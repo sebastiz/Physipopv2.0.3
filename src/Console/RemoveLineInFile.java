@@ -15,9 +15,7 @@ public class RemoveLineInFile {
 
     public static void main(String[] args) {
 
-
     }
-
 
     public static void removeLineFromFile(String lineToRemove) {
     	Preferences userPrefs = Preferences.userNodeForPackage(TBB_SQLBuilder.class);

@@ -181,20 +181,16 @@ public class BreathTestExtractorMethods {
 				String lactNotes=NotesExtractor(lact).trim();
 				//System.out.println("MeNotesLactoseNotes"+lactNotes);
 				mapAllLactoseBreathTest.put("LactoseNotes",lactNotes);
-				//System.out.println("I HAVE FOUND THE LACTOSE"+mapAllLactoseBreathTest);
 			}
 			else{
-				//System.out.println("I HAVE NOT FOUND THE LACTOSE"+mapAllLactoseBreathTest);
 				mapAllLactoseBreathTest.put("LactoseNotes",null);
 					}
 		} catch (Exception e) {
 
-			//System.out.println("No Lactose Notes");
 		}
 
 		try {
 			if(lact!=null){
-				//mapAllLactoseBreathTest.put("LactoseSymptoms",null);
 				mapAllLactoseBreathTest.put("LactoseSymptoms",SymptomsExtractor(lact).trim());
 		}
 		else{

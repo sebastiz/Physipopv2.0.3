@@ -2508,6 +2508,10 @@ try {
 								HookMeUpExpunger(getValue);
 								RemoveLineInFile takeit =new RemoveLineInFile();
 								takeit.removeLineFromFile(" LL ");
+								//Empty the file logger
+								PrintWriter writer = new PrintWriter(prefs.get("PathForLogger", null));
+								writer.print("");
+								writer.close();
 							} catch (ClassNotFoundException | IOException | SQLException | ParseException e1) {
 								e1.printStackTrace();
 							}
@@ -2523,7 +2527,11 @@ try {
 							HookMeUpExpunger(getValue1);
 							HookMeUpExpunger(getValue2);
 							RemoveLineInFile takeit =new RemoveLineInFile();
-							takeit.removeLineFromFile("*.[Bb][Rr][Aa][Vv][Oo].*");
+							takeit.removeLineFromFile(".*[Bb][Rr][Aa][Vv][Oo].*");
+							//Empty the file logger
+							PrintWriter writer = new PrintWriter(prefs.get("PathForLogger", null));
+							writer.print("");
+							writer.close();
 						} catch (ClassNotFoundException | IOException | SQLException | ParseException e1) {
 							e1.printStackTrace();
 						}
@@ -2542,6 +2550,10 @@ try {
 							HookMeUpExpunger(getValue2);
 							RemoveLineInFile takeit =new RemoveLineInFile();
 							takeit.removeLineFromFile("*.[Ii][Mm][Pp].*");
+							//Empty the file logger
+							PrintWriter writer = new PrintWriter(prefs.get("PathForLogger", null));
+							writer.print("");
+							writer.close();
 						} catch (ClassNotFoundException | IOException | SQLException | ParseException e1) {
 							e1.printStackTrace();
 						}
@@ -2558,6 +2570,10 @@ try {
 							HookMeUpExpunger(getValue1);
 							HookMeUpExpunger(getValue2);
 							RemoveLineInFile.removeLineFromFile("*.[Hh][Rr][Mm].*");
+							//Empty the file logger
+							PrintWriter writer = new PrintWriter(prefs.get("PathForLogger", null));
+							writer.print("");
+							writer.close();
 						} catch (ClassNotFoundException | IOException | SQLException | ParseException e1) {
 							e1.printStackTrace();
 						}
@@ -2572,6 +2588,10 @@ try {
 							HookMeUpExpunger(getValue);
 							RemoveLineInFile takeit =new RemoveLineInFile();
 							takeit.removeLineFromFile(".*[Ff][Ii][Nn][Aa][Ll].*");
+							//Empty the file logger
+							PrintWriter writer = new PrintWriter(prefs.get("PathForLogger", null));
+							writer.print("");
+							writer.close();
 						} catch (ClassNotFoundException | IOException | SQLException | ParseException e1) {
 							e1.printStackTrace();
 						}

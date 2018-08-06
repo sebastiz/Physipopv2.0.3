@@ -180,20 +180,6 @@ public class Iterator {
 								}
 					        }
 
-//Old Barrett's surveillance files
-					        else if(child.getPath().contains("BarrettsSurveillanceReport2010To2016")){
-					        	try {
-					        		////System.out.println("Yes being processed Surveillance report");
-					        		//getFileCreationDate(child);
-					        		EndoscopyExtractorOld.Endoscopy_mane(child.getPath());
-									HistopathExtraxtorOld.Histology_mane(child.getPath());
-
-								} catch (Exception e) {
-									////System.out.println("The histology import ain't happening here bud");
-									Logger.error(e+child.getName());
-								}
-					        }
-
 
 //For newer Bravo files
 					        else if(s.contains("pH Analysis Thresholds")&&!s.contains("ENDOSCOPIC DIAGNOSIS")

@@ -114,9 +114,7 @@ public class DBConnectorForAll {
 		 value=value.replace(":", "_");
 		 value=value.replaceAll("\\/", "_").trim();
 		 value=value.replaceAll("\\?", "").replaceAll("%", "pcent").replaceAll("\\(", "").replaceAll("\\)","").trim();
-		 System.out.println("6. THIS IS THE PREP VALUE f"
-		 		+ "or entry into INSERT "+value);
-		 //map=null;
+		 System.out.println("6. THIS IS THE PREP VALUE f"+ "or entry into INSERT "+value);
 		 return value;
 	}
 
@@ -221,6 +219,7 @@ public class DBConnectorForAll {
 		String stg3;
 		try {
 			 stg3 = "INSERT INTO "+table+" ("+FK+","+prep+") VALUES("+FKnum+","+value+")";
+			 System.out.println(stg3);
 
 		try {
 			st.execute(stg3);
@@ -247,6 +246,7 @@ public class DBConnectorForAll {
 	public void InserterMany2Many(Statement st, String prep,String value,String table,int FKnum,String FK) throws SQLException{
 		String stg3;
 		 stg3 = "INSERT INTO "+table+" ("+FK+","+prep+") VALUES("+FKnum+","+value+")";
+
 		 st.execute(stg3);
 }
 

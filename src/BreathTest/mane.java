@@ -43,6 +43,18 @@ int sharedkey;
         	//System.out.println(mapAll);
         	//Need to get ExtractValues to return a map so can be mapAll.put to it
         	//Need to split a word document up
+        	try {
+
+
+			//s=s;
+				//s=s.replaceAll("\\p{C}", "_");
+				//s=s.replaceAll("__", "_");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
 
         	try {
                 HospNum=Overview.Searcher.HospNo_searcher(s);
@@ -148,12 +160,18 @@ int sharedkey;
 			e.printStackTrace();
 		}
 
+
+
         for(Iterator<Map.Entry<String, String>> it = mapAll.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<String, String> entry = it.next();
             if(entry.getValue()==null||entry.getValue().isEmpty()) {
 
               it.remove();
             }
+
+
+
+
           }
 
         try {
@@ -162,8 +180,6 @@ int sharedkey;
 			Statement st=ConnectMeUp.Connector(HospNum,FName,SName,DOB);
 			String first=ConnectMeUp.StringInsertKeyPreparer(st,mapAll,tab);
 			String second=ConnectMeUp.StringInsertValuePreparer(st,mapAll,tab);
-
-			//System.out.println("CHECK I"+Checkers.VisitDateChecker(st,tab,HospNum)+"VISITDATE"+VisitDate);
 				if (!Checkers.VisitDateChecker(st,tab,HospNum).contains(VisitDate)){
 			ConnectMeUp.Inserter(st,HospNum,first,second,tab,child);
 			//mapAll=null;
