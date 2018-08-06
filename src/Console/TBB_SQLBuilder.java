@@ -1501,7 +1501,7 @@ public class TBB_SQLBuilder {
                     	 SelectResult=null;
                     	 editorPane_2.setText(strb2.toString());
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+						// TODO Auto-generated catch block for not reason
 						e1.printStackTrace();
 					}
             	 }
