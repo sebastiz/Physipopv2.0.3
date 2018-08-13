@@ -75,7 +75,7 @@ Pattern ReflEpisodeAct_pattern = Pattern.compile("Reflux Episode Activity \\(Imp
 Pattern SxCorr_pattern = Pattern.compile("(?s)Symptom Correlation to Reflux((?:(?!Symptom Correlation to Reflux).)*?)Reflux Symptom Index",Pattern.DOTALL);
 Pattern RSSI_pattern = Pattern.compile("Reflux Symptom Sensitivity Index \\(Impedance\\).*?Reflux Symptom Association Probability \\(Impedance\\)",Pattern.DOTALL);
 Pattern MainRSI_pattern = Pattern.compile("Reflux Symptom Index .*?Reflux Symptom Sensitivity Index|Reflux Symptom Index .*?Reflux Symptom Association Probability",Pattern.DOTALL);
-Pattern MainRSAP_pattern = Pattern.compile("Reflux Symptom Association Probability \\(Impedance\\).*?Waveform",Pattern.DOTALL);
+Pattern MainRSAP_pattern = Pattern.compile("Reflux Symptom Association Probability \\(Impedance\\).*?[^\\n]",Pattern.DOTALL);
 Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 /////////////Sort this out//////////////////////////////////////////////////////
 
@@ -553,18 +553,28 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 			    		 }
 			}
 		 }
-		 //System.out.println("Arr_Proc_table2dssssssssssssssssssssssssssss"+Arr_Proc_table2d);
+		 System.out.println("Arr_Proc_table2dssssssssssssssssssssssssssss"+Arr_Proc_table2d);
 		 Arr_Proc_table2d.remove(0);
 
 		 Map<String,String> mapSx_PPPostprandExpo= new LinkedHashMap<String,String>();
 		 for (int ff=0;ff<Arr_Proc_table2d.size();ff++){
 				//Symptom
-			 mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),Arr_Proc_table2d.get(ff).get(1));
+			 System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
+			 try {
+				 //Put here so that if array has no value (ie has captured a title for example) then the hash is filled- it will be excluded
+				 //anyway when the database is connected to.
+				mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),Arr_Proc_table2d.get(ff).get(1));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),"NoExist");
+			}
+			 System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
 				  }
-			//System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
+
 			mapImpedanceAll.putAll(mapSx_PPPostprandExpo);
 	} catch (Exception e) {
 		// TODO Auto-generated catch blockMainProc
+
 		e.printStackTrace();
 	}
 

@@ -160,10 +160,14 @@ public class Iterator {
 					    inputstream.close();
 					    PDFont.clearResources();
 					    System.gc();
-					        s=Checkers.FindNReplace(s);
+					    s=Checkers.FindNReplace(s);
+					    //child.getName().toString().replaceAll("//%", "")
+					    System.out.println("child.getName().tostring()"+child.getName().toString());
+					    System.out.println("child.getPath().tostring()"+child.getPath().toString());
 
-
-
+					    if(child.getPath().contains("final")){
+					    	System.out.println("final here");
+					    }
 
 //Endoscopy files....takes xlsx files....
 					        if(child.getPath().contains("T6200")||child.getPath().contains("TCR2232")||child.getPath().contains("Gastroscopy_Hi")){
@@ -183,10 +187,12 @@ public class Iterator {
 
 //For newer Bravo files
 					        else if(s.contains("pH Analysis Thresholds")&&!s.contains("ENDOSCOPIC DIAGNOSIS")
+
 					        		&&!child.getName().trim().contains("Chph")
 					        		&&!child.getName().trim().contains("ChPh")
 					        		&&!child.getName().trim().contains("PAE")
 					        		){
+					        	System.out.println("Caught in New Bravo"+child.getName());
 					        	Bravo.mane newer = new Bravo.mane();
 
 
@@ -215,7 +221,7 @@ public class Iterator {
 					        }
 //Older BRAVO files
 					       else if(s.contains("Fraction Time pH <4")&&!s.contains("Reflux Table - pH")&&!s.contains("ENDOSCOPIC DIAGNOSIS")&&s.contains("Day")&&!s.contains("Reflux Table - Proximal")){
-
+					    	   System.out.println("Caught in Bravo old"+child.getName());
 					        	Bravo.maneOld g=new Bravo.maneOld();
 
 					        	g.Extract(s,child.getName(),getFileCreationDate(child));
@@ -223,7 +229,7 @@ public class Iterator {
 					        }
 //Surgical files
 					       else if(child.getName().contains("Galaxy")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
-
+					    	   System.out.println("Caught in surgery"+child.getName());
 					        	//Surgery.Procedures p=new Surgery.Procedures();
 					        	getFileCreationDate(child);
 					        	Procedures.Sugery_mane(child.getPath());
@@ -233,7 +239,7 @@ public class Iterator {
 					        else if(s.contains("Impedance")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	 try {
 									if (child.getPath().contains("rtf")){
-										System.out.println("File now being dealt with"+getFileCreationDate(child));
+										System.out.println("File now being dealt with endoscopy"+getFileCreationDate(child));
 										System.out.println("GHGHGHGHGHGHGH");
 									Impedance.mane i = new Impedance.mane(s);
 									i.Impmane(s,child.getName(),getFileCreationDate(child));
@@ -243,6 +249,7 @@ public class Iterator {
 					        }
 //Breath Test files
 					        else if(s.contains("Breath Test")&&!s.contains("Breath Test Technician")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
+					        	System.out.println("Caught in breath test"+child.getName());
 					        	try {
 									BreathTest.mane b= new BreathTest.mane();
 
@@ -256,10 +263,11 @@ public class Iterator {
 					        }
 
 
-//HRM
+//HRM- doesnt process the final report here as Indication is excluded:
 					        else if(s.contains("nares")&&!s.contains("Indications")&&!s.contains("RECALL")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	//do Something for HRM
-					        	System.out.println("SEND SEND SEND send to HRM ONLY");
+					        	System.out.println("Caught in HRM ONly"+child.getName());
+
 					        	s=Checkers.FindNReplace(s);
 
 					        	try {
@@ -275,10 +283,13 @@ public class Iterator {
 					        //This looks to see if file is called FINAL. This is the first one to look at as it
 					        //will definitely be the final file and then any "Indication" keyword in other files
 					        //will not be entered into the database (so won't displace this one
-					        else if((child.getPath().contains("final")
+
+
+					        if((child.getPath().contains("final")
 					        		||child.getPath().contains("FINAL")
 					        		||child.getPath().contains("Final"))&&s.contains("nares")&&s.contains("Indications")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	System.out.println("Caught in Diag"+child.getName());
+					        	System.out.println(s);
 					        	s=Checkers.FindNReplace(s);
 					        	try {
 									mane.Dimane(s,child.getName(),getFileCreationDate(child));
@@ -347,7 +358,6 @@ public class Iterator {
 						 } catch (Exception e) {
 								// TODO Auto-generated catch block
 								Logger.error(e+"This file didnt get processed:"+child.getName());
-
 								//System.out.println("This file didnt get processed:"+child.getName());
 							}
 					}

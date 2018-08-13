@@ -453,7 +453,7 @@ public class Bravo_maneTest {
 
 								ArrayList<List<String>> Arr2d=new ArrayList<List<String>>();
 ArrayList<String> Arr1=new ArrayList<String>();
-String input1="Symptom, Heartburn, ChestPain, StomachPain";
+String input1="Heartburn, ChestPain, StomachPain";
 String [] nd1=input1.split(",");
 for (int i1=0;i1<nd1.length;i1++){
 	Arr1.add(nd1[i1].trim());

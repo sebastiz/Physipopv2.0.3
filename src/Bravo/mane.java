@@ -145,14 +145,16 @@ public class mane {
 			  }
 		//System.out.println("docSlim"+docSlim);
 		ExtractSymptomsTable(docSlim,day);
-		System.out.println("SymptomsIteration"+Symptoms);
-		  for (int ih = 0; ih < Symptoms.get(0).size(); ih++) {
+		//System.out.println("SymptomsIteration"+Symptoms);
+		  for (int ih = 1; ih < Symptoms.get(0).size(); ih++) {
 		        for (int j = 1; j < Symptoms.size(); j ++) {
+					System.out.println("SYMP "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih));
+
 		       /*     try {
 		            	System.out.println("Symptoms.get(j).get(ih + 1));"+Symptoms.get(j).get(ih + 1));
 						mapReflDayOneandTwo.put(Symptoms.get(j).get(0) + Symptoms.get(0).get(ih),
 						     Symptoms.get(j).get(ih + 1));
-						//System.out.println("SYMP "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih + 1));
+						System.out.println("SYMP "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih + 1));
 
 		        } catch (Exception e) {
 
@@ -161,11 +163,12 @@ public class mane {
 					try {
 							mapReflDayOneandTwo.put(Symptoms.get(j).get(0) + Symptoms.get(0).get(ih),
 								     Symptoms.get(j).get(ih));
-							//System.out.println("SYMP2 "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih + 1));
+							System.out.println("SYMP2 "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih));
 
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						Logger.error(e+"  "+child.toString());
+						System.out.println("Here is the ExtractNew problem: " + e);
 					}
 		            //Symptoms=null;
 		        }
@@ -613,13 +616,17 @@ public class mane {
 			String g="Symptom "+matcherSymptomsTable_pattern.group(1);
 			//String match2=matcherTotal_pattern.group(1).replaceAll("\\n\\n", "\n");
 
-			//System.out.println("LOOK AT G1"+g);
-			g=g.replaceAll("\\(.*\\)", "").replaceAll("\\n", "").replaceAll("\\s{2,}", " ").replaceAll("[Bb]loated", "").replaceAll("[Tt]rapped", "");
-			//System.out.println("LOOK AT G"+g);
+			System.out.println("LOOK AT G1"+g);
+			g=g.replaceAll("(Symptom.*)\\n.*", "$1").replaceAll("\\(.*\\)", "").replaceAll("\\n", "").replaceAll("\\s{2,}", " ").replaceAll("[Bb]loated", "").replaceAll("[Tt]rapped", "").replaceAll("Symptom", "");
+//
+			//g=g.replaceAll("\\(.*\\)", "").replaceAll("\\n", "").replaceAll("\\s{2,}", " ").replaceAll("[Bb]loated", "").replaceAll("[Tt]rapped", "");
+			System.out.println("LOOK AT G"+g);
 			bilbo=g.split("\\s+");
+
 
 		}
 		else {
+
 
 		}
 			for (String d:bilbo){

@@ -31,7 +31,7 @@ public class DBConnectorForAll {
 	public Statement ConnectorNoInsert(String HospNum,String SName,String FName,String DOB) throws SQLException{
 		Preferences userPrefs = Preferences.userNodeForPackage(TBB_SQLBuilder.class);
 		String connectDB ="jdbc:ucanaccess://"+userPrefs.get("PathForDB", null);
-		//System.out.println("Connection To Database Made");
+		System.out.println("Connection To Database Made");
 		Connection conn=DriverManager.getConnection(connectDB);
 		Statement st =conn.createStatement();
 		return st;

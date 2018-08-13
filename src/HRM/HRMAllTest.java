@@ -26,7 +26,7 @@ import org.xml.sax.SAXException;
 
 
 public class HRMAllTest {
-	File child = new File("//Users/sebastianzeki//Documents//PhysJava//BugFolder - Copy/BugFolder - Copy//Phys_HRM_STEKELENBURG,.doc");
+	File child = new File("//Users/sebastianzeki//Documents//PhysJava//BugFolder - Copy/BugFolder - Copy//HRM_Test//Phys_HRM_STEKELENBURG,.doc");
 	String child_str=child.getPath();
 	public String GetHRMFile(String child) throws IOException, SAXException, TikaException{
 

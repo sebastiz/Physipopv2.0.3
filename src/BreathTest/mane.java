@@ -40,7 +40,7 @@ int sharedkey;
         	mapAll.clear();
         	mapAll.putAll(ge.ExtractValues(child));
 
-        	//System.out.println(mapAll);
+        	System.out.println("BREATH TEST"+mapAll);
         	//Need to get ExtractValues to return a map so can be mapAll.put to it
         	//Need to split a word document up
         	try {

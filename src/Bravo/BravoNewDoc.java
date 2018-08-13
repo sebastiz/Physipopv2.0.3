@@ -26,7 +26,6 @@ import org.apache.poi.hwpf.HWPFDocument;
 
 	public BravoNewDoc(String s) throws IOException, SQLException {
 
-
 		//Need to go through each table
 		//If table has two columns the just key value them
 		//Deal with by iterating through section

@@ -66,7 +66,7 @@ public class EndoscopyExtractor {
 			 while (cells.hasNext ()){
 				 XSSFCell cell = (XSSFCell) cells.next ();
 
-//Adds whole endoscopy if any cell contains the term Barrett's RFA or APC or EMR
+                   //Adds whole endoscopy if any cell contains the term Barrett's RFA or APC or EMR
 				 if(cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&(cell.toString().contains("Barrett")||cell.toString().contains("osinoph")||cell.toString().matches(".*osinoph.*"))) {
 					 //System.out.println("Barrett's endoscopy detected");
 					 filteredRows.add(row);
