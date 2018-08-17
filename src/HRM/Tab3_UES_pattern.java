@@ -16,7 +16,7 @@ public class Tab3_UES_pattern {
 	String [] seTab3_UES=null;
 
 	public Tab3_UES_pattern(String x) {
-		// TODO Auto-generated constructor stub
+		
 		 x=this.x;
 	}
 	

@@ -36,23 +36,12 @@ int sharedkey;
 
 	public void Gomane(String s,String child,String FileCreationDate) throws IOException, TikaException, SQLException {
         try {
-        	GraphExtractor ge = new GraphExtractor();
         	mapAll.clear();
-        	mapAll.putAll(ge.ExtractValues(child));
+        	mapAll.putAll(GraphExtractor.ExtractValues(child));
 
         	System.out.println("BREATH TEST"+mapAll);
         	//Need to get ExtractValues to return a map so can be mapAll.put to it
         	//Need to split a word document up
-        	try {
-
-
-			//s=s;
-				//s=s.replaceAll("\\p{C}", "_");
-				//s=s.replaceAll("__", "_");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 
 
 
@@ -65,7 +54,7 @@ int sharedkey;
 
 
         			} catch (Exception e2) {
-        				// TODO Auto-generated catch block
+
         				Logger.error(e2+"Couldn't get the hospital number-is this a private patient"+child);
         			}
 
@@ -186,7 +175,7 @@ int sharedkey;
 			//st.close();
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			Logger.error(e+HospNum+"->From BreathTests"+child);
 		}
 		}

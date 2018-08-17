@@ -90,7 +90,7 @@ public class Procedures {
 					Thread.sleep(500);
 
 					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
+						
 						e1.printStackTrace();
 					}
 				}
@@ -170,7 +170,7 @@ public class Procedures {
 					ConnectMeUp.Inserter(st,HospNum,first,second,tab,filepath);
 				 }
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				Logger.error(e+HospNum+"->From EndoscopyOld"+filepath);
 			}
 			}

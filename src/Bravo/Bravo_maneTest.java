@@ -233,7 +233,7 @@ public class Bravo_maneTest {
 		try {
 			FileCreationDate=GetFileCreationDate(child);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		ArrayList<List<String>> Arr2dTest=new ArrayList<List<String>>();

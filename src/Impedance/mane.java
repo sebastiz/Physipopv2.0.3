@@ -191,7 +191,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 			//System.out.println("HASHmapmap_PPBolusExpos"+mapSx_PPBolusExpo);
 			mapImpedanceAll.putAll(mapSx_PPBolusExpo);
 		} catch (Exception e) {
-			// TODO Auto-generated catch blockMainPPBolusExpo
+
 			//System.out.println("There's no PPBolus here");
 		}
 
@@ -250,7 +250,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		 //System.out.println("HASHmapSx_PPReflEpisodeActExpos"+mapSx_PPReflEpisodeActExpo);
 					mapImpedanceAll.putAll(mapSx_PPReflEpisodeActExpo);
 				} catch (Exception e) {
-					// TODO Auto-generated catch blockPPReflEpisodeActExpo
+
 					//System.out.println("There's no Postprandial string so no PP reflux episode activity");
 				}
 		//----------------------------------------------------------------
@@ -308,7 +308,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 
 
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainPPPostprandExpo
+
 		e.printStackTrace();
 	}
 
@@ -376,7 +376,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		//System.out.println("HASHmapmapSx_PPAcidExpos"+mapSx_PPAcidExpo);
 		mapImpedanceAll.putAll(mapSx_PPAcidExpo);
 	} catch (Exception e1) {
-		// TODO Auto-generated catch blockMainPPAcidExpo
+
 		//System.out.println("There's no Postprandial string so no PP Acid Exposure");
 
 	}
@@ -451,13 +451,13 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		 try {
 			VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			Logger.error(e+HospNum_Id+"->From ImpedanceMane Mane"+child);
 		}
 		 try {
 			VisitDate=VisitDateFormatter.unAmerican(VisitDate);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			Logger.error(e+HospNum_Id+"->From ImpedanceMane unAmerican Mane"+child);
 		}
 		 mapPtData.put("VisitDate",VisitDate);
@@ -468,43 +468,43 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(0).get(0), Arr_PtData_table2d.get(0).get(1));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(1).get(0), Arr_PtData_table2d.get(1).get(1));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(1).get(2), Arr_PtData_table2d.get(1).get(3));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(2).get(0), Arr_PtData_table2d.get(2).get(1));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(3).get(0), Arr_PtData_table2d.get(3).get(1));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(3).get(2), Arr_PtData_table2d.get(3).get(3));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		 try {
 			mapPtData.put("MainPtData"+Arr_PtData_table2d.get(4).get(0), Arr_PtData_table2d.get(4).get(1));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 			//System.out.println("HASHmapmapSx_PPPostprandExpos"+Arr_PtData_table2d);
@@ -513,7 +513,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		//System.out.println("HASHPtData"+mapPtData);
 		mapImpedanceAll.putAll(mapPtData);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+
 		e.printStackTrace();
 	}
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -565,7 +565,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 				 //anyway when the database is connected to.
 				mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),Arr_Proc_table2d.get(ff).get(1));
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+
 				mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),"NoExist");
 			}
 			 System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
@@ -573,7 +573,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 
 			mapImpedanceAll.putAll(mapSx_PPPostprandExpo);
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainProc
+
 
 		e.printStackTrace();
 	}
@@ -620,7 +620,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		//System.out.println("HASHRflxAnalysis"+mapRflxAnalysis);
 		mapImpedanceAll.putAll(mapRflxAnalysis);
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainReflxSettings
+
 		e.printStackTrace();
 	}
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -680,7 +680,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		 //System.out.println("HASH_ProxExtent_table2d"+mapProxExtent);
 		 mapImpedanceAll.putAll(mapProxExtent);
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainProxExtent
+
 		//System.out.println("There's no Proximal extent here");
 
 	}
@@ -709,7 +709,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 			Arr_SumSxCorrel_table2d.add(Arr_SumSxCorrel_table);
 				}
 		}
-		//System.out.println("Arr_SumSxCorrel_table2d"+Arr_SumSxCorrel_table2d);
+
 		//Tidy up
 		Arr_SumSxCorrel_table2d.remove(Arr_SumSxCorrel_table2d.size()-1);
 		Arr_SumSxCorrel_table2d.remove(Arr_SumSxCorrel_table2d.size()-1);
@@ -725,7 +725,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 			    		 }
 			}
 		 }
-		 //System.out.println("Arr_SxCorrel_table2d"+Arr_SumSxCorrel_table2d);
+
 		 //Tidy Up
 
 		 Arr_SumSxCorrel_table2d.remove(0);
@@ -743,7 +743,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 mapImpedanceAll.putAll(mapSumSx_Correl);
 
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockSumSx_Correl
+
 		//System.out.println("There's no SumCorrSx");
 
 	}
@@ -1091,8 +1091,6 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 		//System.out.println("HASHmapmapSx_BolusExpos"+mapSx_BolusExpo);
 		mapImpedanceAll.putAll(mapSx_BolusExpo);
 	} catch (Exception e) {
-		// TODO Auto-generated MainBolusExpo
-		//System.out.println("There's no BolusExpo on this report");
 	}
 
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -1147,7 +1145,7 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 			    System.out.println("HASHmapSx_Corr"+mapSx_Corr);
 			    mapImpedanceSx.putAll(mapSx_Corr);
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainSx_Corr_
+
 		Logger.error(e+HospNum_Id+"There is no MainSz_Corr here"+child);
 	}
 //------------------------------------------------------------------------------------------------------------------------------------
@@ -1206,7 +1204,7 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 		    mapImpedanceSx.putAll(mapRSI);
 
 	} catch (Exception e) {
-		// TODO Auto-generated catch blockMainSxRSSI
+
 		//System.out.println("There ain't no RSSI here");
 	}
 
@@ -1260,7 +1258,7 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 			 mapImpedanceSx.putAll(mapMainRSI);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch blockHASHSxmapMainRSI
+
 			e.printStackTrace();
 		}
 
@@ -1314,7 +1312,7 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch blockHASHSxmapMainRSAP
+
 			Logger.error(e+"Theres no Main RSAP here"+child);
 		}
 
@@ -1355,7 +1353,7 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 
 						} catch (Exception e) {
 							Logger.error(e+HospNum_Id+"->From Impedance"+child);
-							// TODO Auto-generated catch block INSERTS
+
 						}
 				}
 }

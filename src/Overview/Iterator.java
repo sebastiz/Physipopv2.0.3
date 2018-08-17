@@ -356,7 +356,7 @@ public class Iterator {
 							}
 						}
 						 } catch (Exception e) {
-								// TODO Auto-generated catch block
+								
 								Logger.error(e+"This file didnt get processed:"+child.getName());
 								//System.out.println("This file didnt get processed:"+child.getName());
 							}
@@ -364,7 +364,7 @@ public class Iterator {
 
 			  }
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			Logger.error(e+"This file didnt get processed:"+directoryListing);
 		}
 	}

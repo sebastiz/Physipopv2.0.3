@@ -59,7 +59,7 @@ public class HRMDx {
 	String VisitDate;
 	static String Diagnosis = null;
 	public HRMDx() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static String HRMDiag(Map<String,Object> DCI){
@@ -90,7 +90,7 @@ public class HRMDx {
 					}
 
 				} catch (NumberFormatException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 		}

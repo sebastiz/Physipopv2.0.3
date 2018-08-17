@@ -34,7 +34,7 @@ public class VisitDateFormatter {
 				cleanYear = VisitDate.replaceAll("$\\s+", "").trim();
 				System.out.println(VisitDate+"The end");
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 				System.out.println("String replace FAILVDFormatCleaner");
 			}
@@ -156,7 +156,7 @@ public class VisitDateFormatter {
 							VisitDate=dt2.format(date);
 					//System.out.println("MATCHES4"+date+ VisitDate);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 
@@ -205,7 +205,7 @@ public class VisitDateFormatter {
 	    	//System.out.println(VisitDate);
 	    }
 	    } catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println("ERROR: I can't get the DOB to format: VDFormatDOB");
 		}
 	return VisitDate;

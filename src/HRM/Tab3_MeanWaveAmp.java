@@ -15,7 +15,7 @@ public class Tab3_MeanWaveAmp {
 	public Tab3_MeanWaveAmp(String x) {
 		
 		x=this.x;
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Map<String, String> tab3MeanWaveAmpRegex(String x, Map<String,String> map) {

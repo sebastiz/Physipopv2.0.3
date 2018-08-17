@@ -89,7 +89,7 @@ public class HRMAll {
 							ConnectMeUp.Inserter2(st,third,fourth,table,sharedkey,FKFieldName,child);
 							}
 						} catch (Exception e1) {
-							// TODO Auto-generated catch block
+							
 							Logger.error(e1+HospNum+"->From HRMAll"+child);
 						}
 
@@ -103,7 +103,7 @@ public class HRMAll {
                	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 					 }
 			} catch (Exception e3) {
-				// TODO Auto-generated catch block
+				
 				Logger.error(e3+"Couldn't get the hospital number"+child);
 			}
 	          ////System.out.println("HospNumHRMALL"+ HospNum);
@@ -114,7 +114,7 @@ public class HRMAll {
 	          try {
 				FName=Overview.Searcher.FName_searcher(s);
 			} catch (Exception e4) {
-				// TODO Auto-generated catch block
+				
 				 Logger.error("FNAME ERROR HRMALL"+e4+HospNum+child);
 			}
 
@@ -145,7 +145,7 @@ public class HRMAll {
 				VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 				System.out.println("VisitDate+HRMAll"+ VisitDate);
 			} catch (Exception e2) {
-				// TODO Auto-generated catch block
+				
 				Logger.error(e2+HospNum+"->From HRMAll-VDFormat issue"+child);
 			}
 	 		mapAllReport.put("VisitDate", VisitDate);
@@ -154,7 +154,7 @@ public class HRMAll {
 	 		try {
 				DOB=Overview.Searcher.DOB_searcher(s);
 			} catch (Exception e2) {
-				// TODO Auto-generated catch block
+				
 				Logger.error(e2+HospNum+"->From Diag Mane No DOB"+DOB+child);
 			}
 	 		mapAllReport.put("DOBAge", DOB);
@@ -198,7 +198,7 @@ public class HRMAll {
 				}
 				mapAllReport.put("Height", Height);
 			} catch (Exception e1) {
-				// TODO Auto-generated catch block
+				
 				//Logger.error(e1+"No height here"+HospNum+child);
 				////System.out.println("ERROR no HEIGHT HERE for: "+HospNum);
 			}

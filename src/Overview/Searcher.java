@@ -11,7 +11,7 @@ import org.pmw.tinylog.Logger;
 public class Searcher {
 
 	public Searcher() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	public static String searcher(String s,String searchPattern) throws IOException, SQLException {
 		String match=null;
@@ -23,7 +23,7 @@ public class Searcher {
 					match=matchermatch_patternDoc.group(1).trim();
 				}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			//System.out.println("The searcher couldn't find this"+e);
 			//Logger.error(e+"The searcher couldn't find this "+searchPattern);
 		}
@@ -142,7 +142,7 @@ public class Searcher {
 			}
 		}
 	} catch (Exception e1) {
-		// TODO Auto-generated catch block
+		
 	}
 		return FName;
 	}
@@ -189,7 +189,7 @@ public class Searcher {
 				}
 			}
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
+			
 		}
 			return SName;
 		}

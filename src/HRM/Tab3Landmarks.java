@@ -17,7 +17,7 @@ public class Tab3Landmarks {
 	String [] seTab3Landmarks=null;
 
 	public Tab3Landmarks(String x) {
-		// TODO Auto-generated constructor stub
+		
 		 x=this.x;
 	}
 	

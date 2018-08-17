@@ -40,7 +40,7 @@ public class HRM_altDoc {
 	Map<String,String> mapAllReport= new LinkedHashMap<String,String>();
 
 	public HRM_altDoc(String pdfname) {
-		// TODO Auto-generated constructor stub
+		
 		this.pdfname=pdfname;
 	}
 
@@ -136,7 +136,7 @@ public class HRM_altDoc {
 			reader.close();
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -171,7 +171,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
 
 
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
  		//---------------------------------------------
@@ -179,7 +179,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
  			//Tab3LES_Pressures Tab3Anat = new Tab3LES_Pressures(rh);
         	////System.out.println("MY GREAT Tab3LES_Pressures CLASS"+Tab3Anat.LESPressuresRegex(rh,mapAllReport));
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
 
@@ -189,7 +189,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
         	////System.out.println("MY GREAT Tab3_UES_pattern CLASS"+Tab3UES.Tab3_UES_Regex(rh,mapAllReport));
 
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
 
@@ -199,7 +199,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
         	//System.out.println("MY GREAT tab3NumSwall CLASS"+tab3NumSwall);
 
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
         //---------------------------------------------
@@ -208,7 +208,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
         	 tab3MeanWaveAmp.tab3MeanWaveAmpRegex(rh,mapAllReport);
 
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
          //---------------------------------------------
@@ -220,7 +220,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
 
 
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
   		//---------------------------------------------------------------
@@ -229,7 +229,7 @@ System.out.println("DO I EVEN COME HERE TO HRMALTDOC?");
   	     	tab3ChicagoClass.tab3ChicagoClassRegex(rh,mapAllReport);
   	     	////System.out.println("MY GREAT Tab3_ChicagoClass CLASS"+mapAllReport);
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
+			
 			e2.printStackTrace();
 		}
         rh=null;

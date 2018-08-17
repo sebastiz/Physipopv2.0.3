@@ -285,7 +285,7 @@ public class ImpDx {
 	String Diagnosis = null;
 	
 	public ImpDx() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String ImpDiag(String DCI){
@@ -315,7 +315,7 @@ if(entry.getKey().contains("smallbreaks")){
 				}
 
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 	}

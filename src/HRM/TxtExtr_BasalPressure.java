@@ -16,7 +16,7 @@ public class TxtExtr_BasalPressure {
 	ArrayList<List<String>> SumBasPress_table2d = new ArrayList<List<String>>();
 	String [] se=null;
 	public TxtExtr_BasalPressure(String x) {
-		// TODO Auto-generated constructor stub
+		
 		   x=this.x;
 	}
 	

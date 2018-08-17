@@ -13,7 +13,7 @@ public class Tab3NumSwall {
 	String [] seTab3NumSwall=null;
 
 	public Tab3NumSwall(String x) {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Map<String, String> Tab3NumSwallRegex(String x, Map<String,String> map) {

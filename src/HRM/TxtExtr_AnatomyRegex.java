@@ -11,7 +11,7 @@ public class TxtExtr_AnatomyRegex {
 	Map<String,String> map;
 	
 	 public TxtExtr_AnatomyRegex(String x) {
-		    // TODO Auto-generated constructor stub
+		    
 		    x=this.x;
 
 		  }

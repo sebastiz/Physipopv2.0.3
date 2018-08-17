@@ -64,7 +64,7 @@ public class maneOld {
 				try {
 					VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					
 					Logger.error(e+HospNum+"->From Bravo ManeOld"+child);
 				}
 				mapWholeBRAVO.put("VisitDate", VisitDate);
@@ -1293,7 +1293,7 @@ SIDay1_Doublearr.add(matcherSIDay1_Doublepattern.group(0));
 												    mapWholeBRAVO3And4= null;
 													//st.close();
 											} catch (Exception e) {
-												// TODO Auto-generated catch block
+												
 												Logger.error(e+HospNum+"->From BravoManeOld"+child);
 											}
 											}

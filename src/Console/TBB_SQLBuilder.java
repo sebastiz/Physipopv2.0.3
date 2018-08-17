@@ -271,7 +271,7 @@ public class TBB_SQLBuilder {
           try {
 			tray.add(icon);
 		} catch (AWTException e3) {
-			// TODO Auto-generated catch block
+
 			e3.printStackTrace();
 		}*/
 
@@ -365,7 +365,7 @@ public class TBB_SQLBuilder {
             	try {
 					toExcel(table);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+
 					e.printStackTrace();
 				}
 
@@ -933,7 +933,7 @@ public class TBB_SQLBuilder {
 											 JOptionPane.showInputDialog(null, "This is the Endosoft Query", strb);
 		        	        	                pr.close();
 										} catch (FileNotFoundException e1) {
-											// TODO Auto-generated catch block
+
 											e1.printStackTrace();
 										}
 
@@ -1310,7 +1310,7 @@ public class TBB_SQLBuilder {
 	                   	}
 
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
                  }
@@ -1335,7 +1335,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableImp="Impedance2";
@@ -1354,7 +1354,7 @@ public class TBB_SQLBuilder {
 	                   	 SelectResult=null;
 	                   	 editorPane_2.setText(strb2.toString());
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
                  }
@@ -1378,7 +1378,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableBravo="BravoDay1And2";
@@ -1398,7 +1398,7 @@ public class TBB_SQLBuilder {
                        	 editorPane_2.setText(strb2.toString());
 
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
                  }
@@ -1422,7 +1422,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableBT="BreathTests";
@@ -1455,7 +1455,7 @@ public class TBB_SQLBuilder {
                    	 editorPane_2.setText(strb2.toString());
 						//}
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
                  }
@@ -1480,7 +1480,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableDiag="Diag";
@@ -1501,7 +1501,7 @@ public class TBB_SQLBuilder {
                     	 SelectResult=null;
                     	 editorPane_2.setText(strb2.toString());
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block for not reason
+
 						e1.printStackTrace();
 					}
             	 }
@@ -1526,7 +1526,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableEndoscopy="Endoscopy";
@@ -1545,7 +1545,7 @@ public class TBB_SQLBuilder {
                     	 SelectResult=null;
                     	 editorPane_2.setText(strb2.toString());
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
             	 }
@@ -1569,7 +1569,7 @@ public class TBB_SQLBuilder {
 						st=Connect.ConnectorNoInsert(HospNum,null,null,null);
 						//st.close();
 					} catch (SQLException e2) {
-						// TODO Auto-generated catch block
+
 						e2.printStackTrace();
 					}
  					String tableHistology="Histology";
@@ -1590,7 +1590,7 @@ public class TBB_SQLBuilder {
                     	 SelectResult=null;
                     	 editorPane_2.setText(strb2.toString());
 					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
+
 						e1.printStackTrace();
 					}
             	 }
@@ -1941,7 +1941,7 @@ public class TBB_SQLBuilder {
      	        frame.pack();
      	        frame.setVisible(true);
 						} catch (HeadlessException e1) {
-							// TODO Auto-generated catch block
+
 							e1.printStackTrace();
 						}
 
@@ -2044,7 +2044,7 @@ try {
 		 System.out.println("Yes mate noGRS innit");
 	}
 } catch (Exception e3) {
-	// TODO Auto-generated catch block
+
 	e3.printStackTrace();
 }
 
@@ -2090,7 +2090,7 @@ try {
 													                    try {
 																			webView.getEngine().load(ftohtml.toURI().toURL().toString());
 																		} catch (Exception e1) {
-																			// TODO Auto-generated catch block
+
 																			e1.printStackTrace();
 																		}
 													                });
@@ -2874,7 +2874,7 @@ try {
 								Date date = formatter.parse(rs1.getObject(columnIndex).toString());
 								vector.add(date);
 							} catch (Exception e) {
-								// TODO Auto-generated catch block
+
 								e.printStackTrace();
 							}
 				    	}

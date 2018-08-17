@@ -47,7 +47,7 @@ public class DBConnectorForAll {
 		try {
 			HospNumChecker(st,HospNum,SName,FName,DOB);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			Logger.error(e+"There is no Hospital Number here");
 		}
 		return st;
@@ -131,7 +131,7 @@ public class DBConnectorForAll {
 			try {
 				DOB=VisitDateFormatter.VDFormat(DOB);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			String stg = "INSERT INTO PatientData (HospNum_Id,FName,SName,DOB) VALUES('"+HospNum+"','"+SName+"','"+FName+"','"+DOB+"')";
@@ -192,7 +192,7 @@ public class DBConnectorForAll {
 			try {
 				st.execute(stg2);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				Logger.error(e+"This db didnt get processed: "+HospNum+stg2+"TABLE:"+table+"CHILD"+child);
 				e.printStackTrace();
 			}
@@ -224,14 +224,14 @@ public class DBConnectorForAll {
 		try {
 			st.execute(stg3);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			Logger.error(e+"No process"+child+":"+stg3);
 		}
 
 		System.out.println("Successful execution innit");
 		}
              catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 
 			}
 		int Bravo_Id=0;

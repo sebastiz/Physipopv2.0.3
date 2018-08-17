@@ -54,7 +54,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				try {
 					FName=Overview.Searcher.FName_searcher(s);
 				} catch (Exception e4) {
-					// TODO Auto-generated catch block
+
 					 Logger.error("FNAME ERROR HRMALL"+e4+HospNum+child);
 				}
 		 		mapAllDiag.put("FName", FName);
@@ -82,7 +82,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 					VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 					//System.out.println("VisitDate+Diag"+ VisitDate);
 				} catch (Exception e2) {
-					// TODO Auto-generated catch block
+
 					Logger.error(e2+HospNum+"->From HRMAll-VDFormat issue"+child);
 				}
 		 		if(VisitDate!=null){
@@ -93,7 +93,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 		 		try {
 					DOB=Overview.Searcher.DOB_searcher(s);
 				} catch (Exception e2) {
-					// TODO Auto-generated catch block
+
 					Logger.error(e2+HospNum+"->From Diag Mane No DOB"+DOB+child);
 				}
 		 		if(DOB!=null){
@@ -149,7 +149,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 						}
 					}
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
+
 					Logger.error(e1+"NoIdxAndHx"+HospNum+child);
 				}
 				//System.out.println("IndicAndHxHERE"+IndicANDHx);
@@ -172,7 +172,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 						}
 					}
 			       } catch (Exception e1) {
-		// TODO Auto-generated catch block
+
 		Logger.error(e1+"PPI "+HospNum+child);
 	}
 				 if(PPI!=null){
@@ -185,7 +185,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
                 	RDQScore=null;
 					RDQScore=Searcher.searcher(s,RDQ);
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
+
 					Logger.error(e1+HospNum+child);
 				}
 
@@ -196,12 +196,18 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 
 
 				//TODO this HODQ score in Diag mane doesnt work.
+                //TODO Check the JHS exists.
+                //TODO Check the RDQ exists.
 				String HODQ="HODQ \\(dysphagia\\) score:(.*)?\\(";
-				////System.out.println("HODQScore"+HODQScore);
+
+
+				System.out.println("HODQScore"+HODQScore);
+
+
 				try {
 					HODQScore=Searcher.searcher(s,HODQ);
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
+
 					Logger.error(e1+HospNum+child);
 				}
 				if(HODQScore!=null){

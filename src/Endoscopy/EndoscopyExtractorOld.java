@@ -98,7 +98,7 @@ public class EndoscopyExtractorOld {
 					Thread.sleep(500);
 
 					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
+						
 						e1.printStackTrace();
 					}
 				}
@@ -211,7 +211,7 @@ public class EndoscopyExtractorOld {
 							//System.out.println("GOT THE C 13");
 						}
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
+						
 						e.printStackTrace();
 					}
 
@@ -229,7 +229,7 @@ public class EndoscopyExtractorOld {
 							mapEndoscBarr.put("M_Stage",matcherM13Stage_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replaceAll("C", ""));
 				        }
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
+						
 						e.printStackTrace();
 					}
 
@@ -246,7 +246,7 @@ public class EndoscopyExtractorOld {
 						 }
 						 System.gc();
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
+						
 						Logger.error(e+HospNum+"->From EndoscopyOld"+filepath);
 					}
 

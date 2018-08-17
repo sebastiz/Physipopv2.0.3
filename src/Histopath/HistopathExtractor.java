@@ -102,7 +102,7 @@ public class HistopathExtractor {
 				    		try {
 								mapPathBarr.put("HospNum_Id",matcherHospitalNumpattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replaceAll(":", ""));
 							} catch (Exception e) {
-								// TODO Auto-generated catch block
+								
 								e.printStackTrace();
 							}
 				    	}
@@ -114,7 +114,7 @@ public class HistopathExtractor {
 								mapPathBarr.put("VisitDate",matcherResultEntered_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", ""));
 
 							} catch (Exception e) {
-								// TODO Auto-generated catch block
+								
 								e.printStackTrace();
 							}
 						}
@@ -130,7 +130,7 @@ public class HistopathExtractor {
 									mapPathBarr.put("ClinDetails", matcherBarrClinDetPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
 									System.out.println("THE ClinDetails"+matcherBarrClinDetPath_pattern.group(1));
 						    	   } catch (Exception e) {
-									// TODO Auto-generated catch block
+									
 									e.printStackTrace();
 								}
 						    	    ////
@@ -150,7 +150,7 @@ public class HistopathExtractor {
 								    try {
 										mapPathBarr.put("NatureOfSpec",matcherBarrMacroDescPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
 									} catch (Exception e) {
-										// TODO Auto-generated catch block
+										
 										e.printStackTrace();
 									}
 								    ////System.out.println("THE NatureOfSpec"+matcherBarrMacroDescPath_pattern.group(1));
@@ -171,7 +171,7 @@ public class HistopathExtractor {
 									try {
 										mapPathBarr.put("Histology",matcherBarrHistolPath_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
 									} catch (Exception e) {
-										// TODO Auto-generated catch block
+										
 										e.printStackTrace();
 									}
 									////System.out.println("THE Histology"+matcherBarrHistolPath_pattern.group(1));
@@ -191,7 +191,7 @@ public class HistopathExtractor {
 									try {
 										mapPathBarr.put("Diagnosis", matcherBarrDx_pattern.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
 									} catch (Exception e) {
-										// TODO Auto-generated catch block
+										
 										e.printStackTrace();
 									}
 									////System.out.println("THE Diagnosis"+matcherBarrDx_pattern.group(1));
@@ -200,7 +200,7 @@ public class HistopathExtractor {
 									try {
 										mapPathBarr.put("Diagnosis", matcherBarrDx_pattern2.group(1).replaceAll("\\n^$", "").replaceAll("  ", "").replaceAll("\n", "").replaceAll("\\t", "").replace("'", ""));
 									} catch (Exception e) {
-										// TODO Auto-generated catch block
+										
 										e.printStackTrace();
 									}
 
@@ -213,7 +213,7 @@ public class HistopathExtractor {
 
 
 								} catch (Exception e1) {
-									// TODO Auto-generated catch block
+									
 									e1.printStackTrace();
 								}
 								try {
@@ -224,7 +224,7 @@ public class HistopathExtractor {
 
 
 								} catch (Exception e1) {
-									// TODO Auto-generated catch block
+									
 									e1.printStackTrace();
 								}
 
@@ -235,14 +235,14 @@ public class HistopathExtractor {
 							try {
 								FName=mapPathBarr.get("FName").toString().trim();
 							} catch (Exception e) {
-								// TODO Auto-generated catch block
+								
 								e.printStackTrace();
 							}
 							System.out.println("mapPathBarr"+mapPathBarr);
 							 try {
 								SName=mapPathBarr.get("SName").toString().trim();
 							} catch (Exception e) {
-								// TODO Auto-generated catch block
+								
 								e.printStackTrace();
 							}
 
@@ -250,7 +250,7 @@ public class HistopathExtractor {
 							 try {
 								 HospNum=mapPathBarr.get("HospNum_Id").toString().trim();
 								} catch (Exception e) {
-									// TODO Auto-generated catch block
+									
 									e.printStackTrace();
 								}
 							 try {
@@ -258,7 +258,7 @@ public class HistopathExtractor {
 								 VisitDate=VisitDate.replace("\\", "_").replace("/","_");
 								 VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 								} catch (Exception e) {
-									// TODO Auto-generated catch block
+									
 									e.printStackTrace();
 								}
 							 tab="Histology";
@@ -293,7 +293,7 @@ System.out.println("This is stg2"+stg3);
 											try {
 												st.execute(stg3);
 											} catch (Exception e) {
-												// TODO Auto-generated catch block
+												
 												Logger.error(e+"No process"+":"+stg3);
 											}
 
@@ -338,7 +338,7 @@ System.out.println("This is stg2"+stg3);
 												String FKFieldName="Histology_Id";
 												ConnectMeUp.InserterMany2Many(st,third,fourth,table,sharedkey,FKFieldName);
 										} catch (Exception e) {
-											// TODO Auto-generated catch block
+											
 											Logger.error(e+HospNum+"->From HistopathNew"+filepath);
 										}
 								    	 //st.close();
@@ -347,7 +347,7 @@ System.out.println("This is stg2"+stg3);
 								}
 							 System.gc();
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
+							
 							e.printStackTrace();
 						}
 					 //To make sure Hospital NUmber doesn't get misallocated to the next rows results

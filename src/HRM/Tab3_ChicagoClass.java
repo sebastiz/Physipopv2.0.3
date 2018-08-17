@@ -16,7 +16,7 @@ public class Tab3_ChicagoClass {
 	String [] seTab3_ChicagoClass=null;
 
 	public Tab3_ChicagoClass(String x) {
-		// TODO Auto-generated constructor stub
+		
 		x=this.x;
 	}
 	

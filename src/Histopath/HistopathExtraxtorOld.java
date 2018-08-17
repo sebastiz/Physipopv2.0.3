@@ -123,7 +123,7 @@ public class HistopathExtraxtorOld {
 					Thread.sleep(500);
 
 					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
+						
 						e1.printStackTrace();
 					}
 				}
@@ -165,7 +165,7 @@ public class HistopathExtraxtorOld {
 						try {
 							VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
+							
 							Logger.error(e+HospNum+"->From HistopathExtractorOld Mane"+filepath);
 						}
 						////System.out.println("THIS IS THE format VISITDATE"+VisitDate);
@@ -267,7 +267,7 @@ public class HistopathExtraxtorOld {
 												String FKFieldName="Histology_Id";
 												ConnectMeUp.InserterMany2Many(st,third,fourth,table,sharedkey,FKFieldName);
 										} catch (Exception e) {
-											// TODO Auto-generated catch block
+											
 											Logger.error(e+HospNum+"->From HistopathOld"+filepath);
 										}
 								    	 //st.close();
@@ -276,7 +276,7 @@ public class HistopathExtraxtorOld {
 								}
 							 System.gc();
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
+							
 							e.printStackTrace();
 						}
 }

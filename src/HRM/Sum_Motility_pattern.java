@@ -17,7 +17,7 @@ public class Sum_Motility_pattern {
 	String [] seMotility=null;
 	
 	public Sum_Motility_pattern(String x) {
-		// TODO Auto-generated constructor stub
+		
 		
 		 x=this.x;
 	}

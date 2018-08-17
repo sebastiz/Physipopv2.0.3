@@ -141,7 +141,7 @@ if(!lactulCH4.isEmpty()){
 		algoLactul(lactulTimePoint,lactulH2);
 		algoLactul(lactulTimePoint,lactulCH4);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 		 }
@@ -150,7 +150,7 @@ if(!lactH2.isEmpty()){
 		algoLact(lactTimePoint,lactH2);
 		algoLact(lactTimePoint,lactCH4);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 		 }
@@ -159,7 +159,7 @@ if(!frucH2.isEmpty()){
 		algoFruc(frucTimePoint,frucH2);
 		algoFruc(frucTimePoint,frucCH4);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 }
@@ -168,7 +168,7 @@ if(!sucrH2.isEmpty()){
 		algoSucr(sucrTimePoint,sucrH2);
 		algoSucr(sucrTimePoint,sucrCH4);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 }
@@ -177,7 +177,7 @@ if(!glucH2.isEmpty()){
 		algoGluc(glucTimePoint,glucH2);
 		algoGluc(glucTimePoint,glucCH4);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 }

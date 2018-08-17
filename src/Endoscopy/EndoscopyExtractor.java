@@ -68,7 +68,6 @@ public class EndoscopyExtractor {
 
                    //Adds whole endoscopy if any cell contains the term Barrett's RFA or APC or EMR
 				 if(cell.toString().contains("Endoscopist")&&cell.toString().contains("Gastroscopy")&&(cell.toString().contains("Barrett")||cell.toString().contains("osinoph")||cell.toString().matches(".*osinoph.*"))) {
-					 //System.out.println("Barrett's endoscopy detected");
 					 filteredRows.add(row);
 					  break;
 
@@ -200,7 +199,7 @@ public class EndoscopyExtractor {
 
 
 											} catch (Exception e1) {
-												// TODO Auto-generated catch block
+
 												e1.printStackTrace();
 											}
 											try {
@@ -211,7 +210,7 @@ public class EndoscopyExtractor {
 
 
 											} catch (Exception e1) {
-												// TODO Auto-generated catch block
+
 												e1.printStackTrace();
 											}
 
@@ -226,33 +225,33 @@ public class EndoscopyExtractor {
 												try {
 													FName=mapEndoscBarr.get("FIRSTNAME").toString().trim();
 												} catch (Exception e) {
-													// TODO Auto-generated catch block
+
 													e.printStackTrace();
 												}
 												System.out.println("mapEndoscBarr"+mapEndoscBarr);
 												 try {
 													SName=mapEndoscBarr.get("LASTNAME").toString().trim();
 												} catch (Exception e) {
-													// TODO Auto-generated catch block
+
 													e.printStackTrace();
 												}
 												 try {
 													DOB=mapEndoscBarr.get("DOB").toString().trim();
 												} catch (Exception e) {
-													// TODO Auto-generated catch block
+
 													e.printStackTrace();
 												}
 												 try {
 													 HospNum=mapEndoscBarr.get("HospNum_Id").toString().trim();
 													} catch (Exception e) {
-														// TODO Auto-generated catch block
+
 														e.printStackTrace();
 													}
 												 try {
 													 VisitDate=mapEndoscBarr.get("VisitDate").toString().trim();
 													 VisitDate=VisitDate.replace("\\", "_").replace("/","_");
 													} catch (Exception e) {
-														// TODO Auto-generated catch block
+
 														e.printStackTrace();
 													}
 
@@ -268,7 +267,7 @@ public class EndoscopyExtractor {
 														    }
 														 System.gc();
 													} catch (Exception e) {
-														// TODO Auto-generated catch block
+
 														Logger.error(e+HospNum+"->From EndoscopyNew"+filepath);
 													}
 											 }
