@@ -43,10 +43,14 @@ public class HRMAll {
 		s=s.replaceAll(" ", " ").trim();
 		s=s.replaceAll("^\\s", "").replace(" 	     ", "").replaceAll("\n\\t", " ");
 
-
+		System.out.println("Pre replaceAll"+s);
 //Replace (cm/s) with cms
 		s=s.replaceAll("    ", "\n").replaceAll("^ ", "").replaceAll("^ ", "").replaceAll("\\(cm\\/s\\)","").replaceAll("\\(Chicago Classification\\)","Chicago Classification").replaceAll("(\\(.*)\\n(.*\\)).*\\n\\n(.*)", "$1$2 $3");
-		 s=Checkers.FindNReplace(s);
+		//System.out.println("Pre find and replace"+s);
+
+		s=Checkers.FindNReplace(s);
+
+		 //System.out.println("Post find and replace"+s);
 		 s=s.replaceAll("(\\(cm\\)\\s?){2,}","\\(cm\\) ").replaceAll("(?:\\(cm\\/s\\)\\s?){2,}","\\(cm\\/s\\)").replaceAll("(\\(mmHg\\)\\s?){2,}","\\(mmHg\\)");
 		 System.out.println("I'm in HRM");
 		 //Map<String,String> mapAllReport= new LinkedHashMap<String,String>();
@@ -56,7 +60,6 @@ public class HRMAll {
 
 //Hospital Number
 
-			 ////System.out.println("This is the string going into SwallowExtractor    :"+s);
 
 			 mapAllReport=MainHRMExtractor(s,child);
 			 mapAllReport.put("FileCreationDate", FileCreationDate);
@@ -89,7 +92,7 @@ public class HRMAll {
 							ConnectMeUp.Inserter2(st,third,fourth,table,sharedkey,FKFieldName,child);
 							}
 						} catch (Exception e1) {
-							
+
 							Logger.error(e1+HospNum+"->From HRMAll"+child);
 						}
 
@@ -103,7 +106,7 @@ public class HRMAll {
                	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 					 }
 			} catch (Exception e3) {
-				
+
 				Logger.error(e3+"Couldn't get the hospital number"+child);
 			}
 	          ////System.out.println("HospNumHRMALL"+ HospNum);
@@ -114,7 +117,7 @@ public class HRMAll {
 	          try {
 				FName=Overview.Searcher.FName_searcher(s);
 			} catch (Exception e4) {
-				
+
 				 Logger.error("FNAME ERROR HRMALL"+e4+HospNum+child);
 			}
 
@@ -145,7 +148,7 @@ public class HRMAll {
 				VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 				System.out.println("VisitDate+HRMAll"+ VisitDate);
 			} catch (Exception e2) {
-				
+
 				Logger.error(e2+HospNum+"->From HRMAll-VDFormat issue"+child);
 			}
 	 		mapAllReport.put("VisitDate", VisitDate);
@@ -154,7 +157,6 @@ public class HRMAll {
 	 		try {
 				DOB=Overview.Searcher.DOB_searcher(s);
 			} catch (Exception e2) {
-				
 				Logger.error(e2+HospNum+"->From Diag Mane No DOB"+DOB+child);
 			}
 	 		mapAllReport.put("DOBAge", DOB);
@@ -198,7 +200,7 @@ public class HRMAll {
 				}
 				mapAllReport.put("Height", Height);
 			} catch (Exception e1) {
-				
+
 				//Logger.error(e1+"No height here"+HospNum+child);
 				////System.out.println("ERROR no HEIGHT HERE for: "+HospNum);
 			}
@@ -255,17 +257,20 @@ public class HRMAll {
 
 			 for (int ff=1;ff<myList.size();ff++){
 					//Symptom
-				 mapSwallow.put(myList.get(0)+"MapSwallowsNum"+ff,myList.get(ff));
-					  }
 
+				 mapSwallow.put(myList.get(0).replaceAll(" 480-", "").replaceAll(" 500-", "").replaceAll(" 43-", "").replaceAll(" 74-", "").replaceAll(" 259-", "").replace("-", "").replaceAll("\\s+", "").replaceAll("<", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("nadirmsec", "nadir")+"MapSwallowsNum"+ff,myList.get(ff));
+						 //.replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("43-","").replace("-", "").replaceAll("\\/", "")+"MapSwallowsNum"+ff,myList.get(ff));
+					  }
 		 }
-			//HashMap<String, String> mapSwallow = new HashMap<String, String>();
+
 			 //Then need to split the pattern into ArrayList
 				while (matchermatch_patternSwallow2.find()){
 		            String[] myList = matchermatch_patternSwallow2.group(2).split("\\s+");
-		            String p1 = matchermatch_patternSwallow2.group(1).replaceAll("\\s+", "");
+		            String p1 = matchermatch_patternSwallow2.group(1).replaceAll(" 480-", "").replaceAll(" 500-", "").replaceAll(" 43-", "").replaceAll(" 74-", "").replaceAll(" 259-", "").replace("-", "").replaceAll("\\s+", "").replaceAll("<", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("nadirmsec", "nadir");
+
 		            int line = 1;
 		            for (String p2s: myList){
+		            	//System.out.println("The Swallow symptom here: "+p1);
 		        	    mapSwallow.put(p1+"MapSwallowsNum"+line, p2s);
 		        	    line++;
 		            }

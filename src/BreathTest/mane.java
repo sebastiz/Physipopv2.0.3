@@ -37,7 +37,7 @@ int sharedkey;
 	public void Gomane(String s,String child,String FileCreationDate) throws IOException, TikaException, SQLException {
         try {
         	mapAll.clear();
-        	mapAll.putAll(GraphExtractor.ExtractValues(child));
+        	mapAll.putAll(GraphExtractor.ExtractValues(child,s));
 
         	System.out.println("BREATH TEST"+mapAll);
         	//Need to get ExtractValues to return a map so can be mapAll.put to it
@@ -50,8 +50,6 @@ int sharedkey;
                 if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
                 	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
         			 }
-
-
 
         			} catch (Exception e2) {
 
@@ -137,6 +135,12 @@ int sharedkey;
 			e2.printStackTrace();
 		}
         try {
+        	mapAll.putAll(BT.GlucoseTestExtractor(s));
+		} catch (Exception e2) {
+
+			e2.printStackTrace();
+		}
+        try {
         	mapAll.putAll(BT.ReqPhysExtractor(s));
 		} catch (Exception e1) {
 
@@ -148,6 +152,7 @@ int sharedkey;
 
 			e.printStackTrace();
 		}
+
 
 
 

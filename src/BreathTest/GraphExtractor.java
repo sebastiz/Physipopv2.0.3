@@ -58,7 +58,8 @@ public class GraphExtractor {
 
 
 
-	public static Map<String,String> ExtractValues(String filename) throws IOException, SQLException, InvalidFormatException, OpenXML4JException, XmlException {
+	@SuppressWarnings("resource")
+	public static Map<String,String> ExtractValues(String filename,String s) throws IOException, SQLException, InvalidFormatException, OpenXML4JException, XmlException {
 		 Map<String,String> mapAllReport= new LinkedHashMap<String,String>();
 
 		 String fileName = filename;
@@ -73,24 +74,18 @@ public class GraphExtractor {
 
 			e.printStackTrace();
 		}
-	     System.out.println("The file is here in BT"+filename+"filetype");
-	     System.out.println("And goes postInputStream");
 
 
 	     //Add an either if here so that if the document has an embedded OLE2 object which is excel then it can be extracted otherwise treat as a word document
-         //TODO: Make sure that the notes, symptoms and interpreter work
-	     //Get the embedded extractor code from here:https://stackoverflow.com/questions/21419783/extract-embedded-files-from-doc-using-java
 	  		  InputStream fis = new FileInputStream(filename);
 	  		  System.out.println("And goes postInputStream"+filename);
 
 
 	  		  if(filename.contains("docx")){
 	  			Map<String,String> mapAllBreathTestGraphs= new LinkedHashMap<String,String>();
-	  			 System.out.println("And goes postInputStream"+filename);
-		           mapAllBreathTestGraphs.clear();
+		        mapAllBreathTestGraphs.clear();
 
 		           //For working with docx files use XWPFDocument
-
 	  		  XWPFDocument document = new XWPFDocument(fis);
 
 	  		  //Here you get all the embedded documents (ie all the excel spreadsheets).
@@ -99,6 +94,8 @@ public class GraphExtractor {
 	  		 if (embeddedDocs != null && !embeddedDocs.isEmpty()) {
 	  			System.out.print("pPart.getPartName().toString()");
 	  		    Iterator<PackagePart> pIter = embeddedDocs.iterator();
+	  		    mapAllBreathTestGraphs.clear();
+	            System.out.println("WERE IN THE EXTRACTVALUES");
 	  		        while (pIter.hasNext()) {
 
 	  		            PackagePart pPart = pIter.next();
@@ -167,17 +164,15 @@ public class GraphExtractor {
 						}
 
 
-						 System.out.print("embedxls..........."+Arr_RflxAnalysis_table2d);
 
-						 //Now split up the array table into three
-						 //Time Point CH4 H2
+						 //Now split up the array table into three Time Point CH4 H2
 						 ArrayList<String> Arr_TimePoint = new ArrayList<String>();
 						 Arr_TimePoint.add(Arr_RflxAnalysis_table2d.get(0).toString()+"TimePoint");
+
 						 //Every third element from element 1 onwards to get TimePoint measurements
 						 StringBuilder StrTimePoint=new StringBuilder();
 						 StrTimePoint.append(Arr_RflxAnalysis_table2d.get(0).toString()+"TimePoint");
 						 for (int i = 1; i < Arr_RflxAnalysis_table2d.size(); i=i+3) {
-							 //Arr_TimePoint.add(Arr_RflxAnalysis_table2d.get(i));
 							  StrTimePoint.append("_"+Arr_RflxAnalysis_table2d.get(i));
 						 }
 						 mapAllBreathTestGraphs.put(Arr_RflxAnalysis_table2d.get(0).toString()+"TimePoint",StrTimePoint.toString());
@@ -190,7 +185,6 @@ public class GraphExtractor {
 						 StringBuilder StrCH4=new StringBuilder();
 						 StrCH4.append(Arr_RflxAnalysis_table2d.get(0).toString()+"CH4");
 						 for (int i = 2; i < Arr_RflxAnalysis_table2d.size(); i=i+3) {
-							 //Arr_CH4.add(Arr_RflxAnalysis_table2d.get(i));
 							 StrCH4.append("_"+Arr_RflxAnalysis_table2d.get(i));
 						 }
 						 mapAllBreathTestGraphs.put(Arr_RflxAnalysis_table2d.get(0).toString()+"CH4",StrCH4.toString());
@@ -203,7 +197,6 @@ public class GraphExtractor {
 						 StringBuilder StrH2=new StringBuilder();
 						 StrH2.append(Arr_RflxAnalysis_table2d.get(0).toString()+"H2");
 						 for (int i = 3; i < Arr_RflxAnalysis_table2d.size(); i=i+3) {
-							 //Arr_H2.add(Arr_RflxAnalysis_table2d.get(i));
 							 StrH2.append("_"+Arr_RflxAnalysis_table2d.get(i));
 						 }
 						 mapAllBreathTestGraphs.put(Arr_RflxAnalysis_table2d.get(0).toString()+"H2",StrH2.toString());
@@ -234,23 +227,30 @@ public class GraphExtractor {
 	        	  for (int i=0; i<doc.getRange().numSections(); i++){
 	        	  if(doc.getRange().getSection(i).text().toString().contains("Lactulose Hydrogen Breath Test")){
 	        		  String lactul="lactul";
-	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,lactul));
+	        		  System.out.println("Sent to ValueMapper for Lactulose");
+	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,lactul,s));
 	        	  }
 	        	   if(doc.getRange().getSection(i).text().toString().contains("Lactose Hydrogen Breath Test")){
 	        		  String lact="lact";
-	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,lact));
+	        		  System.out.println("Sent to ValueMapper for Lactose");
+	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,lact,s));
+	        		  //Could say that if fails here then send to ValueMapper2 but change lact to lactose first and then use this as the search term to truncate the section
+	        		  //and extract the string
 	        	  }
 	        	   if(doc.getRange().getSection(i).text().toString().contains("Sucrose Hydrogen Breath Test")){
 	        		  String sucr="sucr";
-	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,sucr));
+	        		  System.out.println("Sent to ValueMapper for Sucrose");
+	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,sucr,s));
 	        	  }
 	        	   if(doc.getRange().getSection(i).text().toString().contains("Glucose Hydrogen Breath Test")){
 	        		  String gluc="gluc";
-	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,gluc));
+	        		  System.out.println("Sent to ValueMapper for Glucose");
+	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,gluc,s));
 	        	  }
 	        	   if(doc.getRange().getSection(i).text().toString().contains("Fructose Hydrogen Breath Test")){
 	        		  String fruc="fruc";
-	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,fruc));
+	        		  System.out.println("Sent to ValueMapper for Fructose");
+	        		  mapAllBreathTestGraphs.putAll(ValueMapper(doc,i,fruc,s));
 	        	  }
 	        	  }
 
@@ -262,11 +262,18 @@ public class GraphExtractor {
 	  		  }
 	      }
 
-	public static  Map<String,String> ValueMapper(HWPFDocument doc,int section,String keyStem) throws IOException, SQLException {
+	public static  Map<String,String> ValueMapper(HWPFDocument doc,int section,String keyStem,String s) throws IOException, SQLException {
 
-		System.out.println("WERE IN THE VALUEMAPPER"+doc.getRange().numSections());
-		 TableIterator itr2 = new TableIterator(doc.getRange().getSection(section));
+		System.out.println("WERE IN THE VALUEMAPPER");
+		//System.out.println("WERE IN THE VALUEMAPPER"+doc.getRange().getSection(section).text().toString());
+		//System.out.println("WERE IN THE numSections"+doc.getRange().numSections());
+		//System.out.println("WERE IN THE Section 0 numParagraphs"+doc.getRange().getSection(0).numParagraphs());
+		//System.out.println("WERE IN THE Section 1 numParagraphs"+doc.getRange().getSection(1).getTable(arg0));
+
 		 ArrayList<Table> places = new ArrayList<Table>();
+		 TableIterator itr2 = new TableIterator(doc.getRange().getSection(section));
+
+		 //int counter = 0;
          while(itr2.hasNext()){
              Table table = itr2.next();
              places.add(table);
@@ -283,35 +290,34 @@ public class GraphExtractor {
     	 StringBuilder H2 = new StringBuilder();
 
          for (int i=0; i<tableHoNo1.numRows(); i++){
-       	  if(!tableHoNo1.getRow(i).getCell(1).getParagraph(0).text().trim().isEmpty()){
-       		 //You are going to need to determine the value of the last column with
-       		 //text in it and then use that as the maximum that j cycles to which is always 4
-	              for (int j=0; j<5; j++){
+        	 System.out.println("THIS IS THE NUMBER OF ROW CELLS AGAIN TEXT"+tableHoNo1.getRow(i).getParagraph(0).text()+"Cell Text");
 
-	            System.out.println("THIS IS row i:  "+i+','+"j:"+j+" value: "+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
+        	 //Need to catch those graphs which cant be processed as formatted badly so then process them in a catch and flatten the file and extract from the flattened file section
+        	 try {
+				if(!StringUtils.isEmpty(tableHoNo1.getRow(i).getCell(1).getParagraph(0).text().trim())){
+				 //You are going to need to determine the value of the last column with text in it and then use that as the maximum that j cycles to which is always 4
+				      for (int j=0; j<5; j++){
 
-	   if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
-
-		   try {
-			System.out.println("oint:::"+tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-			oint.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
-	   }
-	   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("Time")&&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
-		   Time.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-	   }
-	   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
-		   CH.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-	   }
-	   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("H")&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
-
-		   H2.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
-	   }
-	        	  					}
-                       }
+   if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
+				oint.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
+   }
+   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("Time")&&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("oint")){
+   Time.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
+   }
+   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
+   CH.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
+   }
+   else if(tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("H")&!tableHoNo1.getRow(0).getCell(j).getParagraph(0).text().contains("CH")){
+   H2.append(tableHoNo1.getRow(i).getCell(j).getParagraph(0).text()+":");
+   }
+					  					}
+				           }
+			} catch (Exception e) {
+				e.printStackTrace();
+				//Try to see if another format of the word tables is being used here and then extract it- this is the alternative word tables
+				//Got to ValueMapper2
+				ValueMapper2(s);
+			}
               }
      	mapTable.put(keyStem+"TimePoint",oint.toString().replaceAll("\\P{Print}", "").trim());
        	mapTable.put(keyStem+"Time",Time.toString().replaceAll("\\P{Print}", "").trim());
@@ -321,6 +327,12 @@ public class GraphExtractor {
 
 
 	}
-      }
 
 
+
+public static  Map<String,String> ValueMapper2(String s) throws IOException, SQLException {
+	System.out.println("The breath Test that is badly formatted"+s);
+	return null;
+
+}
+}

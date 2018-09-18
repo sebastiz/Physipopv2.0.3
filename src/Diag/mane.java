@@ -26,7 +26,9 @@ static String VisitDate;
 static String PPI;
 static String IndicANDHx;
 static String RDQScore=null;
+static String JHSScore=null;
 static String HODQScore=null;
+static String t=null;
 String s=null;
 static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 
@@ -37,6 +39,11 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 		System.out.println("Im in Diag.mane.Dimane");
 
 		mapAllDiag.clear();
+
+
+
+		//replaceAll("<|>|//)|//(", "")
+
 		 try {
 	         HospNum=Overview.Searcher.HospNo_searcher(s);
 	         if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
@@ -47,9 +54,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 					}
 				mapAllDiag.put("HospNum_Id", HospNum);
 				mapAllDiag.put("FileCreationDate", FileCreationDate);
-
-
-
+				//Get the whole reort into the database:
 
 				try {
 					FName=Overview.Searcher.FName_searcher(s);
@@ -106,13 +111,12 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				String Indic3="Indication(.*)?Anggiansah";
 				String Indic4="Indication(.*)SUMMARY";
 				String Indic5="Indication(.*)^Performed";
-				String Indic6="Indication(.*)?Jafar";
 				String Indic7="Indication(.*)?Conclusion";
 				String Indic8="Indication(.*)?pH-impedance result";
 				String Indic9="Indication(.*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n])";
+				String Indic6="Indication(.*)?Jafar";
 
 
-				//Add in the PPI string searcher in here
 
 				try {
 					IndicANDHx=Searcher.multiline_searcher(s,Indic1);
@@ -129,13 +133,13 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 								if(IndicANDHx==null){
 									IndicANDHx=Searcher.multiline_searcher(s,Indic5);
 									if(IndicANDHx==null){
-										IndicANDHx=Searcher.multiline_searcher(s,Indic6);
+										IndicANDHx=Searcher.multiline_searcher(s,Indic7);
 										if(IndicANDHx==null){
-											IndicANDHx=Searcher.multiline_searcher(s,Indic7);
+											IndicANDHx=Searcher.multiline_searcher(s,Indic8);
 											if(IndicANDHx==null){
-												IndicANDHx=Searcher.multiline_searcher(s,Indic8);
+												IndicANDHx=Searcher.multiline_searcher(s,Indic9);
 												if(IndicANDHx==null){
-													IndicANDHx=Searcher.multiline_searcher(s,Indic9);
+													IndicANDHx=Searcher.multiline_searcher(s,Indic6);
 													if(IndicANDHx==null){
 														IndicANDHx="Nil found";
 													}
@@ -152,6 +156,9 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 
 					Logger.error(e1+"NoIdxAndHx"+HospNum+child);
 				}
+
+
+
 				//System.out.println("IndicAndHxHERE"+IndicANDHx);
 				if(IndicANDHx!=null){
 				IndicANDHx=IndicANDHx.replaceAll("\\(", "~").replaceAll("\\)", "~").replaceAll("'", "");
@@ -160,12 +167,14 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 
 
 				String PPI1="(?:^| )[Oo][Nn] (.*(?=PPI)).*?Indications and|(?:^| )[Oo][Ff]{2} (.*(?=PPI)).*?Indications and";
-				String PPI2="Monitoring( .*?PPI)";
+				String PPI2="((ON|OFF)\\s+?PPI)";
+				//String PPI2="Monitoring( .*?PPI)";
 
 				try{
 					PPI=null;
 					PPI=Searcher.multiline_searcher(s,PPI1);
 					if(PPI==null){
+						System.out.println("PPI in here"+PPI);
 						PPI=Searcher.searcher(s,PPI2);
 						if(PPI==null){
 							PPI="Nil found";
@@ -195,17 +204,32 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
                 }
 
 
-				//TODO this HODQ score in Diag mane doesnt work.
-                //TODO Check the JHS exists.
-                //TODO Check the RDQ exists.
-				String HODQ="HODQ \\(dysphagia\\) score:(.*)?\\(";
+                String JHS="Joint hypermobility score:(.*)\\/\\d\\s+";
+                try {
+                	JHSScore=null;
+                	JHSScore=Searcher.searcher(s,JHS);
+				} catch (Exception e1) {
+
+					Logger.error(e1+HospNum+child);
+				}
+
+                //System.out.println("RDQScore"+RDQScore);
+                if(JHSScore!=null){
+				mapAllDiag.put("JHSScore", JHSScore);
+                }
 
 
-				System.out.println("HODQScore"+HODQScore);
+
+				String HODQ="HODQ \\(dysphagia\\) score:(.*)?\\d+";
+				//System.out.println("\\/\\d\\s+
+
+
 
 
 				try {
 					HODQScore=Searcher.searcher(s,HODQ);
+					//System.out.println("this is the string"+s);
+					System.out.println("HODQScoreeee"+HODQScore);
 				} catch (Exception e1) {
 
 					Logger.error(e1+HospNum+child);
@@ -213,6 +237,17 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				if(HODQScore!=null){
 				mapAllDiag.put("HODQScore", HODQScore);
 				}
+
+
+				try {
+					t=s.replaceAll("[^\\dA-Za-z ]", "");
+					mapAllDiag.put("WholeReport", t);
+				} catch (Exception e5) {
+					// TODO Auto-generated catch block
+					e5.printStackTrace();
+				}
+
+
 
 								  try {
 									String tab="Diag";

@@ -377,6 +377,66 @@ public class BreathTestExtractorMethods {
 	}
 
 
+	public Map<String,String> GlucoseTestExtractor(String str){
+		Pattern match_pattern = Pattern.compile("Glucose Hydrogen Breath Test(.*?Interpretation[^\\r|^\\n]*)",Pattern.DOTALL);
+		Matcher matchermatch_pattern = match_pattern.matcher(str);
+
+		//Pattern match_pattern2 = Pattern.compile("Lactose Hydrogen Breath Test.*?(Notes:.*?$\n[\n]?.*?\n[\n]?)",Pattern.DOTALL);
+		Pattern match_pattern2 = Pattern.compile("Glucose Hydrogen Breath Test.*?(Notes:.*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n].*?[\\r|\\n])",Pattern.DOTALL);
+		Matcher matchermatch_pattern2 = match_pattern2.matcher(str);
+
+		if (matchermatch_pattern.find()) {
+			gluc=matchermatch_pattern.group(1).toString().trim();
+
+		}
+
+		else if (matchermatch_pattern2.find()){
+			gluc=matchermatch_pattern2.group(1).toString().trim();
+
+		}
+
+		try {
+			if(gluc!=null){
+				String glucNotes=NotesExtractor(gluc).trim();
+				mapAllGlucoseBreathTest.put("GlucoseNotes",glucNotes);
+			}
+			else{
+				mapAllGlucoseBreathTest.put("GlucoseNotes",null);
+					}
+		} catch (Exception e) {
+
+		}
+
+		try {
+			if(gluc!=null){
+				mapAllGlucoseBreathTest.put("GlucoseSymptoms",SymptomsExtractor(gluc).trim());
+		}
+		else{
+			mapAllGlucoseBreathTest.put("GlucoseSymptoms",null);
+				}
+		} catch (Exception e) {
+
+			//System.out.println("No Lactose Symptoms");
+		}
+
+
+
+		try {
+			if(gluc!=null){
+				mapAllGlucoseBreathTest.put("GlucoseInterpretation",null);
+				mapAllGlucoseBreathTest.put("GlucoseInterpretation",InterpretationExtractor(gluc).trim());
+		}
+			else{
+				mapAllGlucoseBreathTest.put("GlucoseInterpretation",null);
+					}
+		}
+			catch (Exception e) {
+
+			//System.out.println("No Lactose Interpretation");
+		}
+		//System.out.println("mapAllLactoseBreathTest2"+mapAllLactoseBreathTest);
+		return mapAllGlucoseBreathTest;
+	}
 
 
 

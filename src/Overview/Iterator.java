@@ -154,7 +154,7 @@ public class Iterator {
 						parser.parse(inputstream, handler, metadata, context);
 						String s=null;
 					    s =handler.toString();
-					   // System.out.println(s);
+					   //System.out.println("THe most raw string"+s);
 					    handler=null;
 					    context=null;
 					    inputstream.close();
@@ -289,7 +289,7 @@ public class Iterator {
 					        		||child.getPath().contains("FINAL")
 					        		||child.getPath().contains("Final"))&&s.contains("nares")&&s.contains("Indications")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	System.out.println("Caught in Diag"+child.getName());
-					        	System.out.println(s);
+					        	System.out.println("The raw string"+s);
 					        	s=Checkers.FindNReplace(s);
 					        	try {
 									mane.Dimane(s,child.getName(),getFileCreationDate(child));
@@ -356,7 +356,7 @@ public class Iterator {
 							}
 						}
 						 } catch (Exception e) {
-								
+
 								Logger.error(e+"This file didnt get processed:"+child.getName());
 								//System.out.println("This file didnt get processed:"+child.getName());
 							}
@@ -364,7 +364,7 @@ public class Iterator {
 
 			  }
 		} catch (Exception e) {
-			
+
 			Logger.error(e+"This file didnt get processed:"+directoryListing);
 		}
 	}

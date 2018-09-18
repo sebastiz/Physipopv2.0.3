@@ -25,7 +25,7 @@ Regurgitation :regurg.
 Regurgitation :Regurg.
 Regurgitation :Regurg
 Regurgitation :regurg
-Regurgitation :Regurgitation itaion
+Regurgitation :Regurgitation itation
 Cough :cough
 Throat :throat
 Throat :THROAT
@@ -55,7 +55,6 @@ Nausea :NAUSEA
 Esophageal :Oesophageal
 LES midpoint (from nares)(cm) :LOS midpoint
 LES midpoint (from nares)(cm) :LOS midpoint (from nares)
-LES midpoint (from nares)(cm) :LES midpoint (from nares)
 LES midpoint (from nares)(cm) :LOS Center (fr. nares):
 LES midpoint (from nares)(cm) :LES Center (fr. nares):
 Proximal LES (from nares)(cm) :Proximal LOS (from nares)
@@ -111,7 +110,7 @@ Hiatal hernia?:Hiatal Hernia
 Mean basal pressure(mmHg):Mean basal pressure
 Mean residual pressure(mmHg):Mean residual pressure
 Contractile front velocity(cm/s):Contractile front velocity
-Intrabolus pressure (avg max)(mmHg):Intrabolus pressure (avg max)
+Intrabolus pressure (@LESR)(mmHg):Intrabolus pressure (avg max)
  :(cm/s)(cm/s)
  :(cm/s)(cm/s)
  :(cm) (cm)
@@ -119,3 +118,6 @@ Intrabolus pressure (avg max)(mmHg):Intrabolus pressure (avg max)
  (mmHg) :(mmHg)(mmHg)(mmHg)(mmHg)
  (mmHg) :(mmHg)(mmHg)(mmHg)
  (mmHg) :(mmHg)(mmHg)
+(from nares)(cm) :(from nares)(cm)  (from nares)
+OFF:'off'
+ON:'on'
