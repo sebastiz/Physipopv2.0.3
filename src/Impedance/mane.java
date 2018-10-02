@@ -185,10 +185,10 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 			 Arr_PPBolusExpo_table2d.remove(0);
 			 Arr_PPBolusExpo_table2d.remove(0);
 			 Map<String,String> mapSx_PPBolusExpo= new LinkedHashMap<String,String>();
-			 for (int ff=0;ff<Arr_PPBolusExpo_table2d.size()-1;ff++){
+			 for (int ff=0;ff<Arr_PPBolusExpo_table2d.size();ff++){
 				 mapSx_PPBolusExpo.put("MainPPBolusExpo"+Arr_PPBolusExpo_table2d.get(ff).get(0),Arr_PPBolusExpo_table2d.get(ff).get(1));
 					  }
-			//System.out.println("HASHmapmap_PPBolusExpos"+mapSx_PPBolusExpo);
+			System.out.println("MEEEEEEEEEEEHASHmapmap_PPBolusExpos"+mapSx_PPBolusExpo);
 			mapImpedanceAll.putAll(mapSx_PPBolusExpo);
 		} catch (Exception e) {
 
@@ -559,7 +559,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		 Map<String,String> mapSx_PPPostprandExpo= new LinkedHashMap<String,String>();
 		 for (int ff=0;ff<Arr_Proc_table2d.size();ff++){
 				//Symptom
-			 System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
+			 //System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
 			 try {
 				 //Put here so that if array has no value (ie has captured a title for example) then the hash is filled- it will be excluded
 				 //anyway when the database is connected to.
@@ -568,7 +568,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 
 				mapSx_PPPostprandExpo.put("MainProc"+Arr_Proc_table2d.get(ff).get(0),"NoExist");
 			}
-			 System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
+			 //System.out.println("HASHmapMain_Proc"+mapSx_PPPostprandExpo);
 				  }
 
 			mapImpedanceAll.putAll(mapSx_PPPostprandExpo);
@@ -649,7 +649,7 @@ Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 		}
 
 		Arr_ProxExtent_table2d.remove(0);
-		Arr_ProxExtent_table2d.remove(Arr_ProxExtent_table2d.size()-1);
+		Arr_ProxExtent_table2d.remove(Arr_ProxExtent_table2d.size());
 
 		//Tidy up
 		 for (int i = 0; i < Arr_ProxExtent_table2d.size(); i++) {
@@ -923,7 +923,7 @@ e.printStackTrace();
 			  Arr_MonitoringDet_table2d.get(ff).set(0, "GastricChannel_"+Arr_MonitoringDet_table2d.get(ff).get(0));
 		  }
 
-			for (int ff=1;ff<Arr_MonitoringDet_table2d.size()-1;ff++){
+			for (int ff=1;ff<Arr_MonitoringDet_table2d.size();ff++){
 				mapSx_MonitoringDet.put("MainAcidExp"+Arr_MonitoringDet_table2d.get(0).get(0)+"_"+Arr_MonitoringDet_table2d.get(ff).get(0),Arr_MonitoringDet_table2d.get(ff).get(1));
 				mapSx_MonitoringDet.put("MainAcidExp"+Arr_MonitoringDet_table2d.get(0).get(1)+"_"+Arr_MonitoringDet_table2d.get(ff).get(0),Arr_MonitoringDet_table2d.get(ff).get(2));
 				mapSx_MonitoringDet.put("MainAcidExp"+Arr_MonitoringDet_table2d.get(0).get(2)+"_"+Arr_MonitoringDet_table2d.get(ff).get(0),Arr_MonitoringDet_table2d.get(ff).get(3));
@@ -970,7 +970,7 @@ e.printStackTrace();
 			    		 }
 			}
 		 }
-System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
+//System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 		//Post tidy up
 		 Arr_AcidExp_pattern_table2d.get(0).remove(0);
 		 Arr_AcidExp_pattern_table2d.remove(1);
@@ -1048,13 +1048,15 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 
 	try {
 		while (matcherBolusExpo_pattern.find()) {
-			BolusExpo_arr.add(matcherBolusExpo_pattern.group(0));
+			BolusExpo_arr.add(matcherBolusExpo_pattern.group(0).replaceAll("\\((.*?)\\)", ""));
 			 }
-
+		System.out.println("1.BolusExpo_arr"+BolusExpo_arr);
 		List<String> BolusExpo_table=new ArrayList<String>(java.util.Arrays.asList(BolusExpo_arr.get(0).split("\n")));
 
 		//This creates an array of arrays
 		BolusExpo_table=java.util.Arrays.asList(BolusExpo_arr.get(0).split("\n"));
+
+		System.out.println("2.BolusExpo_table"+BolusExpo_table);
 		ArrayList<List<String>> Arr_BolusExpo_table2d = new ArrayList<List<String>>();
 		for (String str : BolusExpo_table){
 			ArrayList<String> Arr_BolusExpo_table = new ArrayList<String>();
@@ -1076,19 +1078,22 @@ System.out.println("Arr_AcidExp_pattern_table2d"+Arr_AcidExp_pattern_table2d);
 			    		 }
 			}
 		 //Tidy Up
-		 Arr_BolusExpo_table2d.remove(0);
-
+		 //Arr_BolusExpo_table2d.remove(0);
+		//Have to skip array indices because the normal value ranges have been inserted
+		 System.out.println("3.Arr_BolusExpo_table2d"+Arr_BolusExpo_table2d);
 		 Map<String,String> mapSx_BolusExpo= new LinkedHashMap<String,String>();
-		 for (int ff=1;ff<Arr_BolusExpo_table2d.size()-1;ff++){
+		 for (int ff=1;ff<Arr_BolusExpo_table2d.size();ff++){
 				//Symptom
 			 mapSx_BolusExpo.put("MainBolusExpo"+Arr_BolusExpo_table2d.get(0).get(0)+"_"+Arr_BolusExpo_table2d.get(ff).get(0),Arr_BolusExpo_table2d.get(ff).get(1));
 				//Recumbent
-			 mapSx_BolusExpo.put("MainBolusExpo"+Arr_BolusExpo_table2d.get(0).get(1)+"_"+Arr_BolusExpo_table2d.get(ff).get(0),Arr_BolusExpo_table2d.get(ff).get(2));
+			 mapSx_BolusExpo.put("MainBolusExpo"+Arr_BolusExpo_table2d.get(0).get(2)+"_"+Arr_BolusExpo_table2d.get(ff).get(0),Arr_BolusExpo_table2d.get(ff).get(2));
 				//Total
-			 mapSx_BolusExpo.put("MainBolusExpo"+Arr_BolusExpo_table2d.get(0).get(2)+"_"+Arr_BolusExpo_table2d.get(ff).get(0),Arr_BolusExpo_table2d.get(ff).get(3));
+			 mapSx_BolusExpo.put("MainBolusExpo"+Arr_BolusExpo_table2d.get(0).get(4)+"_"+Arr_BolusExpo_table2d.get(ff).get(0),Arr_BolusExpo_table2d.get(ff).get(3));
 				//
 				  }
-		//System.out.println("HASHmapmapSx_BolusExpos"+mapSx_BolusExpo);
+		System.out.println("4.HASHmapmapSx_BolusExpos"+mapSx_BolusExpo);
+
+
 		mapImpedanceAll.putAll(mapSx_BolusExpo);
 	} catch (Exception e) {
 	}

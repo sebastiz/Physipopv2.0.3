@@ -124,7 +124,7 @@ public class Iterator {
 							}
 
 
-//////////////////////////////////////////////////////////////////Add the file to the logger
+////////////////////////////////////////////////////////////////// Add the file to the logger
 
 							Preferences userPrefs = Preferences.userNodeForPackage(TBB_SQLBuilder.class);
 							try {
@@ -162,12 +162,13 @@ public class Iterator {
 					    System.gc();
 					    s=Checkers.FindNReplace(s);
 					    //child.getName().toString().replaceAll("//%", "")
-					    System.out.println("child.getName().tostring()"+child.getName().toString());
+					    //System.out.println("child.getName().tostring()"+child.getName().toString());
 					    System.out.println("child.getPath().tostring()"+child.getPath().toString());
+					    //System.out.println("child.getPath().tostring()"+s);
 
-					    if(child.getPath().contains("final")){
-					    	System.out.println("final here");
-					    }
+					    //if(child.getPath().contains("final")){
+					    //	System.out.println("final here");
+					    //}
 
 //Endoscopy files....takes xlsx files....
 					        if(child.getPath().contains("T6200")||child.getPath().contains("TCR2232")||child.getPath().contains("Gastroscopy_Hi")){
@@ -239,7 +240,7 @@ public class Iterator {
 					        else if(s.contains("Impedance")&&!s.contains("ENDOSCOPIC DIAGNOSIS")){
 					        	 try {
 									if (child.getPath().contains("rtf")){
-										System.out.println("File now being dealt with endoscopy"+getFileCreationDate(child));
+										System.out.println("File now being dealt with impedance"+getFileCreationDate(child));
 										System.out.println("GHGHGHGHGHGHGH");
 									Impedance.mane i = new Impedance.mane(s);
 									i.Impmane(s,child.getName(),getFileCreationDate(child));
