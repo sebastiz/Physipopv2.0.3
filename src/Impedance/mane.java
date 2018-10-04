@@ -75,11 +75,9 @@ Pattern ReflEpisodeAct_pattern = Pattern.compile("Reflux Episode Activity \\(Imp
 Pattern SxCorr_pattern = Pattern.compile("(?s)Symptom Correlation to Reflux((?:(?!Symptom Correlation to Reflux).)*?)Reflux Symptom Index",Pattern.DOTALL);
 Pattern RSSI_pattern = Pattern.compile("Reflux Symptom Sensitivity Index \\(Impedance\\).*?Reflux Symptom Association Probability \\(Impedance\\)",Pattern.DOTALL);
 Pattern MainRSI_pattern = Pattern.compile("Reflux Symptom Index .*?Reflux Symptom Sensitivity Index|Reflux Symptom Index .*?Reflux Symptom Association Probability",Pattern.DOTALL);
-Pattern MainRSAP_pattern = Pattern.compile("Reflux Symptom Association Probability \\(Impedance\\).*?[^\\n]",Pattern.DOTALL);
+Pattern MainRSAP_pattern = Pattern.compile("Reflux Symptom Association Probability \\(Impedance\\).*?\n\n\n",Pattern.DOTALL);
 Pattern Medication_pattern = Pattern.compile("Medications:(.*)?\\n");
 /////////////Sort this out//////////////////////////////////////////////////////
-
-
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1273,9 +1271,10 @@ e.printStackTrace();
 		 try {
 			while (matcherMainRSAP_pattern.find()) {
 					MainRSAP_arr.add(matcherMainRSAP_pattern.group(0));
+					System.out.println("1. matcherMainRSAP_pattern.group(0) "+matcherMainRSAP_pattern.group(0));
 					 }
 				List<String> MainRSAP_table=new ArrayList<String>(java.util.Arrays.asList(MainRSAP_arr.get(0).split("\n")));
-
+				System.out.println("2. MainRSAP_arr "+MainRSAP_arr);
 				//This creates an array of arrays
 				MainRSAP_table=java.util.Arrays.asList(MainRSAP_arr.get(0).split("\n"));
 				ArrayList<List<String>> Arr_MainRSAP_table2d = new ArrayList<List<String>>();
@@ -1302,6 +1301,7 @@ e.printStackTrace();
 			    	}
 
 				 Arr_MainRSAP_table2d.remove(0);
+				 System.out.println("3. Arr_MainRSAP_table2d "+Arr_MainRSAP_table2d);
 				 Arr_MainRSAP_table2d.remove(Arr_MainRSAP_table2d.size()-1);
 
 				 for (int ff=1;ff<Arr_MainRSAP_table2d.size();ff++){
@@ -1317,7 +1317,7 @@ e.printStackTrace();
 
 
 		} catch (Exception e) {
-
+System.out.println("EEEEEEEEEEEE"+e);
 			Logger.error(e+"Theres no Main RSAP here"+child);
 		}
 
