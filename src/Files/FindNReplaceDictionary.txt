@@ -71,9 +71,10 @@ PIP (from nares)(cm) :PIP (fr. nares):
 PIP (from nares)(cm) :PIP (from nares)
 PIP (from nares)(cm) :PIP (fr. nares)
 LES length(cm) :LOS length
-Intraabdominal LES length(cm) :Intraabdominal LOS length
-Intraabdominal LES length(cm) :Intraabdominal LES length
-Intraabdominal LES length(cm) :Intraabdominal Segment
+IntraabdominalLESlength(cm):Intraabdominal LOS length
+IntraabdominalLESlength(cm):Intraabdominal LES length
+IntraabdominalLESlength(cm):Intraabdominal Segment
+LES length(cm) :LES length
 LES Pressures :LOS Pressures
 Basal (respiratory min.)(mmHg) :Basal (respiratory min, eSleeve)
 Basal (respiratory mean)(mmHg) :Basal (respiratory mean, eSleeve)
@@ -86,14 +87,17 @@ Residual (mean)(mmHg):Mean Residual Pressure
 Residual (mean)(mmHg):Mean Residual P
 Residual (mean)(mmHg):Residual (mean, eSleeve,IRP)
 Residual (mean)(mmHg):Residual (mean, eSleeve,3sN)
+Residual (mean)(mmHg):Residual (mean, eSleeve)
 Basal (respiratory min.)(mmHg) :Basal P (end expiratory)
 Basal (respiratory min.)(mmHg):Basal (respiratory min., eSleeve,3sN)
+Basal (respiratory min.)(mmHg):Basal (respiratory min.,
 Basal (respiratory mean)(mmHg):Basal (respiratory mean, eSleeve,3sN)
+Basal (respiratory min.)(mmHg):Basal (respiratory mean.,
 Basal (respiratory mean)(mmHg):Mean Basal P
 Basal (respiratory mean)(mmHg):Mean Basal Pressure
-Esophageal length (LOS-UOS centers):Esophageal  length (LOS-UOS centers)
-Esophageal length (LOS-UOS centers):Oesophageal length (LOS-UOScenters)
-Esophageal length (LES-UES centers)(cm):Esophageal length (LES-UES centers)
+EsophageallengthLESUEScenters(cm):Esophageal  length (LOS-UOS centers)
+EsophageallengthLESUEScenters(cm):Oesophageal length (LOS-UOScenters)
+EsophageallengthLESUEScenters(cm):Esophageal length (LES-UES centers)
 Contractile front velocity(cm/s):Velocity (5.0-13.0 above LOS)
 Contractile front velocity(cm/s):Velocity (11.0-3.0 above LOS)
 Contractile front velocity(cm/s):Vel. (betw. 13.0 & 5.0 cm above LOS)

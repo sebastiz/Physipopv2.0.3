@@ -154,7 +154,7 @@ public class Iterator {
 						parser.parse(inputstream, handler, metadata, context);
 						String s=null;
 					    s =handler.toString();
-					   //System.out.println("THe most raw string"+s);
+					   System.out.println("Comparison string"+s);
 					    handler=null;
 					    context=null;
 					    inputstream.close();
@@ -302,6 +302,7 @@ public class Iterator {
 					           		if(!child.getPath().contains("Interpretation / Findings")){
 
 									HRMAll.mane(s,child.getName(),getFileCreationDate(child));
+									System.out.println("Im entering some HRM data"+child.getName());
 					           		}
 
 								} catch (Exception e) {
@@ -317,6 +318,7 @@ public class Iterator {
 					        	try {
 					        		getFileCreationDate(child);
 									mane.Dimane(s,child.getName(),getFileCreationDate(child));
+									System.out.println("Im entering some diag data with the HRM as well"+child.getName());
 								} catch (Exception e) {
 									Logger.error(e+child.getName());
 
@@ -324,6 +326,7 @@ public class Iterator {
 					        	try {
 					        		getFileCreationDate(child);
 									HRMAll.mane(s,child.getName(),getFileCreationDate(child));
+									System.out.println("Im entering some HRM data with the diag as well"+child.getName());
 
 								} catch (Exception e) {
 									Logger.error(e+child.getName());
@@ -334,7 +337,7 @@ public class Iterator {
 					        else if(s.contains(("Indications"))&&!s.contains("nares")&&!s.contains("HISTOLOGY")&&!s.contains("ENDOSCOPIC DIAGNOSIS")&&!s.contains("Analysis Thresholds Channel")){
 					        	try {
 					        		//Just for Diag
-					        		System.out.println("SEND SEND SEND send to MANE");
+					        		System.out.println("SEND SEND SEND send to MANE DIAG only");
 					        		getFileCreationDate(child);
 									mane.Dimane(s,child.getName(),getFileCreationDate(child));
 

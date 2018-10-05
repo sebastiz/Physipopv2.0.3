@@ -43,14 +43,16 @@ public class HRMAll {
 		s=s.replaceAll(" ", " ").trim();
 		s=s.replaceAll("^\\s", "").replace(" 	     ", "").replaceAll("\n\\t", " ");
 
-		System.out.println("Pre replaceAll"+s);
-//Replace (cm/s) with cms
-		s=s.replaceAll("    ", "\n").replaceAll("^ ", "").replaceAll("^ ", "").replaceAll("\\(cm\\/s\\)","").replaceAll("\\(Chicago Classification\\)","Chicago Classification").replaceAll("(\\(.*)\\n(.*\\)).*\\n\\n(.*)", "$1$2 $3");
+		//System.out.println("Pre replaceAll"+s);
+        //Replace (cm/s) with cms
+		System.out.println("Pre find and replace"+s);
+		s=s.replaceAll("    ", "\n").replaceAll("^ ", "").replaceAll("^ ", "").replaceAll("\\(cm\\/s\\)","").replaceAll("\\(Chicago Classification\\)","Chicago Classification");
+				//.replaceAll("(\\(.*)\\n(.*\\)).*\\n\\n(.*)", "$1$2 $3");
 		//System.out.println("Pre find and replace"+s);
 
 		s=Checkers.FindNReplace(s);
 
-		 //System.out.println("Post find and replace"+s);
+		 System.out.println("Post find and replace"+s);
 		 s=s.replaceAll("(\\(cm\\)\\s?){2,}","\\(cm\\) ").replaceAll("(?:\\(cm\\/s\\)\\s?){2,}","\\(cm\\/s\\)").replaceAll("(\\(mmHg\\)\\s?){2,}","\\(mmHg\\)");
 		 System.out.println("I'm in HRM");
 		 //Map<String,String> mapAllReport= new LinkedHashMap<String,String>();
@@ -144,9 +146,9 @@ public class HRMAll {
 	 		try {
 	 			VisitDate=VisitDate.trim();
 	 			VisitDate=VisitDate.replaceAll("^\\s+", "").replaceAll("\\s+$", "");
-	 			System.out.println("VisitDateWithtrim+HRMAll"+ VisitDate);
+	 			//System.out.println("VisitDateWithtrim+HRMAll"+ VisitDate);
 				VisitDate=VisitDateFormatter.VDFormat(VisitDate);
-				System.out.println("VisitDate+HRMAll"+ VisitDate);
+				//System.out.println("VisitDate+HRMAll"+ VisitDate);
 			} catch (Exception e2) {
 
 				Logger.error(e2+HospNum+"->From HRMAll-VDFormat issue"+child);
@@ -215,6 +217,13 @@ public class HRMAll {
 			 String [] t = null;
 			 BufferedReader reader = new BufferedReader(new InputStreamReader(ClassLoader.class.getResourceAsStream("/Files/HRMFields.txt")),2048);
 
+
+//Tidy up the report so get rid of upper Esophageal Sphincter data as the recordings have the same values as for oesophageal body so the wrong values are inputted
+//into the oesophageal body values
+
+             //s=s.replaceAll("Upper Esophageal Sphincter.*?nadir","");
+             s=Pattern.compile("Upper Esophageal Sphincter.*?nadir", Pattern.DOTALL).matcher(s).replaceAll("");
+             System.out.println("String before the stringFlag extraction"+s);
 			 while ((line = reader.readLine()) != null)
 				 //Reads the lines and then adds it straight to the map for that patient
 			 {
@@ -276,7 +285,7 @@ public class HRMAll {
 		            }
 		         }
 
-System.out.println("MYSWALLOW"+mapSwallow);
+//System.out.println("MYSWALLOW"+mapSwallow);
 		 return mapSwallow;
 	}
 
@@ -286,6 +295,7 @@ System.out.println("MYSWALLOW"+mapSwallow);
 		 //Had to do a dirty mini find and replace as the main dictionary would end up duplicating cms where it wasnt present
 		 s=s.replaceAll(" :\\n", "").replaceAll("\\):", "");
 
+        //System.out.println("stringFlag result"+s);
 
 		 Pattern match_patternWhole = Pattern.compile("("+start.trim()+"?\\s*)(\\-?\\d+\\.\\d+|[Nn]\\/[Aa]|\\d+|Yes|No)?",Pattern.DOTALL);
 		 Matcher matchermatch_patternWhole = match_patternWhole.matcher(s);
@@ -302,6 +312,10 @@ System.out.println("MYSWALLOW"+mapSwallow);
 						match2=matchermatch_patternWhole.group(2).replaceAll("\\n", "").trim();
 								match3=match+"   "+match2;
 						seTab3_HRM=match3.split("\\s+(?=\\S*$)");
+						System.out.println("match_matchermatch_patternWhole"+match);
+						System.out.println("match2_matchermatch_patternWhole"+match2);
+						System.out.println("match3_matchermatch_patternWhole"+match3);
+
 					}
 					else if(matchermatch_patternWhole2.find()){
 						String match2;
@@ -313,6 +327,8 @@ System.out.println("MYSWALLOW"+mapSwallow);
 						match3=matchermatch_patternWhole3.group(0).replaceAll("\\n", "").trim();
 						seTab3_HRM=match3.split("\\s+(?=\\S*$)");
 					}
+
+					System.out.println("seTab3_HRM"+seTab3_HRM.getClass());
 			return seTab3_HRM;
 	}
 }

@@ -36,14 +36,15 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 	}
 	public static Map<String, String> Dimane(String s,String child,String FileCreationDate) throws IOException, SAXException, TikaException, SQLException, ParseException {
 		s=s.replaceAll(" ", " ").trim();
-		System.out.println("Im in Diag.mane.Dimane");
+		//System.out.println("Im in Diag.mane.Dimane");
 
 		mapAllDiag.clear();
 
 
 
-		//replaceAll("<|>|//)|//(", "")
 
+
+//Get the Hospital number and other basics for the patient data table:
 		 try {
 	         HospNum=Overview.Searcher.HospNo_searcher(s);
 	         if(HospNum==null||HospNum==""||HospNum.isEmpty()||HospNum.equals("0207188419")){
@@ -174,7 +175,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 					PPI=null;
 					PPI=Searcher.multiline_searcher(s,PPI1);
 					if(PPI==null){
-						System.out.println("PPI in here"+PPI);
+						//System.out.println("PPI in here"+PPI);
 						PPI=Searcher.searcher(s,PPI2);
 						if(PPI==null){
 							PPI="Nil found";
@@ -229,7 +230,7 @@ static Map<String,String> mapAllDiag= new LinkedHashMap<String,String>();
 				try {
 					HODQScore=Searcher.searcher(s,HODQ);
 					//System.out.println("this is the string"+s);
-					System.out.println("HODQScoreeee"+HODQScore);
+					//System.out.println("HODQScoreeee"+HODQScore);
 				} catch (Exception e1) {
 
 					Logger.error(e1+HospNum+child);

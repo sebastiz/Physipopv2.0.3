@@ -2,7 +2,7 @@ LES, respiratory mean\(mmHg\)
 UES mean\(mmHg\)
 LES proximal\(cm\)
 LES intraabdominal\(cm\)
-Esophageal length\(cm\)
+EsophageallengthLESUEScenters\(cm\)
 Hiatal hernia
 Dist. wave amplitude\(mmHg\)
 Wave dur. @ LES -3.0 & 7.0\(s\)
@@ -15,11 +15,11 @@ LES \(mean\)\(mmHg\)
 UES \(mean\)\(mmHg\)
 Number of swallows evaluated
 Proximal LES \(from nares\)\(cm\)
+IntraabdominalLESlength\(cm\)
 LES length\(cm\)
 Peristaltic \(velocity ≤ 6.25 cm/s\)\(%\)
 Esophageal length \(LES-UES centers\)\(cm\)
 %Simultaneous
-Intraabdominal LES length\(cm\)
 Failed\(%\)
 Hiatal hernia\?
 Mean wave amplitude\(mmHg\)
