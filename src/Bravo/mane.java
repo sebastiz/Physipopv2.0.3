@@ -66,7 +66,7 @@ public class mane {
 			try {
 				VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 			} catch (Exception e) {
-				
+
 				Logger.error(e+HospNum+"->From ExtractNew Mane");
 			}
 			VisitDate=VisitDateFormatter.unAmerican(VisitDate);
@@ -166,7 +166,7 @@ public class mane {
 							System.out.println("SYMP2 "+Symptoms.get(j).get(0) +"  "+ Symptoms.get(0).get(ih)+"     "+ Symptoms.get(j).get(ih));
 
 					} catch (Exception e) {
-						
+
 						Logger.error(e+"  "+child.toString());
 						System.out.println("Here is the ExtractNew problem: " + e);
 					}
@@ -231,14 +231,14 @@ public class mane {
 						mapReflDay.put(Symptoms.get(j).get(0) + Symptoms.get(0).get(ih),
 						     Symptoms.get(j).get(ih));
 					} catch (Exception e) {
-						
+
 						e.printStackTrace();
 					}
 		        	try {
 						mapReflDay.put(Symptoms.get(j).get(0) + Symptoms.get(0).get(ih),
 						     Symptoms.get(j).get(ih));
 					} catch (Exception e) {
-						
+
 						e.printStackTrace();
 					}
 		        }
@@ -295,7 +295,7 @@ public class mane {
 			st=ConnectMeUp.Connector(HospNum,FName,SName,DOB);
 
 		} catch (Exception e) {
-			
+
 			Logger.error(e+HospNum+"->From BravoMane"+child);
 		}
 		first=ConnectMeUp.StringInsertKeyPreparer(st,mapReflDayOneandTwo,tab);
@@ -308,7 +308,7 @@ public class mane {
 		try {
 			sharedkey=ConnectMeUp.Inserter(st,HospNum,first,second,tab,child);
 		} catch (Exception e) {
-			
+
 			Logger.error(e+HospNum+"->From BravoManeOld"+child);
 		}
 	    table="BravoTotal";
@@ -320,7 +320,7 @@ public class mane {
 		try {
 			ConnectMeUp.Inserter2(st,third,fourth,table,sharedkey,FKFieldName,child);
 		} catch (Exception e) {
-			
+
 			Logger.error(e+HospNum+"->From BravoManeOld"+child);
 		}
 		fifth=ConnectMeUp.StringInsertKeyPreparer(st,mapReflDayOneandTwo,tabMore);
@@ -330,7 +330,7 @@ public class mane {
 			ConnectMeUp.Inserter2(st,fifth,sixth,tabMore,sharedkey,FKFieldName,child);
 			}
 		} catch (Exception e) {
-			
+
 			Logger.error(e+HospNum+"-There is no Bravo day 3 and 4 here"+child);
 		}*/
 		}
@@ -769,7 +769,7 @@ public class mane {
         	HospNum=Overview.Searcher.HospNo_searcher(child.toString());
 			 }
 			} catch (Exception e2) {
-				
+
 				Logger.error(e2+"Couldn't get the hospital number"+child);
 			}
 	return HospNum;
@@ -782,7 +782,7 @@ public class mane {
 	 		try {
 				FName=Overview.Searcher.FName_searcher(doc);
 			} catch (Exception e) {
-				
+
 				Logger.error(e+HospNum+child);
 			}
 			return FName;
@@ -797,7 +797,7 @@ public class mane {
 	 		try {
 	 			SName=Overview.Searcher.SName_searcher(doc);
 			} catch (Exception e) {
-				
+
 				Logger.error(e+HospNum+child);
 			}
 			return SName;
@@ -812,7 +812,7 @@ public class mane {
 	 		try {
 				VisitDate=VisitDateFormatter.VDFormat(VisitDate);
 			} catch (Exception e) {
-				
+
 				Logger.error(e+HospNum+"->From ImpedanceMane Mane"+child);
 			}
 			return VisitDate;
